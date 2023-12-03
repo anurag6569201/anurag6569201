@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Anurag Kumar!
+# 👋 Hi, I'm Anurag Singh!
 
 ## 👀 About Me
 I am a passionate individual interested in Web Development, AI/ML, and IoT. Currently, I am focusing on enhancing my skills in the field of AI/ML.
