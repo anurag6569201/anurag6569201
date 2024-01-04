@@ -200,4 +200,7 @@
         left: 98.5vw;
         scale: .90;
     }
+    .network-icon{
+        padding: .5em;
+    }
 }
