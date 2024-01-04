@@ -1,35 +1,41 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-body{
+
+body {
     font-size: 10px;
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center top;
-    background:linear-gradient(120deg,var(--blue),var(--yellow));
+    background: linear-gradient(120deg, var(--blue), var(--yellow));
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     width: 0px;
 }
+
 :root {
     --blurness: 10px;
-    --main:#414932;
-    --blue:rgba(56, 178, 176,.6);
-    --yellow:rgb(255,252,82);
-    --yellow_light:rgba(255,252,82,.2);
-    --back:rgba(0,0,0,1);
+    --main: #414932;
+    --blue: rgba(56, 178, 176, .6);
+    --yellow: rgb(255, 252, 82);
+    --yellow_light: rgba(255, 252, 82, .2);
+    --back: rgba(0, 0, 0, 1);
 }
+
 /* navbar styling */
 
-nav{
+nav {
     width: 8em;
-    background:linear-gradient(90deg,var(--blue),var(--yellow_light),transparent);
+    background: linear-gradient(90deg, var(--blue), var(--yellow_light), transparent);
     backdrop-filter: blur(var(--blurness));
     height: 100vh;
     position: fixed;
@@ -41,17 +47,20 @@ nav{
     overflow: hidden;
     z-index: 1000;
 }
-.logo{
+
+.logo {
     padding-bottom: 1em;
 }
-.logo img{
+
+.logo img {
     width: 5em;
     height: 5em;
     border-radius: 50%;
     margin-top: 1em;
 }
+
 .link1,
-.link2{
+.link2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -59,8 +68,9 @@ nav{
     transition: .6s;
     transform: translateX(0%);
 }
+
 nav .link1 a,
-nav .link2 a{
+nav .link2 a {
     padding: .5em;
     text-decoration: none;
     color: var(--main);
@@ -68,69 +78,81 @@ nav .link2 a{
     font-size: 1.8em;
     transition: .4s;
 }
+
 nav .link1 a:active,
-nav .link2 a:active{
+nav .link2 a:active {
     font-weight: 800;
     color: #7aaa1adc;
 }
-.link-btn{
+
+.link-btn {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .link-btn .hemburger-close,
-.link-btn .hemburger-open{
+.link-btn .hemburger-open {
     width: 4em;
     height: 4em;
     cursor: pointer;
 }
-.hemburger-open{
+
+.hemburger-open {
     display: none;
 }
-.hemburger-close{
+
+.hemburger-close {
     display: block;
 }
-.link-time{
+
+.link-time {
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
 }
-.link-time span{
+
+.link-time span {
     font-size: 3em;
     width: 100%;
     font-weight: 600;
     color: var(--main);
 }
+
 /* nav actions */
 
 /* hero section starts */
-.wrapper_all{
+.wrapper_all {
     width: 100vw;
-    background:linear-gradient(120deg,var(--blue),var(--yellow)),url(../images/hero_sup.png); 
+    background: linear-gradient(120deg, var(--blue), var(--yellow)), url(../images/hero_sup.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: center;
     background-attachment: fixed;
 }
-.landing{
+
+.landing {
     width: 100%;
     min-height: 160vh;
     overflow-x: hidden;
 }
-.hero{
+
+.hero {
     width: 45vw;
     height: 160vh;
     backdrop-filter: blur(0);
     z-index: -100;
 }
-.intro{
+
+.intro {
     position: absolute;
     top: 15vh;
     right: 3em;
     padding-right: 2em;
 }
+
 .section-subheading,
 .intro span {
     font-size: 6em;
@@ -138,35 +160,41 @@ nav .link2 a:active{
     background: linear-gradient(90deg, var(--blue), var(--main));
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; 
+    color: transparent;
 }
-.section-subheading{
+
+.section-subheading {
     font-size: 4.5em;
 }
-.ul-interests{
+
+.ul-interests {
     font-size: 2em;
     color: rgba(0, 0, 0, 1);
 }
-.intro p{
+
+.intro p {
     font-size: 1.8em;
     width: 400px;
     background: linear-gradient(90deg, var(--blue), var(--main));
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; 
+    color: transparent;
     font-weight: 700;
     padding-top: 2em;
 }
-.hero .blocks-contain{
+
+.hero .blocks-contain {
     position: absolute;
     top: 60vh;
     right: 0;
 }
-.blocks{
+
+.blocks {
     justify-content: right;
     padding-right: 2em;
     padding-bottom: 2em;
 }
+
 .custom-block {
     height: 100px;
     background-color: var(--back);
@@ -178,21 +206,115 @@ nav .link2 a:active{
     align-items: center;
     justify-content: center;
 }
-.custom-block p{
+
+.custom-block p {
     font-size: 2.5em;
     color: aliceblue;
     font-weight: 800;
     text-align: center;
 }
-.custom-block span{
+
+.custom-block span {
     font-size: 3.5em;
     color: aliceblue;
     font-weight: 800;
 }
-.custom-block div{
+
+.custom-block div {
     font-size: 1.8em;
     font-weight: 500;
-    color:rgb(236, 236, 236)
+    color: rgb(236, 236, 236)
 }
 
 /* projects */
+.news-content ul,
+.news-content li {
+    list-style: none;
+    padding: 0;
+}
+
+.news-content .container {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.news-content .wrapper {
+    border-radius: 15px;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.news-content h1 {
+    font-size: 1.1rem;
+    font-family: sans-serif;
+}
+
+.news-content .sessions {
+    margin-top: 2rem;
+    border-radius: 12px;
+    position: relative;
+}
+.news-content a{
+    text-decoration: none;
+    font-size: 1.4em;
+}
+.news-content li {
+    padding-bottom: .1em;
+    border-left: 1px solid #abaaed;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.news-content li:last-child {
+    border: 0px;
+    padding-bottom: 0;
+}
+
+.news-content li:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 1px solid #4e5ed3;
+    box-shadow: 3px 3px 0px #bab5f8;
+    box-shadow: 3px 3px 0px #bab5f8;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+}
+
+.news-content .time {
+    color: #e6e6e6;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 601px) {
+    .news-content .time {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .news-content .time {
+        margin-bottom: 0.3rem;
+        font-size: 0.85rem;
+    }
+}
+
+.news-content p {
+    color: #d3d3d3d7;
+    font-weight: 500;
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin-top: 0.4rem;
+}
+
+@media screen and (max-width: 600px) {
+    .news-content p {
+        font-size: 0.9rem;
+    }
+}
