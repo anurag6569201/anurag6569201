@@ -116,6 +116,7 @@
     .blocks {
         font-size: 6px;
         justify-content: left;
+        bottom: 15vh;
     }
 
     .intro {
