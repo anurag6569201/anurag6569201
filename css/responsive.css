@@ -200,7 +200,4 @@
         left: 98.5vw;
         scale: .90;
     }
-    :root{
-        --back:rgba(0,0,0,.6);
-    }
 }
