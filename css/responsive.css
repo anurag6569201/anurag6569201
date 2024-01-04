@@ -1,0 +1,206 @@
+@media (max-width:1000px) and (min-width:1100px) {
+    .wrapper_all {
+        background-size: cover;
+    }
+
+    body {
+        font-size: 9px;
+    }
+
+    #profile {
+        font-size: 7px;
+    }
+
+    .blocks {
+        font-size: 8px;
+    }
+}
+
+@media (max-width:1101px) {
+    body {
+        font-size: 8.5px;
+    }
+
+    #profile {
+        font-size: 6.7px;
+    }
+
+    .blocks {
+        font-size: 8px;
+    }
+}
+
+@media (max-width:999px) and (min-width:768px) {
+    body {
+        font-size: 8.5px;
+    }
+
+    .profile-area {
+        flex-direction: column;
+    }
+
+    .wrapper_all {
+        background-attachment: local;
+        background-size: cover;
+    }
+
+    .projects-row .card {
+        height: 270px;
+    }
+
+    .topic-content .icon {
+        padding-right: .5em;
+    }
+
+    .landing {
+        min-height: 175vh;
+    }
+
+    .hero .blocks-contain {
+        right: -2em;
+    }
+}
+
+@media (max-width:767px) and (min-width:576px) {
+    .profile-area {
+        flex-direction: column;
+    }
+
+    .wrapper_all {
+        background-attachment: local;
+        background-size: cover;
+    }
+
+    .projects-row .card {
+        height: 270px;
+    }
+
+    .topic-content .icon {
+        padding-right: .5em;
+    }
+
+    .hero .blocks-contain {
+        right: -7em;
+    }
+
+    .blocks {
+        font-size: 6.5px;
+    }
+
+    #profile .avatar {
+        width: 140px;
+        height: 140px;
+    }
+
+    .landing {
+        min-height: 225vh;
+    }
+
+    .contact-map {
+        display: block;
+    }
+
+    .contact {
+        font-size: 8px;
+    }
+}
+
+@media (max-width:575px) {
+    nav {
+        display: none;
+    }
+
+    .bio {
+        padding: 0 2em;
+    }
+
+    .hero {
+        width: 100vw;
+    }
+
+    .blocks {
+        font-size: 7px;
+        justify-content: left;
+    }
+
+    .intro {
+        top: 5vh;
+        right: 0;
+        font-size: 6px;
+    }
+
+    .landing {
+        height: 230vh;
+    }
+
+    .wrapper_all {
+        background-size: cover;
+        background-position-x: 65%;
+    }
+
+    #News {
+        padding: 0 2em;
+        font-size: 8px;
+    }
+
+    .projects-wrapper {
+        margin: 0 !important;
+        padding: 0 2em;
+    }
+
+    .prj-heading {
+        font-size: 8px;
+    }
+
+    .project-sorting {
+        display: block;
+    }
+
+    .project-sorting button {
+        margin-bottom: 1em;
+        margin-left: .5em;
+    }
+
+    .projects-row .card {
+        height: 250px;
+    }
+
+    .topic-wrapper {
+        padding: 0 2em;
+        margin: 0;
+    }
+
+    .row-cols-3>* {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .contact {
+        padding: 0 0em;
+        border-radius: 0;
+    }
+    .section-heading{
+        border-radius: 0;
+        background-color: transparent;
+    }
+    .contact .row{
+        border-radius: 0;
+    }
+
+    .contact .col-6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .contact-map {
+        flex-direction: column;
+    }
+
+    .pages {
+        left: 98.5vw;
+        scale: .90;
+    }
+    :root{
+        --back:rgba(0,0,0,.6);
+    }
+}
