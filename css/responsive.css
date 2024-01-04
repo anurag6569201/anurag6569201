@@ -123,12 +123,6 @@
         right: 0;
         font-size: 6px;
     }
-
-    .wrapper_all {
-        background-size: cover;
-        background-position-x: 65%;
-    }
-
     #News {
         padding: 0 2em;
         font-size: 8px;
@@ -196,5 +190,6 @@
     }
     .landing{
         background-size: cover;
+        background-position-x: 60%;
     }
 }
