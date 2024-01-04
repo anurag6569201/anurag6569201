@@ -1,9 +1,5 @@
 .bio{
-    position: absolute;
-    padding-left: 8em;
-    padding-right: 8em;
-    width: 100vw;
-    top: 100vh; 
+    padding: 0 7em;
 }
 .bio #section2{
     display: flex;
@@ -68,7 +64,9 @@
     margin-top: 5vh;
 }
 
-
+#about{
+    padding-bottom: 8em;
+}
 /* news */
 #News{
     padding-left: 8em;
@@ -78,6 +76,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 40px 45px black;
 }
 .news-row{
     backdrop-filter: blur(--blurness);

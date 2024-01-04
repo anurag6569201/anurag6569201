@@ -39,7 +39,7 @@
         flex-direction: column;
     }
 
-    .wrapper_all {
+    .hero {
         background-attachment: local;
         background-size: cover;
     }
@@ -50,10 +50,6 @@
 
     .topic-content .icon {
         padding-right: .5em;
-    }
-
-    .landing {
-        min-height: 175vh;
     }
 
     .hero .blocks-contain {
@@ -92,16 +88,15 @@
         height: 140px;
     }
 
-    .landing {
-        min-height: 225vh;
-    }
-
     .contact-map {
         display: block;
     }
 
     .contact {
         font-size: 8px;
+    }
+    .landing{
+        background-size: cover;
     }
 }
 
@@ -119,7 +114,7 @@
     }
 
     .blocks {
-        font-size: 7px;
+        font-size: 6px;
         justify-content: left;
     }
 
@@ -127,10 +122,6 @@
         top: 5vh;
         right: 0;
         font-size: 6px;
-    }
-
-    .landing {
-        height: 230vh;
     }
 
     .wrapper_all {
@@ -202,5 +193,8 @@
     }
     .network-icon{
         padding: .5em;
+    }
+    .landing{
+        background-size: cover;
     }
 }
