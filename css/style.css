@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+::-webkit-scrollbar{
+    width: 0px;
+}
 html,
 body {
     overflow-x: hidden;
@@ -133,7 +135,6 @@ nav .link2 a:active {
 /* hero section starts */
 .landing {
     width: 100%;
-    /* overflow-x: hidden; */
     background: linear-gradient(120deg, var(--blue), var(--yellow)), url(../images/hero_sup.png), url(../images/wave.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -145,6 +146,7 @@ nav .link2 a:active {
     width: 100vw;
     height: 110vh;
     position: relative;
+    overflow-x: hidden;
 }
 .hero-bio{
     position: absolute;
