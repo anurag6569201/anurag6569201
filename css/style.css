@@ -323,3 +323,23 @@ nav .link2 a:active {
         font-size: 0.9rem;
     }
 }
+.intro {
+    transform: translateX(100%);
+    animation: animtext 1.5s forwards;
+    opacity: 0;
+}
+
+@keyframes animtext {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(-10%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1; 
+    }
+}
