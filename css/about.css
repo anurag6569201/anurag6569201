@@ -96,3 +96,8 @@
     font-weight: 500;
     color: rgb(219, 219, 219);
 }
+
+.revealUp {
+    opacity: 0;
+    visibility: hidden;
+}

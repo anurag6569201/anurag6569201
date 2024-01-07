@@ -133,7 +133,7 @@ nav .link2 a:active {
 /* hero section starts */
 .landing {
     width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background: linear-gradient(120deg, var(--blue), var(--yellow)), url(../images/hero_sup.png), url(../images/wave.svg);
     background-repeat: no-repeat;
     background-size: contain;

@@ -104,7 +104,12 @@
     nav {
         display: none;
     }
-
+    .section-subheading, .intro span {
+        background: linear-gradient(90deg,var(--main), var(--blue));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
     .bio {
         padding: 0 2em;
     }
