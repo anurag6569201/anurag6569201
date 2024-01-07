@@ -117,12 +117,12 @@ function scrollToElement(elementId) {
 
 // loader
 const loader = document.getElementById("loader");
-window.addEventListener('load', () => {
+
+document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         loader.style.display = "none";
-    },40);
+    }, 20); 
 });
-
 
 // reviling
 gsap.registerPlugin(ScrollTrigger);
