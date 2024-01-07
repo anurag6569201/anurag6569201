@@ -147,18 +147,12 @@
 }
 
 .projects-row .card {
+    min-height: 350px;
     background-color: var(--back);
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-ul li {
-    list-style-type: disc;
-    color: aliceblue;
-    font-size: 1.4em;
-    font-weight: 400;
+.preview-project img{
+    min-height: 20em;
 }
 .techs {
     display: flex;
@@ -211,9 +205,7 @@ ul li {
     opacity: 1;
     visibility: visible;
 }
-.preview-project img{
-    height: 210px;
-}
+
 .project-sorting {
     display: flex;
     align-items: center;
@@ -385,7 +377,21 @@ form button:hover{
 .contact-detail{
     padding: 0 2em;
 }
-
+#section5 ul {
+    list-style-type: none;
+    padding: 0;
+}
+#section5 ul li {
+    list-style-type: disc;
+    color: aliceblue;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+.card-body h5{
+    color: aliceblue;
+    font-size: 2.5em;
+    font-weight: 600;
+}
 
 /* loader */
 .loader {
