@@ -3,7 +3,26 @@ let link1 = document.querySelector(".link1")
 let link2 = document.querySelector(".link2")
 let hemburger_open = document.querySelector(".hemburger-open")
 let hemburger_close = document.querySelector(".hemburger-close")
+let themebtn=document.querySelector('.toggle-btn')
+let themebtncheck=document.querySelector('#checkbox')
+let universe=document.querySelector('#glscreen')
+let shadowhr=document.querySelector('.shadowhr')
+let animblackhole=document.querySelector('.anim-blackhole')
+let bodycss=document.body
 
+themebtn.addEventListener('click',()=>{
+    if(themebtncheck.checked){
+        bodycss.style.background="var(--pic-theme)"
+        universe.style.display="none"
+        shadowhr.style.display="none"
+        animblackhole.style.display="none"
+    }else{
+        bodycss.style.background="transparent"
+        universe.style.display="block"
+        shadowhr.style.display="block"
+        animblackhole.style.display="block"
+    }
+})
 function menu_open() {
     link1.style.transform = "translateX(0%)";
     link2.style.transform = "translateX(0%)";

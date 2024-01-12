@@ -15,11 +15,11 @@ body {
 body {
     font-size: 10px;
     width: 100%;
-    background: linear-gradient(120deg, var(--blue), var(--yellow)), url(../images/hero_sup.png), url(../images/wave.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    background-attachment: fixed;
+    background: var(--pic-theme);
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    background-position-x: center!important;
+    background-attachment: fixed!important;
 }
 
 body::-webkit-scrollbar {
@@ -34,6 +34,7 @@ body::-webkit-scrollbar {
     --yellow_light: rgba(255, 252, 82, .2);
     --back: rgba(0, 0, 0, 1);
     --blacktheme:black;
+    --pic-theme:linear-gradient(120deg, var(--blue), var(--yellow)), url(../images/hero_sup.png), url(../images/wave.svg);
 }
 
 /* navbar styling */
@@ -41,14 +42,14 @@ body::-webkit-scrollbar {
 nav {
     backdrop-filter: blur(var(--blurness));
     height: 100vh;
-    max-width: 8em;
+    width: 8em;
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 2em;
+    gap: 1em;
     overflow: hidden;
     display: block;
     z-index: 1000;
@@ -178,7 +179,7 @@ nav .link2 a:hover {
 
 .ul-interests {
     font-size: 2em;
-    color: rgba(0, 0, 0, 1);
+    color: rgb(255, 255, 255);
 }
 
 .intro p {
