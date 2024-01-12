@@ -14,10 +14,12 @@ body {
 
 body {
     font-size: 10px;
-    background-size: contain;
+    width: 100%;
+    background: linear-gradient(120deg, var(--blue), var(--yellow)), url(../images/hero_sup.png), url(../images/wave.svg);
     background-repeat: no-repeat;
-    background-position: center top;
-    background-color: var(--blacktheme);
+    background-size: cover;
+    background-position-x: center;
+    background-attachment: fixed;
 }
 
 body::-webkit-scrollbar {
@@ -145,14 +147,7 @@ nav .link2 a:hover {
 /* nav actions */
 
 /* hero section starts */
-.allin-one {
-    width: 100%;
-    background: linear-gradient(120deg, var(--blue), var(--yellow)), url(../images/hero_sup.png), url(../images/wave.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: center;
-    background-attachment: fixed;
-}
+
 
 .hero {
     width: 100vw;
