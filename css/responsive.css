@@ -2,12 +2,14 @@
     padding: 0;
 }
 .allin-one{
-    overflow-x: hidden!important;
+    overflow-x: hidden;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
 }
 .secondin-one{
-    padding: 0 3em 0 8em!important;
+    padding: 0 3em 0 8em;
     background-color: var(--blacktheme);
-    overflow-x: hidden!important;
+    overflow-x: hidden;
 }
 @media (max-width:1000px) and (min-width:1100px) {
     .wrapper_all {
@@ -112,6 +114,9 @@
 }
 
 @media (max-width:575px) {
+    .secondin-one{
+        padding: 0;
+    }
     nav {
         display: none;
     }
