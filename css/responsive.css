@@ -1,3 +1,14 @@
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    padding: 0;
+}
+.allin-one{
+    overflow-x: hidden!important;
+}
+.secondin-one{
+    padding: 0 3em 0 8em!important;
+    background-color: var(--blacktheme);
+    overflow-x: hidden!important;
+}
 @media (max-width:1000px) and (min-width:1100px) {
     .wrapper_all {
         background-size: cover;

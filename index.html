@@ -16,6 +16,8 @@
     <!-- custom css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
+    <link rel="stylesheet" href="css/anim.css">
+
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/other.css">
     <link rel="stylesheet" href="css/style.css">
@@ -27,6 +29,9 @@
 <!-- body area start-->
 
 <body>
+   
+    <!-- <canvas id="glscreen"></canvas> -->
+ 
     <div class="loader" id="loader">
         <div class="wrapper">
             <div class="circle"></div>
@@ -48,8 +53,9 @@
             <div class="line-4"></div>
         </div>
     </div>
+
     <!-- paginatin -->
-    <div class="pages" id="pagination">
+    <div class="pages" id="pagination" style="pointer-events: none;">
         <div class="pagination">
             <input onclick="scrollToElement('section1')" id="dot-1" type="radio" name="dots" checked>
             <label for="dot-1"></label>
@@ -69,553 +75,555 @@
 
 
 
-    <!-- navbar starts -->
-    <nav class="navb" id="navb">
-        <div class="logo">
-            <img src="images/hero.jpg" alt="">
-        </div>
-
-        <div class="link-btn">
-            <img src="images/burger-solid.svg" alt="" class="hemburger-open" onclick="menu_open()">
-            <img src="images/xmark-solid.svg" alt="" class="hemburger-close" onclick="menu_close()">
-        </div>
-
-        <div class="link1" id="link1">
-            <a class="nav-link" href="#section1">Home</a>
-            <a class="nav-link" href="#section2">about</a>
-            <a class="nav-link" href="#section3">News</a>
-            <a class="nav-link" href="#section4">Techs</a>
-        </div>
-
-        <div class="link2">
-            <a class="nav-link" href="#section5">Projects</a>
-            <a class="nav-link" href="#section6">Contact</a>
-        </div>
-
-        <div class="link-time">
-            <span id="hrs"></span> <br>
-            <span id="min"></span> <br>
-            <span id="sec"></span>
-        </div>
-
-    </nav>
-
-    <!-- navbar ends -->
-    <header class="landing container-fluid" id="Home">
-        <!-- Hero section starts -->
-        <div class="wrapper_all" style="margin: auto;overflow-x: hidden;">
-
-            <div class="hero" id="section1">
-
-                <div class="container blocks-contain">
-                    <div class="row col-12 blocks">
-                        <div class="col-4 col-md-4 col-sm-4 col-lg-3">
-                            <div class="custom-block">
-                                <span>20+</span>
-                                <div>Projects</div>
+<div class="allin-one">
+        <!-- navbar starts -->
+        <nav class="navb" id="navb">
+            <div class="logo">
+                <img src="images/hero.jpg" alt="">
+            </div>
+    
+            <div class="link-btn">
+                <img src="images/burger-solid.svg" alt="" class="hemburger-open" onclick="menu_open()">
+                <img src="images/xmark-solid.svg" alt="" class="hemburger-close" onclick="menu_close()">
+            </div>
+    
+            <div class="link1" id="link1">
+                <a class="nav-link active" href="#section1">Home</a>
+                <a class="nav-link" href="#section2">about</a>
+                <a class="nav-link" href="#section3">News</a>
+                <a class="nav-link" href="#section4">Techs</a>
+            </div>
+    
+            <div class="link2">
+                <a class="nav-link" href="#section5">Projects</a>
+                <a class="nav-link" href="#section6">Contact</a>
+            </div>
+    
+            <div class="link-time">
+                <span id="hrs"></span> <br>
+                <span id="min"></span> <br>
+                <span id="sec"></span>
+            </div>
+    
+        </nav>
+    
+        <!-- navbar ends -->
+        <header class="landing container-fluid" id="Home">
+            <!-- Hero section starts -->
+            <div class="wrapper_all" style="margin: auto;overflow-x: hidden;">
+    
+                <div class="hero" id="section1">
+    
+                    <div class="container blocks-contain">
+                        <div class="row col-12 blocks">
+                            <div class="col-4 col-md-4 col-sm-4 col-lg-3">
+                                <div class="custom-block">
+                                    <span>20+</span>
+                                    <div>Projects</div>
+                                </div>
+                                <div class="custom-block">
+                                    <span>1+ year</span>
+                                    <div>Experience</div>
+                                </div>
                             </div>
-                            <div class="custom-block">
-                                <span>1+ year</span>
-                                <div>Experience</div>
-                            </div>
-                        </div>
-                        <div class="col-4 col-md-4 col-sm-4 col-lg-3">
-                            <div class="custom-block">
-                                <span>5+</span>
-                                <div>Clients</div>
-                            </div>
-                            <div class="custom-block">
-                                <p>Web Developer</p>
+                            <div class="col-4 col-md-4 col-sm-4 col-lg-3">
+                                <div class="custom-block">
+                                    <span>5+</span>
+                                    <div>Clients</div>
+                                </div>
+                                <div class="custom-block">
+                                    <p>Web Developer</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="hero-bio">
+                        <div class="intro">
+                            <span>Anurag Singh</span>
+                            <div class="col-md-12">
+                                <div class="section-subheading">Interests</div>
+                                <ul class="ul-interests">
+                                    <li>Web Development</li>
+                                    <li>Problem Solving and Innovation</li>
+                                    <li>Electrical Engineering</li>
+                                    <li>AI / ML</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
                 </div>
-                <div class="hero-bio">
-                    <div class="intro">
-                        <span>Anurag Singh</span>
-                        <div class="col-md-12">
-                            <div class="section-subheading">Interests</div>
-                            <ul class="ul-interests">
-                                <li>Web Development</li>
-                                <li>Problem Solving and Innovation</li>
-                                <li>Electrical Engineering</li>
-                                <li>AI / ML</li>
+    
+    
+    
+                <div class="bio">
+                    <div class="row" id="section2">
+                        <div id="profile" class="col-lg-5 col-md-5">
+                            <div class="profile-area">
+                                <img class="avatar avatar-circle revealUp" src="images/avatar.png" alt="Anurag singh">
+                                <div class="profile-text revealUp">
+                                    <h2>Anurag Singh</h2>
+                                    <h3>Electrical Engineering 2023-2027</h3>
+                                    <h3>
+                                        <a href="https://www.iiit-bh.ac.in/" target="_blank" rel="noopener">
+                                            <span>International Institute Of Technology Bhubhneswar</span>
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <ul class="network-icon revealUp" aria-hidden="true">
+                                <li>
+                                    <a href="/#contact" aria-label="envelope">
+                                        <i class="fas fa-envelope big-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/anurag6569201" target="_blank" rel="noopener"
+                                        aria-label="github">
+                                        <i class="fab fa-github big-icon"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/anurag6569/" target="_blank" rel="noopener"
+                                        aria-label="linkedin">
+                                        <i class="fab fa-linkedin big-icon"></i>
+                                    </a>
+                                </li>
+                                <li><span><a href="mailto:b323009@iiit-bh.ac.in"><i
+                                                class="fa-regular fa-envelope"></i></a></span></li>
+                                <li><span><a href="tel:8989591496"><i class="fa-solid fa-phone"></i></a></span></li>
+                            </ul>
+                        </div>
+                        <section id="about" class="col-lg-7 col-md-7">
+                            <div class="container">
+                                <div class="row">
+    
+                                    <div class="bio-content">
+                                        <h2 class="revealUp">Biography</h2>
+                                        <div class="article-style revealUp">
+                                            <p>Welcome! I'm Anurag Singh, a driven individual from Maihar, Madhya
+                                                Pradesh
+                                                (485771). My educational journey led me through Simran School and Blue
+                                                Bells
+                                                for my 10th and 12th grades, respectively. Currently immersed in the
+                                                world
+                                                of Electrical Engineering at IIIT Bhubneshwar.</p>
+                                            <p>Beyond the classroom, I've proven my mettle in hackathons, proudly
+                                                achieving
+                                                finalist status. My skills extend to web development, where I've
+                                                contributed
+                                                to the success of college fests. Whether crafting innovative solutions
+                                                in
+                                                hackathons or bringing digital magic to college events, I'm passionate
+                                                about
+                                                making a meaningful impact.</p>
+                                            <p>Join me on this exciting journey where my blend of technical prowess and
+                                                creative energy converges to create memorable experiences and solutions.
+                                            </p>
+                                            <p class="revealUp" style="font-size: 2em;"><i class="fas fa-download pr-1 fa-fw"></i>
+                                                Download
+                                                my <a href="images/media/anuCV.pdf" target="_blank">résumé</a>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+    
+                </div>
+    
+        </header>
+        <!-- Hero section ends -->
+    
+       <div class="secondin-one">
+             <!-- about section starts -->
+        <div class="container-fluid" id="News" style="margin-bottom: 5em;">
+    
+            <div class="row news-row col-md-12" id="section3" style="margin: 0;">
+                <div class="section-heading text-center">
+                    <h1 class="mb-0 news-heading revealUp">Timeline</h1>
+                </div>
+                <div class="news-content">
+                    <div class="container">
+                        <div class="wrapper">
+                            <ul class="sessions revealUp">
+                                <li>
+                                    <div class="time">Dec 2023</div>
+                                    <p>Frontend Developer at College <a href="https://botspark2k24.vercel.app/">Robofest</a>
+                                        organized by the Tars Society website.</p>
+                                </li>
+                                <li>
+                                    <div class="time">Nov 2023</div>
+                                    <p>Worked with <a
+                                            href="https://drive.google.com/file/d/1sSTPEnRksdacbLtJYSfNKXwlTnRdFNhY/view?usp=drive_link">Google
+                                            Cloud Computing</a> for a month.</p>
+                                </li>
+                                <li>
+                                    <div class="time">Oct 2023</div>
+                                    <p>Finalist in Hackathon of<a
+                                            href="https://drive.google.com/file/d/1lYfBHPfSqjKqaFOr3S71yVABk_6pgH3r/view?usp=sharing">D3
+                                            Fest</a> at IIIT Bhubaneswar.</p>
+                                </li>
+                                <li>
+                                    <div class="time">Sep 2023</div>
+                                    <p>Joined <a href="https://www.iiit-bh.ac.in/">IIIT Bhubaneswar</a> for a degree in
+                                        Electrical Engineering.</p>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
-
-            <div class="bio">
-                <div class="row" id="section2">
-                    <div id="profile" class="col-lg-5 col-md-5">
-                        <div class="profile-area">
-                            <img class="avatar avatar-circle revealUp" src="images/avatar.png" alt="Anurag singh">
-                            <div class="profile-text revealUp">
-                                <h2>Anurag Singh</h2>
-                                <h3>Electrical Engineering 2023-2027</h3>
-                                <h3>
-                                    <a href="https://www.iiit-bh.ac.in/" target="_blank" rel="noopener">
-                                        <span>International Institute Of Technology Bhubhneswar</span>
-                                    </a>
-                                </h3>
+        </div>
+    
+        <!-- timeline -->
+        <!-- popular topics -->
+        <div class="container-fluid topic-wrapper" id="section4" style="margin-top: 10em;">
+    
+            <!-- Single "topic" Section -->
+            <section class="topic row-cols-1">
+                <div class="topic-head revealUp">
+                    <h1 class="topic-header text-center">Techs</h1>
+                </div>
+                <div class="topic-content row row-cols-3">
+    
+                    <!-- Web Stacks -->
+                    <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-title text-center revealUp">Web Stacks</div>
+                            <div class="card-body revealUp">
+                                <span class="icon"><i class="devicon-html5-plain"></i></span>
+                                <span class="icon"><i class="devicon-css3-plain"></i></span>
+                                <span class="icon"><i class="devicon-javascript-plain"></i></span>
+                                <span class="icon"><i class="devicon-php-plain"></i></span>
+                                <span class="icon"><i class="devicon-mysql-plain"></i></span>
+                                <span class="icon"><i class="devicon-django-plain"></i></span>
+                                <span class="icon"><i class="devicon-bootstrap-plain"></i></span>
                             </div>
                         </div>
-                        <ul class="network-icon revealUp" aria-hidden="true">
-                            <li>
-                                <a href="/#contact" aria-label="envelope">
-                                    <i class="fas fa-envelope big-icon"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/anurag6569201" target="_blank" rel="noopener"
-                                    aria-label="github">
-                                    <i class="fab fa-github big-icon"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/anurag6569/" target="_blank" rel="noopener"
-                                    aria-label="linkedin">
-                                    <i class="fab fa-linkedin big-icon"></i>
-                                </a>
-                            </li>
-                            <li><span><a href="mailto:b323009@iiit-bh.ac.in"><i
-                                            class="fa-regular fa-envelope"></i></a></span></li>
-                            <li><span><a href="tel:8989591496"><i class="fa-solid fa-phone"></i></a></span></li>
-                        </ul>
                     </div>
-                    <section id="about" class="col-lg-7 col-md-7">
-                        <div class="container">
-                            <div class="row">
-
-                                <div class="bio-content">
-                                    <h2 class="revealUp">Biography</h2>
-                                    <div class="article-style revealUp">
-                                        <p>Welcome! I'm Anurag Singh, a driven individual from Maihar, Madhya
-                                            Pradesh
-                                            (485771). My educational journey led me through Simran School and Blue
-                                            Bells
-                                            for my 10th and 12th grades, respectively. Currently immersed in the
-                                            world
-                                            of Electrical Engineering at IIIT Bhubneshwar.</p>
-                                        <p>Beyond the classroom, I've proven my mettle in hackathons, proudly
-                                            achieving
-                                            finalist status. My skills extend to web development, where I've
-                                            contributed
-                                            to the success of college fests. Whether crafting innovative solutions
-                                            in
-                                            hackathons or bringing digital magic to college events, I'm passionate
-                                            about
-                                            making a meaningful impact.</p>
-                                        <p>Join me on this exciting journey where my blend of technical prowess and
-                                            creative energy converges to create memorable experiences and solutions.
-                                        </p>
-                                        <p style="font-size: 2em;"><i class="fas fa-download pr-1 fa-fw revealUp"></i>
-                                            Download
-                                            my <a href="images/media/anuCV.pdf" target="_blank">résumé</a>.</p>
-                                    </div>
-                                </div>
+    
+                    <!-- Coding Languages -->
+                    <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-title text-center revealUp">Coding Languages</div>
+                            <div class="card-body revealUp">
+                                <span class="icon"><i class="devicon-python-plain"></i></span>
+                                <span class="icon"><i class="devicon-c-plain"></i></span>
+                                <span class="icon"><i class="devicon-cplusplus-plain"></i></span>
                             </div>
                         </div>
-                    </section>
+                    </div>
+    
+                    <!-- Designing -->
+                    <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-title text-center revealUp">Designing</div>
+                            <div class="card-body revealUp">
+                                <span class="icon"><i class="devicon-vscode-plain"></i></span>
+                                <span class="icon"><i class="devicon-git-plain"></i></span>
+                                <span class="icon"><i class="devicon-github-original"></i></span>
+                                <span class="icon"><i class="devicon-figma-plain"></i></span>
+                            </div>
+                        </div>
+                    </div>
+    
                 </div>
-
+            </section>
+    
+        </div>
+    
+        <div class="container-fluid projects-wrapper revealUp" id="section5" style="margin: auto;">
+            <div class="row justify-content-center" style="margin: 0;">
+                <div class="col-12 text-center prj-heading">
+                    <h1 class="project-header">Projects</h1>
+                    <div class="project-sorting">
+                        <button id="sort-all" onclick="sort_all()" class="sort-btn active"><span>Show All</span></button>
+                        <button id="sort-web" onclick="sort_web()" class="sort-btn"><span>Web Dev</span></button>
+                        <button id="sort-game" onclick="sort_game()" class="sort-btn"><span>Games</span></button>
+                        <button id="sort-aiml" onclick="sort_aiml()" class="sort-btn"><span>AI/Ml</span></button>
+                        <button id="sort-others" onclick="sort_others()" class="sort-btn"><span>Others</span></button>
+                    </div>
+                </div>
             </div>
-
-    </header>
-    <!-- Hero section ends -->
-
-    <!-- about section starts -->
-    <div class="container-fluid" id="News" style="margin-bottom: 5em;">
-
-        <div class="row news-row col-md-12" id="section3" style="margin: 0;">
-            <div class="section-heading text-center">
-                <h1 class="mb-0 news-heading revealUp">Timeline</h1>
-            </div>
-            <div class="news-content">
-                <div class="container">
-                    <div class="wrapper">
-                        <ul class="sessions revealUp">
-                            <li>
-                                <div class="time">Dec 2023</div>
-                                <p>Frontend Developer at College <a href="https://botspark2k24.vercel.app/">Robofest</a>
-                                    organized by the Tars Society website.</p>
+    
+            <section class="projects">
+                <div class="row projects-row col-12 col-md-12" id="projects-container" style="margin: 0;">
+                    <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
+                        <div class="card">
+    
+                            <a class="preview-project" target="_blank" href="https://botspark2k24.vercel.app/">
+                                <div class="lesgo"></div><img src="images/media/botspark.jpg" class="card-img-top"
+                                    alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="images/media/bots-logo.png" alt=""
+                                        class="project-logo">Botspark
+                                    <a target="_blank" href="https://github.com/anurag6569201/botspark2k23_frontend.git"><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a target="_blank" href="https://botspark2k24.vercel.app/"><i
+                                            class="fa-solid fa-share-from-square"></i></a>
+                                </h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Developed a dynamic website for the Tars Society at IIIT Bhubaneswar, focusing on frontend development.</li>
+                                        <span class="techs">
+                                            <button class="tech-button">HTML</button>
+                                            <button class="tech-button">CSS</button>
+                                            <button class="tech-button">JavaScript</button>
+                                        </span>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
+                        <div class="card">
+                            <div class="lesgo"></div>
+                            <a class="preview-project" target="_blank" href="https://depression-sathi.000webhostapp.com/">
+                                <div class="lesgo"></div><img src="images/media/depression.jpg" class="card-img-top"
+                                    alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="images/media/deps-logo.png" alt=""
+                                        class="project-logo">Depression-sathi
+                                    <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
+                                    <a target="_blank" href="https://depression-sathi.000webhostapp.com/"><i
+                                            class="fa-solid fa-share-from-square"></i></a>
+                                </h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Created a platform facilitating interaction between doctors and users for healing through chat and chatbots.</li>
+                                        <span class="techs">
+                                            <button class="tech-button">HTML</button>
+                                            <button class="tech-button">CSS</button>
+                                            <button class="tech-button">JavaScript</button>
+                                            <button class="tech-button">Php</button>
+                                            <button class="tech-button">MySQL</button>
+                                            <button class="tech-button">Bootstrap</button>
+                                        </span>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
+                        <div class="card">
+                            <div class="lesgo"></div>
+                            <a class="preview-project" target="_blank" href="https://greenplog.vercel.app/">
+                                <div class="lesgo"></div><img src="images/media/greenplog.jpg" class="card-img-top"
+                                    alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="images/media/greeb-logo.png" alt=""
+                                        class="project-logo">GreenPlog
+                                    <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
+                                    <a target="_blank" href="https://greenplog.vercel.app/"><i
+                                            class="fa-solid fa-share-from-square"></i></a>
+                                </h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Designed an interactive web app where users can locate garbage, engage in jogging, and earn rewards.</li>
+                                        <span class="techs">
+                                            <button class="tech-button">HTML</button>
+                                            <button class="tech-button">CSS</button>
+                                            <button class="tech-button">JavaScript</button>
+                                            <button class="tech-button">Python</button>
+                                            <button class="tech-button">Django</button>
+                                            <button class="tech-button">Bootstrap</button>
+                                        </span>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
+                        <div class="card">
+                            <div class="lesgo"></div>
+                            <a class="preview-project" target="_blank" href="http://gutargu.000webhostapp.com/">
+                                <div class="lesgo"></div><img src="images/media/gutargu.jpg" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="images/media/gutar-logo.png" alt=""
+                                        class="project-logo">Gutar-Gu
+                                    <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
+                                    <a target="_blank" href="http://gutargu.000webhostapp.com/"><i
+                                            class="fa-solid fa-share-from-square"></i></a>
+                                </h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Developed a real-time chatting web app for friends to connect and communicate seamlessly.</li>
+                                        <span class="techs">
+                                            <button class="tech-button">HTML</button>
+                                            <button class="tech-button">CSS</button>
+                                            <button class="tech-button">JavaScript</button>
+                                            <button class="tech-button">Php</button>
+                                            <button class="tech-button">MySQL</button>
+                                        </span>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
+                        <div class="card">
+                            <div class="lesgo"></div>
+                            <a class="preview-project" target="_blank" href="https://zencare.vercel.app/">
+                                <div class="lesgo"></div><img src="images/media/zencare.jpg" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="images/media/zen-logo.png" alt=""
+                                        class="project-logo">ZenCare-Hub
+                                    <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
+                                    <a target="_blank" href="https://zencare.vercel.app/"><i
+                                            class="fa-solid fa-share-from-square"></i></a>
+                                </h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Designed a web app for hospitals to predict trending diseases using AI/ML based on retrieved data.</li>
+                                        <span class="techs">
+                                            <button class="tech-button">HTML</button>
+                                            <button class="tech-button">CSS</button>
+                                            <button class="tech-button">JavaScript</button>
+                                            <button class="tech-button">Python</button>
+                                            <button class="tech-button">Django</button>
+                                            <button class="tech-button">Bootstrap</button>
+                                            <button class="tech-button">Beautiful-Soup</button>
+                                        </span>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-3 col-lg-4 col-md-6" data-category="Games">
+                        <div class="card">
+                            <div class="lesgo"></div>
+                            <a class="preview-project" target="_blank" href="https://snakeat.vercel.app/">
+                                <div class="lesgo"></div><img src="images/media/snake.jpg" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="images/media/snake-logo.png" alt=""
+                                        class="project-logo">Snake-eat
+                                    <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
+                                    <a target="_blank" href="https://snakeat.vercel.app/"><i
+                                            class="fa-solid fa-share-from-square"></i></a>
+                                </h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Created a classic snake game with validations, boundaries, and interactive features.</li>
+                                        <span class="techs">
+                                            <button class="tech-button">HTML</button>
+                                            <button class="tech-button">CSS</button>
+                                            <button class="tech-button">JavaScript</button>
+                                        </span>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-3 col-lg-4 col-md-6" data-category="Games">
+                        <div class="card">
+                            <div class="lesgo"></div>
+                            <a class="preview-project" target="_blank" href="https://rockpaper6569.vercel.app/">
+                                <div class="lesgo"></div><img src="images/media/rockpaper.jpg" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="images/media/rockpaperlogo.png" alt=""
+                                        class="project-logo">rockpaper
+                                    <a target="_blank" href="https://github.com/anurag6569201/rockpaper.git"><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a target="_blank" href="https://rockpaper6569.vercel.app/"><i
+                                            class="fa-solid fa-share-from-square"></i></a>
+                                </h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Engage in the classic hand game against the CPU with a modern twist After 5 rounds, view a detailed summary showcasing the outcome of each match.</li>
+                                        <span class="techs">
+                                            <button class="tech-button">HTML</button>
+                                            <button class="tech-button">CSS</button>
+                                            <button class="tech-button">JavaScript</button>
+                                            <button class="tech-button">Bootstrap</button>
+                                        </span>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="pagination-container"></div>
+            </section>
+        </div>
+    
+    
+        <div class="contact" style="margin-top: 10em;" id="section6">
+            <div class="row col-12">
+    
+                <div class="section-heading text-center">
+                    <h1>Contact</h1>
+                </div>
+    
+                <div class="contact-map">
+                    <div class="col-6 col-md-5 col-sm-12 col-lg-6 mb-3 contact-form">
+                        <form action="" method="post">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="msg" rows="4"
+                                    placeholder="Your Message"></textarea>
+                            </div>
+                            <button style="margin-top: 1em;" type="submit"><span>Submit</span></button>
+    
+    
+                            <ul style="display: flex; justify-content: center; padding: 0%;gap: 2em;"
+                                class="contact-icons text-center py-3">
+                                <a href="https://wa.me/919098691543"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a
+                                    href="https://instagram.com/anurag_singh__0__0__?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=100025792005909"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a
+                                    href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTJnsjzfmgQrCZnjXXFmDmzXNKlgJDpdPNlGlwnFQpfSVVQPnDVTCxpqfFrkQXNQCJpSwL"><i
+                                        class="fa-regular fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/in/anurag-singh-b90439282"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                            </ul>
+                        </form>
+                    </div>
+    
+                    <div class="col-6 col-md-6 col-sm-12 col-lg-6 mb-3 contact-detail">
+                        <ul class="fa-ul">
+                            <li><span><i class="fa-regular fa-envelope"></i></span><a
+                                    href="mailto:b323009@iiit-bh.ac.in">b323009@iiit-bh.ac.in</a></span></li>
+                            <li><span><i class="fa-solid fa-phone"></i></span><a href="tel:8989591496">8989591496</a></span>
                             </li>
-                            <li>
-                                <div class="time">Nov 2023</div>
-                                <p>Worked with <a
-                                        href="https://drive.google.com/file/d/1sSTPEnRksdacbLtJYSfNKXwlTnRdFNhY/view?usp=drive_link">Google
-                                        Cloud Computing</a> for a month.</p>
-                            </li>
-                            <li>
-                                <div class="time">Oct 2023</div>
-                                <p>Finalist in Hackathon of<a
-                                        href="https://drive.google.com/file/d/1lYfBHPfSqjKqaFOr3S71yVABk_6pgH3r/view?usp=sharing">D3
-                                        Fest</a> at IIIT Bhubaneswar.</p>
-                            </li>
-                            <li>
-                                <div class="time">Sep 2023</div>
-                                <p>Joined <a href="https://www.iiit-bh.ac.in/">IIIT Bhubaneswar</a> for a degree in
-                                    Electrical Engineering.</p>
-                            </li>
+                            <li><span><i class="fa-solid fa-house"></i></span>Near Civil court Maihar (485771) Madhya
+                                Pradesh</span></li>
                         </ul>
+                        <div class="map" style="z-index: 100;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3637.6348182737665!2d80.765733!3d24.254548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDE1JzE2LjQiTiA4MMKwNDUnNTYuNiJF!5e0!3m2!1sen!2sin!4v1704286551931!5m2!1sen!2sin"
+                                width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
                     </div>
                 </div>
+    
             </div>
         </div>
-    </div>
+       </div>
+</div>
 
-    <!-- timeline -->
-    <!-- popular topics -->
-    <div class="container-fluid topic-wrapper" id="section4" style="margin-top: 10em;">
-
-        <!-- Single "topic" Section -->
-        <section class="topic row-cols-1">
-            <div class="topic-head revealUp">
-                <h1 class="topic-header text-center">Techs</h1>
-            </div>
-            <div class="topic-content row row-cols-3">
-
-                <!-- Web Stacks -->
-                <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
-                    <div class="card h-100">
-                        <div class="card-title text-center revealUp">Web Stacks</div>
-                        <div class="card-body revealUp">
-                            <span class="icon"><i class="devicon-html5-plain"></i></span>
-                            <span class="icon"><i class="devicon-css3-plain"></i></span>
-                            <span class="icon"><i class="devicon-javascript-plain"></i></span>
-                            <span class="icon"><i class="devicon-php-plain"></i></span>
-                            <span class="icon"><i class="devicon-mysql-plain"></i></span>
-                            <span class="icon"><i class="devicon-django-plain"></i></span>
-                            <span class="icon"><i class="devicon-bootstrap-plain"></i></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Coding Languages -->
-                <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
-                    <div class="card h-100">
-                        <div class="card-title text-center revealUp">Coding Languages</div>
-                        <div class="card-body revealUp">
-                            <span class="icon"><i class="devicon-python-plain"></i></span>
-                            <span class="icon"><i class="devicon-c-plain"></i></span>
-                            <span class="icon"><i class="devicon-cplusplus-plain"></i></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Designing -->
-                <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
-                    <div class="card h-100">
-                        <div class="card-title text-center revealUp">Designing</div>
-                        <div class="card-body revealUp">
-                            <span class="icon"><i class="devicon-vscode-plain"></i></span>
-                            <span class="icon"><i class="devicon-git-plain"></i></span>
-                            <span class="icon"><i class="devicon-github-original"></i></span>
-                            <span class="icon"><i class="devicon-figma-plain"></i></span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-
-    <div class="container-fluid projects-wrapper revealUp" id="section5" style="margin: auto;">
-        <div class="row justify-content-center" style="margin: 0;">
-            <div class="col-12 text-center prj-heading">
-                <h1 class="project-header">Projects</h1>
-                <div class="project-sorting">
-                    <button id="sort-all" onclick="sort_all()" class="sort-btn active"><span>Show All</span></button>
-                    <button id="sort-web" onclick="sort_web()" class="sort-btn"><span>Web Dev</span></button>
-                    <button id="sort-game" onclick="sort_game()" class="sort-btn"><span>Games</span></button>
-                    <button id="sort-aiml" onclick="sort_aiml()" class="sort-btn"><span>AI/Ml</span></button>
-                    <button id="sort-others" onclick="sort_others()" class="sort-btn"><span>Others</span></button>
-                </div>
-            </div>
-        </div>
-
-        <section class="projects">
-            <div class="row projects-row col-12 col-md-12" id="projects-container" style="margin: 0;">
-                <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
-                    <div class="card">
-
-                        <a class="preview-project" target="_blank" href="https://botspark2k24.vercel.app/">
-                            <div class="lesgo"></div><img src="images/media/botspark.jpg" class="card-img-top"
-                                alt="...">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title"><img src="images/media/bots-logo.png" alt=""
-                                    class="project-logo">Botspark
-                                <a target="_blank" href="https://github.com/anurag6569201/botspark2k23_frontend.git"><i
-                                        class="fa-brands fa-github"></i></a>
-                                <a target="_blank" href="https://botspark2k24.vercel.app/"><i
-                                        class="fa-solid fa-share-from-square"></i></a>
-                            </h5>
-                            <p class="card-text">
-                                <ul>
-                                    <li>Developed a dynamic website for the Tars Society at IIIT Bhubaneswar, focusing on frontend development.</li>
-                                    <span class="techs">
-                                        <button class="tech-button">HTML</button>
-                                        <button class="tech-button">CSS</button>
-                                        <button class="tech-button">JavaScript</button>
-                                    </span>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
-                    <div class="card">
-                        <div class="lesgo"></div>
-                        <a class="preview-project" target="_blank" href="https://depression-sathi.000webhostapp.com/">
-                            <div class="lesgo"></div><img src="images/media/depression.jpg" class="card-img-top"
-                                alt="...">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title"><img src="images/media/deps-logo.png" alt=""
-                                    class="project-logo">Depression-sathi
-                                <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
-                                <a target="_blank" href="https://depression-sathi.000webhostapp.com/"><i
-                                        class="fa-solid fa-share-from-square"></i></a>
-                            </h5>
-                            <p class="card-text">
-                                <ul>
-                                    <li>Created a platform facilitating interaction between doctors and users for healing through chat and chatbots.</li>
-                                    <span class="techs">
-                                        <button class="tech-button">HTML</button>
-                                        <button class="tech-button">CSS</button>
-                                        <button class="tech-button">JavaScript</button>
-                                        <button class="tech-button">Php</button>
-                                        <button class="tech-button">MySQL</button>
-                                        <button class="tech-button">Bootstrap</button>
-                                    </span>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
-                    <div class="card">
-                        <div class="lesgo"></div>
-                        <a class="preview-project" target="_blank" href="https://greenplog.vercel.app/">
-                            <div class="lesgo"></div><img src="images/media/greenplog.jpg" class="card-img-top"
-                                alt="...">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title"><img src="images/media/greeb-logo.png" alt=""
-                                    class="project-logo">GreenPlog
-                                <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
-                                <a target="_blank" href="https://greenplog.vercel.app/"><i
-                                        class="fa-solid fa-share-from-square"></i></a>
-                            </h5>
-                            <p class="card-text">
-                                <ul>
-                                    <li>Designed an interactive web app where users can locate garbage, engage in jogging, and earn rewards.</li>
-                                    <span class="techs">
-                                        <button class="tech-button">HTML</button>
-                                        <button class="tech-button">CSS</button>
-                                        <button class="tech-button">JavaScript</button>
-                                        <button class="tech-button">Python</button>
-                                        <button class="tech-button">Django</button>
-                                        <button class="tech-button">Bootstrap</button>
-                                    </span>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
-                    <div class="card">
-                        <div class="lesgo"></div>
-                        <a class="preview-project" target="_blank" href="http://gutargu.000webhostapp.com/">
-                            <div class="lesgo"></div><img src="images/media/gutargu.jpg" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title"><img src="images/media/gutar-logo.png" alt=""
-                                    class="project-logo">Gutar-Gu
-                                <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
-                                <a target="_blank" href="http://gutargu.000webhostapp.com/"><i
-                                        class="fa-solid fa-share-from-square"></i></a>
-                            </h5>
-                            <p class="card-text">
-                                <ul>
-                                    <li>Developed a real-time chatting web app for friends to connect and communicate seamlessly.</li>
-                                    <span class="techs">
-                                        <button class="tech-button">HTML</button>
-                                        <button class="tech-button">CSS</button>
-                                        <button class="tech-button">JavaScript</button>
-                                        <button class="tech-button">Php</button>
-                                        <button class="tech-button">MySQL</button>
-                                    </span>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
-                    <div class="card">
-                        <div class="lesgo"></div>
-                        <a class="preview-project" target="_blank" href="https://zencare.vercel.app/">
-                            <div class="lesgo"></div><img src="images/media/zencare.jpg" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title"><img src="images/media/zen-logo.png" alt=""
-                                    class="project-logo">ZenCare-Hub
-                                <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
-                                <a target="_blank" href="https://zencare.vercel.app/"><i
-                                        class="fa-solid fa-share-from-square"></i></a>
-                            </h5>
-                            <p class="card-text">
-                                <ul>
-                                    <li>Designed a web app for hospitals to predict trending diseases using AI/ML based on retrieved data.</li>
-                                    <span class="techs">
-                                        <button class="tech-button">HTML</button>
-                                        <button class="tech-button">CSS</button>
-                                        <button class="tech-button">JavaScript</button>
-                                        <button class="tech-button">Python</button>
-                                        <button class="tech-button">Django</button>
-                                        <button class="tech-button">Bootstrap</button>
-                                        <button class="tech-button">Beautiful-Soup</button>
-                                    </span>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="g-3 col-lg-4 col-md-6" data-category="Games">
-                    <div class="card">
-                        <div class="lesgo"></div>
-                        <a class="preview-project" target="_blank" href="https://snakeat.vercel.app/">
-                            <div class="lesgo"></div><img src="images/media/snake.jpg" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title"><img src="images/media/snake-logo.png" alt=""
-                                    class="project-logo">Snake-eat
-                                <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
-                                <a target="_blank" href="https://snakeat.vercel.app/"><i
-                                        class="fa-solid fa-share-from-square"></i></a>
-                            </h5>
-                            <p class="card-text">
-                                <ul>
-                                    <li>Created a classic snake game with validations, boundaries, and interactive features.</li>
-                                    <span class="techs">
-                                        <button class="tech-button">HTML</button>
-                                        <button class="tech-button">CSS</button>
-                                        <button class="tech-button">JavaScript</button>
-                                    </span>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="g-3 col-lg-4 col-md-6" data-category="Games">
-                    <div class="card">
-                        <div class="lesgo"></div>
-                        <a class="preview-project" target="_blank" href="https://rockpaper6569.vercel.app/">
-                            <div class="lesgo"></div><img src="images/media/rockpaper.jpg" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title"><img src="images/media/rockpaperlogo.png" alt=""
-                                    class="project-logo">rockpaper
-                                <a target="_blank" href="https://github.com/anurag6569201/rockpaper.git"><i
-                                        class="fa-brands fa-github"></i></a>
-                                <a target="_blank" href="https://rockpaper6569.vercel.app/"><i
-                                        class="fa-solid fa-share-from-square"></i></a>
-                            </h5>
-                            <p class="card-text">
-                                <ul>
-                                    <li>Engage in the classic hand game against the CPU with a modern twist After 5 rounds, view a detailed summary showcasing the outcome of each match.</li>
-                                    <span class="techs">
-                                        <button class="tech-button">HTML</button>
-                                        <button class="tech-button">CSS</button>
-                                        <button class="tech-button">JavaScript</button>
-                                        <button class="tech-button">Bootstrap</button>
-                                    </span>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="pagination-container"></div>
-        </section>
-    </div>
-
-
-    <div class="contact" style="margin-top: 10em;" id="section6">
-        <div class="row col-12">
-
-            <div class="section-heading text-center">
-                <h1>Contact</h1>
-            </div>
-
-            <div class="contact-map">
-                <div class="col-6 col-md-5 col-sm-12 col-lg-6 mb-3 contact-form">
-                    <form action="" method="post">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="msg" rows="4"
-                                placeholder="Your Message"></textarea>
-                        </div>
-                        <button style="margin-top: 1em;" type="submit"><span>Submit</span></button>
-
-
-                        <ul style="display: flex; justify-content: center; padding: 0%;gap: 2em;"
-                            class="contact-icons text-center py-3">
-                            <a href="https://wa.me/919098691543"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a
-                                href="https://instagram.com/anurag_singh__0__0__?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/profile.php?id=100025792005909"><i
-                                    class="fa-brands fa-facebook-f"></i></a>
-                            <a
-                                href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTJnsjzfmgQrCZnjXXFmDmzXNKlgJDpdPNlGlwnFQpfSVVQPnDVTCxpqfFrkQXNQCJpSwL"><i
-                                    class="fa-regular fa-envelope"></i></a>
-                            <a href="https://www.linkedin.com/in/anurag-singh-b90439282"><i
-                                    class="fa-brands fa-linkedin-in"></i></a>
-                        </ul>
-                    </form>
-                </div>
-
-                <div class="col-6 col-md-6 col-sm-12 col-lg-6 mb-3 contact-detail">
-                    <ul class="fa-ul">
-                        <li><span><i class="fa-regular fa-envelope"></i></span><a
-                                href="mailto:b323009@iiit-bh.ac.in">b323009@iiit-bh.ac.in</a></span></li>
-                        <li><span><i class="fa-solid fa-phone"></i></span><a href="tel:8989591496">8989591496</a></span>
-                        </li>
-                        <li><span><i class="fa-solid fa-house"></i></span>Near Civil court Maihar (485771) Madhya
-                            Pradesh</span></li>
-                    </ul>
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3637.6348182737665!2d80.765733!3d24.254548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDE1JzE2LjQiTiA4MMKwNDUnNTYuNiJF!5e0!3m2!1sen!2sin!4v1704286551931!5m2!1sen!2sin"
-                            width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-    </div>
 </body>
 <!-- body area end -->
 
-<!-- cdn js -->
+<!-- cdn bootstrap js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
     integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -623,12 +631,86 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
-
+<!-- gsap library js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 
+<!-- jquery js -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simplePagination.js/1.6/jquery.simplePagination.js"></script>
+
+<!-- anim webgl js -->
+<script id="2d-fragment-shader" type="x-shader/x-fragment">
+// <![CDATA[
+
+    // Look below at line 23 for realism.
+    
+    #ifdef GL_ES
+    precision mediump float;
+    #endif
+    
+    #define PI 3.14159265359
+    
+    uniform sampler2D u_image;
+    varying vec2 v_texCoord;
+    
+    uniform vec2 u_resolution;
+    uniform vec2 u_mouse;
+    uniform float u_mass;
+    uniform float u_time;
+    uniform float u_clickedTime;
+    
+    vec2 rotate(vec2 mt, vec2 st, float angle){
+        float cos = cos((angle + u_clickedTime) * PI); // try replacing * 1.0 with * PI
+        float sin = sin(angle * 0.0); // try removing the * 0.0
+        
+        // Uncomment these two lines for realism
+        //float cos = cos(angle) * (u_time * 0.3);
+        //float sin = sin(angle) * (u_time * 0.3);
+        
+        float nx = (cos * (st.x - mt.x)) + (sin * (st.y - mt.y)) + mt.x;
+        float ny = (cos * (st.y - mt.y)) - (sin * (st.x - mt.x)) + mt.y;
+        return vec2(nx, ny);
+    }
+    
+    void main() {
+        vec2 st = vec2(gl_FragCoord.x, u_resolution.y - gl_FragCoord.y)/u_resolution;
+        vec2 mt = vec2(u_mouse.x, u_resolution.y - u_mouse.y)/u_resolution;
+    
+        float dx = st.x - mt.x;
+        float dy = st.y - mt.y;
+    
+        float dist = sqrt(dx * dx + dy * dy);
+        float pull = u_mass / (dist * dist);
+        
+        vec3 color = vec3(0.0);
+        
+        vec2 r = rotate(mt,st,pull);
+        vec4 imgcolor = texture2D(u_image, r);
+        color = vec3(
+            (imgcolor.x - (pull * 0.25)),
+            (imgcolor.y - (pull * 0.25)), 
+            (imgcolor.z - (pull * 0.25))
+        );
+        
+    
+        gl_FragColor = vec4(color,1.);
+    }
+    // ]]>
+</script>
+<script id="2d-vertex-shader" type="x-shader/x-vertex">// <![CDATA[
+    attribute vec2 a_position;
+    attribute vec2 a_texCoord;
+    
+    varying vec2 v_texCoord;
+    void main() {
+        gl_Position = vec4(a_position, 0, 1);
+        v_texCoord = a_texCoord;
+    }
+    // ]]>
+</script>
+<script src="js/anim.js"></script>
+
 <!-- custom js -->
 <script src="js/script.js"></script>
 

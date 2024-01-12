@@ -1,3 +1,4 @@
+let navLinks = document.querySelectorAll(".navb .nav-link")
 let link1 = document.querySelector(".link1")
 let link2 = document.querySelector(".link2")
 let hemburger_open = document.querySelector(".hemburger-open")
@@ -16,6 +17,7 @@ function menu_close() {
     hemburger_close.style.display = "none";
 }
 
+
 let hrs = document.getElementById("hrs");
 let min = document.getElementById("min");
 
@@ -26,6 +28,16 @@ setInterval(() => {
     sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
 }, 1000)
 
+
+navLinks.forEach(link => {
+    link.addEventListener("click", function() {
+        navLinks.forEach(navLink => {
+            navLink.classList.remove("active");
+        });
+
+        link.classList.add("active");
+    });
+});
 // sorting of projects
 
 function sort_all() {
@@ -150,3 +162,5 @@ gsap.utils.toArray(".revealUp").forEach(function (elem) {
     }
   });
 });
+
+

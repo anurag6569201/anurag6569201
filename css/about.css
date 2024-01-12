@@ -1,11 +1,11 @@
 .bio{
-    padding: 0 7em;
+    padding: 0 3em 0 8em;
 }
 .bio #section2{
     display: flex;
 }
 .bio .bio-content{
-    background-color: var(--back);
+    background-color: var(--blacktheme);
     border-radius: 1em;
 }
 #profile{
@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: left;
-    background-color: var(--back);
+    background-color: var(--blacktheme);
     padding: 1em;
     border-radius: 1em;
 }
@@ -59,7 +59,7 @@
     font-size: 3.5em;
     list-style-type: none;
     gap: 1em;
-    background-color: var(--back);
+    background-color: var(--blacktheme);
     border-radius: .3em;
     margin-top: 5vh;
 }
@@ -69,18 +69,15 @@
 }
 /* news */
 #News{
-    padding-left: 8em;
-    padding-right: 8em;
     margin: 0;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 40px 45px black;
 }
 .news-row{
     backdrop-filter: blur(--blurness);
-    background-color: var(--back);
+    background-color: transparent;
     border-radius: 1em;
 }
 .news-heading{
