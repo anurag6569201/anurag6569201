@@ -1,5 +1,6 @@
 .bio{
     padding: 0 3em 0 8em;
+    overflow: hidden;
 }
 .bio #section2{
     display: flex;

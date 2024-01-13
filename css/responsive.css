@@ -7,7 +7,7 @@
     padding-left: calc(var(--bs-gutter-x) * .5);
 }
 .secondin-one{
-    padding: 0 3em 0 8em;
+    width: 100vw;
     background: var(--blacktheme);
     overflow-x: hidden;
     z-index: 20;

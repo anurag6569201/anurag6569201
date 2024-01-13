@@ -3,9 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 0px;
 }
+
 html,
 body {
     overflow-x: hidden;
@@ -16,10 +18,10 @@ body {
     font-size: 10px;
     width: 100%;
     background: var(--pic-theme);
-    background-repeat: no-repeat!important;
-    background-size: cover!important;
-    background-position-x: center!important;
-    background-attachment: fixed!important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position-x: center !important;
+    background-attachment: fixed !important;
 }
 
 body::-webkit-scrollbar {
@@ -33,8 +35,8 @@ body::-webkit-scrollbar {
     --yellow: rgb(255, 252, 82);
     --yellow_light: rgba(255, 252, 82, .2);
     --back: rgba(0, 0, 0, 1);
-    --blacktheme:black;
-    --pic-theme:linear-gradient(120deg, var(--blue), var(--yellow)), url(../images/hero_sup.png), url(../images/wave.svg);
+    --blacktheme: black;
+    --pic-theme: linear-gradient(120deg, var(--blue), var(--yellow)), url(../images/hero_sup.png), url(../images/wave.svg);
 }
 
 /* navbar styling */
@@ -97,10 +99,12 @@ nav .link2 a {
     border-radius: 2em;
     position: relative;
 }
+
 nav .link1 a.active,
-nav .link2 a.active{
+nav .link2 a.active {
     border: 1px solid white;
 }
+
 nav .link1 a:hover,
 nav .link2 a:hover {
     color: wheat;
@@ -156,12 +160,14 @@ nav .link2 a:hover {
     position: relative;
     overflow-x: hidden;
 }
-.hero-bio{
+
+.hero-bio {
     position: absolute;
     height: 110vh;
     width: 100vw;
     top: 0;
 }
+
 .section-subheading,
 .intro span {
     width: 10em;
@@ -197,11 +203,13 @@ nav .link2 a:hover {
     position: relative;
     height: 110vh;
 }
-.intro{
+
+.intro {
     position: absolute;
     right: 0;
     top: 0;
 }
+
 .blocks {
     position: absolute;
     width: 100%;
@@ -279,10 +287,12 @@ nav .link2 a:hover {
     border-radius: 12px;
     position: relative;
 }
-.news-content a{
+
+.news-content a {
     text-decoration: none;
     font-size: 1.4em;
 }
+
 .news-content li {
     padding-bottom: .1em;
     border-left: 1px solid #abaaed;
@@ -342,6 +352,7 @@ nav .link2 a:hover {
         font-size: 0.9rem;
     }
 }
+
 .intro {
     transform: translateX(100%);
     animation: animtext 1.5s forwards;
@@ -353,12 +364,14 @@ nav .link2 a:hover {
         transform: translateX(100%);
         opacity: 0;
     }
+
     60% {
         transform: translateX(-10%);
         opacity: 1;
     }
+
     100% {
         transform: translateX(0%);
-        opacity: 1; 
+        opacity: 1;
     }
 }
