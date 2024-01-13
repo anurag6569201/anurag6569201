@@ -251,12 +251,14 @@ function menu_open_mob() {
     hemburger_open_mob.style.display = "none";
     hemburger_close_mob.style.display = "block";
     console.log("menuopen")
+    mobilever.style.display = "block";
 }
 function menu_close_mob() {
     linkmobile.style.transform = "translateX(-100%)";
     hemburger_open_mob.style.display = "block";
     hemburger_close_mob.style.display = "none";
     console.log("menuclose")
+    mobilever.style.display = "none";
 }
 
 let hrs = document.getElementById("hrs");
