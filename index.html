@@ -108,12 +108,50 @@
             </div>
 
             <div class="link-time">
-                <span id="hrs"></span> <br>
-                <span id="min"></span> <br>
-                <span id="sec"></span>
+                <span style="display: block;" id="hrs"></span>
+                <span style="display: block;" id="min"></span> 
+                <span style="display: block;" id="sec"></span>
             </div>
 
         </nav>
+        <div class="link-btn link-btn-mob" style="position: fixed;bottom: 0;right: 0;margin: 10px;z-index: 10002;">
+            <img style="width: 3em;height: 3em;cursor: pointer;display: block;" src="images/burger-solid.svg" alt="" class="hemburger-open_mob" onclick="menu_open_mob()">
+            <img style="width: 3em;height: 3em;cursor: pointer;display: none;" src="images/xmark-solid.svg" alt="" class="hemburger-close_mob" onclick="menu_close_mob()">
+        </div>
+        <div class="toggle-btn toggle-btn-mob" style="z-index: 10002; position: fixed;top: 0;right: 0;margin: 10px;">
+            <input id="checkbox" type="checkbox" checked />
+            <label class="switch" for="checkbox" style="width: 3em;height: 3em;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="slider">
+                    <path
+                        d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z">
+                    </path>
+                </svg>
+            </label>
+        </div>
+        <div class="mobile-navbar" style="transition: .7s ease-out;">
+            <nav class="mobile-ver" style="transition: .7s ease-out; width: 100vw;height: 100vh;background: transparent;backdrop-filter: blur(30px);">
+                <div>
+                    <img style="width: 50px;height: 50px;border-radius: 50%;margin: 10px;position: absolute;top: 0;left: 0;" src="images/hero.jpg" alt="">
+                </div>
+        
+                <div class="linkmobile" id="linkmobile" style="display: flex;align-items: center;flex-direction: column;z-index: 10001;">
+                    <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link active" href="#section1">Home</a>
+                    <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section2">about</a>
+                    <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section3">News</a>
+                    <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section4">Techs</a>
+                    <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section5">Projects</a>
+                    <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section6">Contact</a>
+                </div>
+        
+                <div style="text-align: center;display: flex;align-items: center;justify-content: center;gap: .5em;position: absolute;top: 0;margin: auto;margin-top: 1em;">
+                    <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="hrs_mob"></span>
+                    <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;">:</span>
+                    <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="min_mob"></span>
+                    <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;">:</span>
+                    <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="sec_mob"></span>
+                </div>
+            </nav>
+        </div>
 
         <!-- navbar ends -->
         <header class="landing container-fluid" id="Home" style="position: relative;">
@@ -241,7 +279,7 @@
                     </div>
 
                 </div>
-            <span class="shadowhr" style="display: none; padding: 0;position: absolute;bottom: 0;height: 10px;background-color: black;box-shadow: 0 0 50px 50px black;width: 100vw;"></span>
+            <span class="shadowhr" style="padding: 0;position: absolute;bottom: 0;height: 10px;background-color: black;box-shadow: 0 0 50px 50px black;width: 100vw;"></span>
         </header>
         <!-- Hero section ends -->
 
@@ -608,8 +646,8 @@
                             </div>
 
                             <div class="contact-map">
-                                <div class="col-6 col-md-5 col-sm-12 col-lg-6 mb-3 contact-form">
-                                    <form action="" method="post">
+                                <div class="col-6 col-md-5 col-sm-12 col-lg-6 mb-3 contact-form" style="z-index: 1;">
+                                    <form action="" method="post" style="position: sticky;">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Name</label>
                                             <input type="text" class="form-control" id="name" name="name"
@@ -658,7 +696,7 @@
                 Madhya
                 Pradesh</span></li>
             </ul>
-            <div class="map" style="z-index: 100;">
+            <div class="map" style="z-index: 100; position: sticky;">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3637.6348182737665!2d80.765733!3d24.254548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDE1JzE2LjQiTiA4MMKwNDUnNTYuNiJF!5e0!3m2!1sen!2sin!4v1704286551931!5m2!1sen!2sin"
                     width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>

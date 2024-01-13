@@ -345,7 +345,7 @@
 }
 .contact-form{
     padding: 0 2em;
-    z-index: 1000;
+    /* z-index: 1000; */
 }
 form .form-label{
     background-color: transparent;

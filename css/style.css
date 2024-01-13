@@ -40,8 +40,29 @@ body::-webkit-scrollbar {
 }
 
 /* navbar styling */
+.mobile-navbar{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.mobile-navbar .mobile-ver{
+    transform: translateX(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.link-btn-mob{
+    display: none;
+}
+.toggle-btn-mob{
+    display: none;
+}
 
-nav {
+.navb {
     backdrop-filter: blur(var(--blurness));
     height: 100vh;
     width: 8em;
@@ -52,12 +73,10 @@ nav {
     align-items: center;
     flex-direction: column;
     gap: 1em;
-    overflow: hidden;
     display: block;
     z-index: 1000;
 }
-
-.logo {
+.navb .logo {
     padding-bottom: 1em;
     width: 100%;
     display: flex;
@@ -65,30 +84,34 @@ nav {
     justify-content: center;
 }
 
-.logo img {
+.navb .logo img {
     width: 5em;
     height: 5em;
     border-radius: 50%;
     margin-top: 1em;
 }
-
-.link1,
-.link2 {
+.navb .link1{
+    margin-top: .5em;
+}
+.navb .link2{
+    margin-top: 1em;
+}
+.navb .link1,
+.navb .link2 {
     display: flex;
     flex-direction: column;
-    padding: .1em;
-    gap: 2em;
+    gap: 1.5em;
     width: 100%;
     transition: .6s;
     transform: translateX(0%);
 }
 
-nav .link1 a,
-nav .link2 a {
-    padding: .5em;
+.navb .link1 a,
+.navb .link2 a {
+    padding: .2em;
     text-decoration: none;
     font-weight: 800;
-    background: linear-gradient(90deg, var(--yellow), var(--blue));
+    background: linear-gradient(90deg, var(--yellow), var(--main));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -100,47 +123,49 @@ nav .link2 a {
     position: relative;
 }
 
-nav .link1 a.active,
-nav .link2 a.active {
-    border: 1px solid white;
+.navb .link1 a.active,
+.navb .link2 a.active {
+    border: 1px solid #9cae4e;
 }
 
-nav .link1 a:hover,
-nav .link2 a:hover {
+.navb .link1 a:hover,
+.navb .link2 a:hover {
     color: wheat;
 }
 
-.link-btn {
+.navb .link-btn {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 1em;
 }
 
-.link-btn .hemburger-close,
-.link-btn .hemburger-open {
+.navb .link-btn .hemburger-close,
+.navb .link-btn .hemburger-open {
     width: 4em;
     height: 4em;
     cursor: pointer;
 }
 
-.hemburger-open {
+.navb .hemburger-open {
     display: none;
 }
 
-.hemburger-close {
+.navb .hemburger-close {
     display: block;
 }
 
-.link-time {
+.navb .link-time {
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
 }
 
-.link-time span {
+.navb .link-time span {
     font-size: 3em;
+    display: block;
     width: 100%;
     font-weight: 800;
     background: linear-gradient(90deg, var(--yellow), var(--blue));

@@ -126,8 +126,17 @@
     .secondin-one{
         padding: 0;
     }
-    nav {
+    .navb {
         display: none;
+    }
+    .mobile-navbar{
+        display: block;
+    }
+    .link-btn-mob{
+        display: block;
+    }
+    .toggle-btn-mob{
+        display: block;
     }
     .section-subheading, .intro span {
         background: linear-gradient(90deg,var(--main), var(--blue));
