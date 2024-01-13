@@ -1,23 +1,40 @@
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
     padding: 0;
 }
-.allin-one{
+
+.allin-one {
     overflow-x: hidden;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
 }
-.secondin-one{
+
+.secondin-one {
     width: 100vw;
     background: var(--blacktheme);
     overflow-x: hidden;
     z-index: 20;
 }
-.landing{
+
+.landing {
     z-index: 1;
 }
+
+#section6,
+#section5,
+#section4,
+#News {
+    padding: 0 3em 0 8em;
+}
+
 #Home,
-.bio{
-    overflow-y: hidden!important;
+.bio {
+    overflow-y: hidden !important;
 }
 
 @media (max-width:1000px) and (min-width:1100px) {
@@ -117,33 +134,49 @@
     .contact {
         font-size: 8px;
     }
-    .landing{
+
+    .landing {
         background-size: cover;
     }
 }
 
 @media (max-width:575px) {
-    .secondin-one{
+
+    #section6,
+    #section5,
+    #section4,
+    #News {
         padding: 0;
     }
+
+    .secondin-one {
+        padding: 0;
+    }
+
     .navb {
         display: none;
     }
-    .mobile-navbar{
+
+    .mobile-navbar {
         display: block;
     }
-    .link-btn-mob{
+
+    .link-btn-mob {
         display: block;
     }
-    .toggle-btn-mob{
+
+    .toggle-btn-mob {
         display: block;
     }
-    .section-subheading, .intro span {
-        background: linear-gradient(90deg,var(--main), var(--blue));
+
+    .section-subheading,
+    .intro span {
+        background: linear-gradient(90deg, var(--main), var(--blue));
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
     }
+
     .bio {
         padding: 0 2em;
     }
@@ -163,6 +196,7 @@
         right: 0;
         font-size: 6px;
     }
+
     #News {
         padding: 0 2em;
         font-size: 8px;
@@ -204,11 +238,13 @@
         padding: 0 0em;
         border-radius: 0;
     }
-    .section-heading{
+
+    .section-heading {
         border-radius: 0;
         background-color: transparent;
     }
-    .contact .row{
+
+    .contact .row {
         border-radius: 0;
     }
 
@@ -225,10 +261,12 @@
         left: 98.5vw;
         scale: .90;
     }
-    .network-icon{
+
+    .network-icon {
         padding: .5em;
     }
-    .landing{
+
+    .landing {
         background-size: cover;
         background-position-x: 60%;
     }
