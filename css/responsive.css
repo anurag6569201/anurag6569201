@@ -31,10 +31,8 @@
 #News {
     padding: 0 3em 0 8em;
 }
-
-#Home,
-.bio {
-    overflow-y: hidden !important;
+#Home{
+    overflow: hidden;
 }
 
 @media (max-width:1000px) and (min-width:1100px) {

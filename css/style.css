@@ -7,7 +7,16 @@
 ::-webkit-scrollbar {
     width: 0px;
 }
-
+:root {
+    --blurness: 10px;
+    --main: #414932;
+    --blue: rgba(56, 178, 176, .6);
+    --yellow: rgb(255, 252, 82);
+    --yellow_light: rgba(255, 252, 82, .2);
+    --back: rgba(0, 0, 0, 1);
+    --blacktheme: black;
+    --pic-theme: linear-gradient(120deg, var(--blue), var(--yellow)), url(../images/hero_sup.png), url(../images/wave.svg);
+}
 html,
 body {
     overflow-x: hidden;
@@ -28,16 +37,7 @@ body::-webkit-scrollbar {
     width: 0px;
 }
 
-:root {
-    --blurness: 10px;
-    --main: #414932;
-    --blue: rgba(56, 178, 176, .6);
-    --yellow: rgb(255, 252, 82);
-    --yellow_light: rgba(255, 252, 82, .2);
-    --back: rgba(0, 0, 0, 1);
-    --blacktheme: black;
-    --pic-theme: linear-gradient(120deg, var(--blue), var(--yellow)), url(../images/hero_sup.png), url(../images/wave.svg);
-}
+
 
 /* navbar styling */
 .mobile-navbar{

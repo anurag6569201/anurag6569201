@@ -156,7 +156,7 @@
         <!-- navbar ends -->
         <header class="landing container-fluid" id="Home" style="position: relative;">
             <!-- Hero section starts -->
-            <canvas id="glscreen" style="height: 220vh;"></canvas>
+            <canvas id="glscreen" style="min-height: 220vh;"></canvas>
             <div class="wrapper_all">
 
                 <div class="hero" id="section1">
@@ -284,8 +284,8 @@
         <!-- Hero section ends -->
 
         <div class="secondin-one">
-            <div style="display: none;" class="anim-blackhole">
-                <div id="blackhole"></div>
+            <div class="anim-blackhole" style="opacity: 0;">
+                <div class="blackhole" id="particles-js"></div>
             </div>
                     <!-- about section starts -->
                     <div class="container-fluid" id="News" style="margin-bottom: 5em;">
@@ -721,6 +721,7 @@
     crossorigin="anonymous"></script>
 
 <!-- gsap library js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 
@@ -798,8 +799,8 @@
     // ]]>
 </script>
 
-<script id="blackhole-anim" src="js/anim1.js"></script>
-<script id="universe-anim" src="js/anim.js"></script>
+<script id="universe-anim" async src="js/anim1.js"></script>
+<script id="universe-anim" async src="js/anim.js"></script>
 
 <!-- custom js -->
 <script src="js/script.js"></script>

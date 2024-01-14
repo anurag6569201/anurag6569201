@@ -11,7 +11,6 @@ let link1 = document.querySelector(".link1")
 let linkmobile = document.querySelector(".mobile-navbar .mobile-ver")
 let link2 = document.querySelector(".link2")
 
-document.addEventListener('DOMContentLoaded', () => {
    
 
     let themebtn = document.querySelector('.toggle-btn')
@@ -19,30 +18,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let universe = document.querySelector('#glscreen')
     
     let animblackhole = document.querySelector('.anim-blackhole')
-    let blackholee = document.querySelector('#blackhole')
+    let blackholee = document.querySelector('.blackhole')
     let bodycss = document.body
-    let blackholescript=document.querySelector("#blackhole-anim")
-    let universescript=document.querySelector("#universe-anim")
     
 
     themebtn.addEventListener('click', () => {
         if (themebtncheck.checked) {
             bodycss.background = "var(--pic-theme)";
             universe.style.display = "none";
-            animblackhole.style.display = "none";
-            blackholee.style.display = "none";
-            blackholescript.src = "";
-            universescript.src = "";
+            animblackhole.style.opacity = "0";
+            blackholee.style.opacity = "0";
         } else {
             bodycss.background = "transparent";
             universe.style.display = "block";
-            animblackhole.style.display = "block";
-            blackholee.style.display = "block";
-            blackholescript.src = "js/anim1.js";
-            universescript.src = "js/anim.js";
+            animblackhole.style.opacity = "1";
+            blackholee.style.opacity = "1";
         }
     });
-});
 
 function menu_open() {
     link1.style.transform = "translateX(0%)";
@@ -198,11 +190,11 @@ function scrollToElement(elementId) {
 // loader
 const loader = document.getElementById("loader");
 
-document.addEventListener('DOMContentLoaded', () => {
+window.onload = () => {
     setTimeout(() => {
         loader.style.display = "none";
     }, 20);
-});
+};
 
 // reviling
 gsap.registerPlugin(ScrollTrigger);
