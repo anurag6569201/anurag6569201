@@ -620,7 +620,7 @@
 
                             <div class="contact-map">
                                 <div class="col-6 col-md-5 col-sm-12 col-lg-6 mb-3 contact-form" style="z-index: 1;">
-                                    <form action="https://formsubmit.co/b323009@iiit-bh.ac.in" method="POST" style="position: sticky;">
+                                    <!-- <form method="POST" style="position: sticky;">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Name</label>
                                             <input type="text" class="form-control" id="name" name="name" required
@@ -637,8 +637,40 @@
                                                 placeholder="Your Message"></textarea>
                                         </div>
                                         <input type="hidden" name="_captcha" value="false">
+                                        
+                                    </form> -->
+                                    <form method="post" class="needs-validation" novalidate>
+                                        {% csrf_token %}
+                                        <div class="mb-3">
+                                            <label for="{{ form.name.id_for_label }}" class="form-label">Name</label><br>
+                                            {{ form.name }}
+                                            <div class="invalid-feedback">
+                                                {{ form.name.errors }}
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="{{ form.email.id_for_label }}" class="form-label">Email</label><br>
+                                            {{ form.email }}
+                                            <div class="invalid-feedback">
+                                                {{ form.email.errors }}
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="{{ form.content.id_for_label }}" class="form-label">Message</label><br>
+                                            {{ form.content }}
+                                            <div class="invalid-feedback">
+                                                {{ form.content.errors }}
+                                            </div>
+                                        </div>
                                         <button style="margin-top: 1em;" type="submit"><span>Submit</span></button>
-
+                                    </form>
+                                    <style>
+                                        #id_email,
+                                        #id_content,
+                                        #id_name{
+                                            width: 100%;
+                                        }
+                                    </style>
 
                                         <ul style="display: flex; justify-content: center; padding: 0%;gap: 2em;"
                                             class="contact-icons text-center py-3">
@@ -655,7 +687,6 @@
                                             <a href="https://www.linkedin.com/in/anurag-singh-b90439282"><i
                                                     class="fa-brands fa-linkedin-in"></i></a>
                                         </ul>
-                                    </form>
                                 </div>
 
                                 <div class="col-6 col-md-6 col-sm-12 col-lg-6 mb-3 contact-detail">

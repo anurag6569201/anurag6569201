@@ -28,6 +28,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["anu6569.onrender.com",'127.0.0.1','localhost']
 
+EMAIL_HOST = 'smtp-relay.brevo.com'
+EMAIL_HOST_USER = 'anurag6569201@gmail.com'
+EMAIL_HOST_PASSWORD = 'BG3KhIQHmgYZzbja'
+EMAIL_PORT = '587'
+
+# EMAIL_HOST_USER = 'b323009@iiit-bh.ac.in'
+# EMAIL_HOST_PASSWORD = 'SJD2vkI3B4Nn5j0g'
 
 # Application definition
 
