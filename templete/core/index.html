@@ -70,7 +70,6 @@
 
             <div class="link1" id="link1">
                 <a class="nav-link active" href="#section1">Home</a>
-                <a class="nav-link" href="#section2">about</a>
                 <a class="nav-link" href="#section3">News</a>
                 <a class="nav-link" href="#section4">Techs</a>
             </div>
@@ -621,22 +620,23 @@
 
                             <div class="contact-map">
                                 <div class="col-6 col-md-5 col-sm-12 col-lg-6 mb-3 contact-form" style="z-index: 1;">
-                                    <form action="" method="post" style="position: sticky;">
+                                    <form action="https://formsubmit.co/b323009@iiit-bh.ac.in" method="POST" style="position: sticky;">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Name</label>
-                                            <input type="text" class="form-control" id="name" name="name"
+                                            <input type="text" class="form-control" id="name" name="name" required
                                                 placeholder="Your Name">
                                         </div>
                                         <div class="mb-3">
                                             <label for="email" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="email" name="email"
+                                            <input type="email" class="form-control" id="email" name="email" required
                                                 placeholder="Your Email">
                                         </div>
                                         <div class="mb-3">
                                             <label for="message" class="form-label">Message</label>
-                                            <textarea class="form-control" id="message" name="msg" rows="4"
+                                            <textarea class="form-control" id="message" name="message" rows="4" required
                                                 placeholder="Your Message"></textarea>
                                         </div>
+                                        <input type="hidden" name="_captcha" value="false">
                                         <button style="margin-top: 1em;" type="submit"><span>Submit</span></button>
 
 
