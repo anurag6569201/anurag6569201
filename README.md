@@ -1,60 +1,81 @@
-# 👋 Hi, I'm Anurag Singh!
+<div align="center">
+  <img height="200" src="https://github.com/anurag6569201/anurag6569201/blob/main/gitback.png"  />
+</div>
 
-## 👀 About Me
-I am a passionate individual interested in Web Development, AI/ML, and IoT. Currently, I am focusing on enhancing my skills in the field of AI/ML.
+###
 
-## 🌱 What I'm Currently Learning
-- ![Django](https://img.icons8.com/color/48/django.png) 
-- ![Flask](https://img.icons8.com/nolan/64/flask.png) 
-- ![Python](https://img.icons8.com/color/48/python.png)
+<h1 align="center">👋 Hi, I'm Anurag Singh!</h1>
 
-## 💻 Web Technologies I Work With
-- ![HTML5](https://img.icons8.com/color/48/html-5--v1.png) 
-- ![CSS3](https://img.icons8.com/fluency/48/css3.png)
-- ![JavaScript](https://img.icons8.com/fluency/48/javascript.png)
-- ![Bootstrap](https://img.icons8.com/color/48/bootstrap--v2.png)
-- ![PHP](https://img.icons8.com/officel/48/php-logo.png)
-- ![MySQL](https://img.icons8.com/color/48/mysql-logo.png) 
+###
 
-## 😒 Programming Languages
-- ![C++](https://img.icons8.com/fluency/48/c-plus-plus-logo.png) 
-- ![C](https://img.icons8.com/plasticine/48/c-programming.png) 
-- ![Python](https://img.icons8.com/color/48/python.png) 
+<h4 align="center">I am a passionate individual interested in Web Development, AI/ML, and IoT. Currently, I am focusing on enhancing my skills in the field of AI/ML.</h4>
 
-## 📊 Analysis
-### Longest Streaks
-- **Web Development**: 25 days
-- **AI/ML**: 15 days
-- **IoT**: 10 days
+###
 
-### Languages Used
-1. Python
-2. JavaScript
-3. HTML/CSS
-4. PHP
-5. C/C++
-6. SQL
+<div>
 
-### Overview
-I have a strong foundation in various web technologies and programming languages, with a keen interest in AI/ML and IoT. My longest streaks indicate consistent dedication to learning and improving in these areas. Feel free to reach out to collaborate on exciting web development projects!
 
-## 🚀 GitHub Stats
-[![Anurag's GitHub stats](https://github.com/anurag6569201/anurag6569201/blob/main/static/assets/images/backgithub.svg)
 
-## 🌟 Featured Projects
-- Project 1: [Project Name](link)
-  Description: Brief description of the project.
-- Project 2: [Project Name](link)
-  Description: Brief description of the project.
+</div>
 
-## 🏆 GitHub Trophies
-[![trophy](https://github-profile-trophy.vercel.app/?username=anurag6569)](https://github.com/ryo-ma/github-profile-trophy)
+<div align="left">
+  <img src="https://github-readme-stats.vercel.app/api?username=anurag6569201&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=anurag6569201&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
+</div>
 
-## 📝 Recent Blog Posts
-1. [Title of Blog Post](link)
-   Description: Brief description of the blog post.
-2. [Title of Blog Post](link)
-   Description: Brief description of the blog post.
+###
 
-## 💞️ Let's Collaborate
-I'm open to collaborating on web development projects. You can reach out to me on [LinkedIn](https://www.linkedin.com/in/anurag6569/).
+<img align="right" height="150" src="https://i.imgflip.com/65efzo.gif"  />
+
+###
+
+
+
+###
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="html5 logo"  />
+  <img width="20" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo"  />
+  <img width="20" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
+  <img width="20" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="30" alt="bootstrap logo"  />
+  <img width="20" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="30" alt="php logo"  />
+  <img width="20" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="30" alt="mysql logo"  />
+  <img width="20" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" height="30" alt="django logo"  />
+  <img width="20" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" height="30" alt="c logo"  />
+  <img width="20" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="30" alt="cplusplus logo"  />
+  <img width="20" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="python logo"  />
+  <img width="20" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="30" alt="figma logo"  />
+  <img width="20" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="30" alt="docker logo"  />
+</div><br>
+<div align="left">
+<a href="https://anu6569.onrender.com/" style="text-decoration: none;">
+    <img src="https://anu6569.onrender.com/static/assets/images/hero.jpg" height="35" width="35" alt="Profile" style="float:left; margin-right:10px;">
+    <h2 style="margin:0;">Portfolio</h2>
+</a>
+<br>
+  <a href="https://instagram.com/singh.anu404?igshid=MzRlODBiNWFlZA=="><img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"/></a>
+  <a href="https://discord.com/users/anurag6569"><img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord logo"  /></a>
+<a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTJnsjzfmgQrCZnjXXFmDmzXNKlgJDpdPNlGlwnFQpfSVVQPnDVTCxpqfFrkQXNQCJpSwL"><img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"/></a>
+<a href="https://www.linkedin.com/in/anurag-singh-b90439282"><img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"/></a>
+
+<br>
+</div>
+
+###
+
+<br clear="both">
+
+<img src="https://raw.githubusercontent.com/anurag6569201/anurag6569201/output/snake.svg" alt="Snake animation" />
+
+###
+
