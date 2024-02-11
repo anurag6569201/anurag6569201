@@ -39,7 +39,7 @@ I am a passionate individual interested in Web Development, AI/ML, and IoT. Curr
 I have a strong foundation in various web technologies and programming languages, with a keen interest in AI/ML and IoT. My longest streaks indicate consistent dedication to learning and improving in these areas. Feel free to reach out to collaborate on exciting web development projects!
 
 ## 🚀 GitHub Stats
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anurag6569)](https://github.com/anuraghazra/github-readme-stats)
+[![Anurag's GitHub stats](https://github.com/anurag6569201/anurag6569201/blob/main/static/assets/images/backgithub.svg)
 
 ## 🌟 Featured Projects
 - Project 1: [Project Name](link)
