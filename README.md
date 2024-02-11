@@ -5,6 +5,7 @@
 ###
 
 <h1 align="center">👋 Hi, I'm Anurag Singh!</h1>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=anurag6569201&label=Code%20views&color=a538ff&style=plastic" alt="anurag6569201" /> </p>
 
 ###
 
@@ -18,14 +19,20 @@
 
 </div>
 
-<div align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=anurag6569201&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=anurag6569201&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
+<div align="center">
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=anurag6569201&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="170" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=anurag6569201&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="170" alt="languages graph"  />
+</div>
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=anurag6569201&locale=en&mode=daily&theme=dark&hide_border=false&border_radius=5&order=3" height="170" alt="streak graph"  />
+</div>
 </div>
 
 ###
 
-<img align="right" height="150" src="https://i.imgflip.com/65efzo.gif"  />
+<img align="right" height="150" src="https://anu6569.onrender.com/static/assets/images/R-1--unscreen.gif"  />
 
 ###
 
@@ -60,8 +67,8 @@
 <div align="left">
 <a href="https://anu6569.onrender.com/" style="text-decoration: none;">
     <img src="https://anu6569.onrender.com/static/assets/images/hero.jpg" height="35" width="35" alt="Profile" style="float:left; margin-right:10px;">
-    <h2 style="margin:0;">Portfolio</h2>
 </a>
+<br>
 <br>
   <a href="https://instagram.com/singh.anu404?igshid=MzRlODBiNWFlZA=="><img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"/></a>
   <a href="https://discord.com/users/anurag6569"><img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord logo"  /></a>
@@ -71,7 +78,6 @@
 <br>
 </div>
 
-###
 
 <br clear="both">
 
