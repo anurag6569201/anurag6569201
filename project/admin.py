@@ -1,8 +1,9 @@
 from django.contrib import admin
-from .models import HomeStats,Biography,TimeLine,TechStacks,AreaInterest
+from .models import HomeStats,Biography,TimeLine,TechStack,AreaInterest,TechLang
 
 admin.site.register(HomeStats)
 admin.site.register(AreaInterest)
 admin.site.register(Biography)
 admin.site.register(TimeLine)
-admin.site.register(TechStacks)
+admin.site.register(TechStack)
+admin.site.register(TechLang)

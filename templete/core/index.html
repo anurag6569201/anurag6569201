@@ -302,23 +302,21 @@
                             <div class="topic-content row row-cols-3">
 
                                 <!-- Web Stacks -->
+                                {% for techs in techstack %}
                                 <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
                                     <div class="card h-100">
-                                        <div class="card-title text-center revealUp">Web Stacks</div>
+                                        <div class="card-title text-center revealUp">{{ techs.description }}</div>
                                         <div class="card-body revealUp">
-                                            <span class="icon"><i class="devicon-html5-plain"></i></span>
-                                            <span class="icon"><i class="devicon-css3-plain"></i></span>
-                                            <span class="icon"><i class="devicon-javascript-plain"></i></span>
-                                            <span class="icon"><i class="devicon-php-plain"></i></span>
-                                            <span class="icon"><i class="devicon-mysql-plain"></i></span>
-                                            <span class="icon"><i class="devicon-django-plain"></i></span>
-                                            <span class="icon"><i class="devicon-bootstrap-plain"></i></span>
+                                            {% for tlang in techs.techlang.all %}
+                                            <span class="icon"><i class="{{ tlang.language }}"></i></span>
+                                            {% endfor %}
                                         </div>
                                     </div>
                                 </div>
+                                {% endfor %}
 
                                 <!-- Coding Languages -->
-                                <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
+                                <!-- <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
                                     <div class="card h-100">
                                         <div class="card-title text-center revealUp">Coding Languages</div>
                                         <div class="card-body revealUp">
@@ -327,10 +325,10 @@
                                             <span class="icon"><i class="devicon-cplusplus-plain"></i></span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <!-- Designing -->
-                                <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
+                                <!-- <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
                                     <div class="card h-100">
                                         <div class="card-title text-center revealUp">Designing</div>
                                         <div class="card-body revealUp">
@@ -340,7 +338,7 @@
                                             <span class="icon"><i class="devicon-figma-plain"></i></span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
                         </section>

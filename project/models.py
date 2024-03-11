@@ -22,6 +22,10 @@ class TimeLine(models.Model):
     contentEnd=models.CharField(max_length=200)
     readContentURL=models.CharField(max_length=200)
 
-class TechStacks(models.Model):
-    TechDescription=models.CharField(max_length=200)
-    TechsClass=models.CharField( max_length=200)
+
+class TechStack(models.Model):
+    description = models.CharField(max_length=200)
+
+class TechLang(models.Model): 
+    language = models.CharField(max_length=100)
+    techstack = models.ForeignKey(TechStack, on_delete=models.CASCADE, related_name='techlang')
