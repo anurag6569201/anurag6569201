@@ -20,12 +20,13 @@ from django.conf.urls.static import static
 from django.urls import path,include
 
 from portfolio import views
+
 app_name="portfolio"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index,name="index"),
     path('project/',include('project.urls')),
-    path('time/',include('timeline.urls')),
 ]
 
 if settings.DEBUG:

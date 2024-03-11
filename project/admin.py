@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import HomeStats,Biography,TimeLine,TechStacks,AreaInterest
 
-# Register your models here.
+admin.site.register(HomeStats)
+admin.site.register(AreaInterest)
+admin.site.register(Biography)
+admin.site.register(TimeLine)
+admin.site.register(TechStacks)

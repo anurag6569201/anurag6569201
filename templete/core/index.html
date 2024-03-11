@@ -136,25 +136,27 @@
 
                     <div class="container blocks-contain">
                         <div class="row col-12 blocks">
+                            {% for state in homestat %}
                             <div class="col-4 col-md-4 col-sm-4 col-lg-3">
                                 <div class="custom-block">
-                                    <span>20+</span>
+                                    <span>{{state.projects}}</span>
                                     <div>Projects</div>
                                 </div>
                                 <div class="custom-block">
-                                    <span>1+ year</span>
+                                    <span>{{state.experience}}+ year</span>
                                     <div>Experience</div>
                                 </div>
                             </div>
                             <div class="col-4 col-md-4 col-sm-4 col-lg-3">
                                 <div class="custom-block">
-                                    <span>5+</span>
+                                    <span>{{state.clients}}+</span>
                                     <div>Clients</div>
                                 </div>
                                 <div class="custom-block">
-                                    <p>Web Developer</p>
+                                    <p>{{state.field}}</p>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="hero-bio">
@@ -163,10 +165,9 @@
                             <div class="col-md-12">
                                 <div class="section-subheading">Interests</div>
                                 <ul class="ul-interests">
-                                    <li>Web Development</li>
-                                    <li>Problem Solving and Innovation</li>
-                                    <li>Electrical Engineering</li>
-                                    <li>AI / ML</li>
+                                    {% for int in intrest %}
+                                    <li>{{ int.content }}</li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>
@@ -243,7 +244,10 @@
                                             <p class="revealUp" style="font-size: 2em;"><i
                                                     class="fas fa-download pr-1 fa-fw"></i>
                                                 Download
-                                                my <a href="images/media/anuCV.pdf" target="_blank">résumé</a>.</p>
+                                                my
+                                                {% for resu in biography %} 
+                                                <a href="{{ resu.resume.url }}" target="_blank">résumé</a>.</p>
+                                                {% endfor %}
                                         </div>
                                     </div>
                                 </div>
@@ -271,31 +275,14 @@
                                 <div class="container">
                                     <div class="wrapper">
                                         <ul class="sessions revealUp">
+                                            {% for line in timeline %}
                                             <li>
-                                                <div class="time">Dec 2023</div>
-                                                <p>Frontend Developer at College <a
-                                                        href="https://botspark2k24.vercel.app/">Robofest</a>
-                                                    organized by the Tars Society website.</p>
+                                                <div class="time">{{line.dateAndTime}}</div>
+                                                <p>{{line.contentStart}}<a
+                                                        href="{{ line.readContentURL }}">{{ line.contentMid }}</a>
+                                                    {{ line.contentEnd }}</p>
                                             </li>
-                                            <li>
-                                                <div class="time">Nov 2023</div>
-                                                <p>Worked with <a
-                                                        href="https://drive.google.com/file/d/1sSTPEnRksdacbLtJYSfNKXwlTnRdFNhY/view?usp=drive_link">Google
-                                                        Cloud Computing</a> for a month.</p>
-                                            </li>
-                                            <li>
-                                                <div class="time">Oct 2023</div>
-                                                <p>Finalist in Hackathon of<a
-                                                        href="https://drive.google.com/file/d/1lYfBHPfSqjKqaFOr3S71yVABk_6pgH3r/view?usp=sharing">D3
-                                                        Fest</a> at IIIT Bhubaneswar.</p>
-                                            </li>
-                                            <li>
-                                                <div class="time">Sep 2023</div>
-                                                <p>Joined <a href="https://www.iiit-bh.ac.in/">IIIT Bhubaneswar</a> for
-                                                    a degree
-                                                    in
-                                                    Electrical Engineering.</p>
-                                            </li>
+                                            {% endfor %}
                                         </ul>
                                     </div>
                                 </div>
