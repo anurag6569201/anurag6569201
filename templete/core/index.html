@@ -258,8 +258,8 @@
                             <div class="section-heading text-center">
                                 <h1 class="mb-0 news-heading revealUp">Timeline</h1>
                             </div>
-                            <div class="news-content">
-                                <div class="container">
+                            <div class="news-content" style="padding: 0;">
+                                <div class="container" style="padding: 0;">
                                     <div class="wrapper">
                                         <ul class="sessions revealUp">
                                             {% for line in timeline %}
@@ -599,7 +599,7 @@
                                         }
                                     </style>
 
-                                        <ul style="display: flex; justify-content: center; padding: 0%;gap: 2em;"
+                                        <ul style="display: flex; justify-content: space-around; padding: 0%;"
                                             class="contact-icons text-center py-3">
                                                 {% for cont in contact %}
                                                     <a href="{{cont.contact_href}}" target="{{cont.target}}">
