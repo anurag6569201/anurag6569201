@@ -58,9 +58,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-size: 3.5em;
+    font-size: 3em;
     list-style-type: none;
-    gap: 1em;
     background-color: var(--blacktheme);
     border-radius: .3em;
     margin-top: 5vh;
