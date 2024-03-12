@@ -29,3 +29,8 @@ class TechStack(models.Model):
 class TechLang(models.Model): 
     language = models.CharField(max_length=100)
     techstack = models.ForeignKey(TechStack, on_delete=models.CASCADE, related_name='techlang')
+
+class Contact(models.Model):
+    contact_href=models.CharField(max_length=100)
+    contactIcon_class=models.CharField(max_length=100)
+    target=models.CharField(max_length=100)

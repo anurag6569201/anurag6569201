@@ -193,26 +193,13 @@
                                 </div>
                             </div>
                             <ul class="network-icon revealUp" aria-hidden="true">
+                                {% for cont in contact %}
                                 <li>
-                                    <a href="/#contact" aria-label="envelope">
-                                        <i class="fas fa-envelope big-icon"></i>
+                                    <a href="{{cont.contact_href}}" target="{{cont.target}}">
+                                        <i class="{{cont.contactIcon_class}}"></i>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="https://github.com/anurag6569201" target="_blank" rel="noopener"
-                                        aria-label="github">
-                                        <i class="fab fa-github big-icon"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/anurag6569/" target="_blank" rel="noopener"
-                                        aria-label="linkedin">
-                                        <i class="fab fa-linkedin big-icon"></i>
-                                    </a>
-                                </li>
-                                <li><span><a href="mailto:b323009@iiit-bh.ac.in"><i
-                                                class="fa-regular fa-envelope"></i></a></span></li>
-                                <li><span><a href="tel:8989591496"><i class="fa-solid fa-phone"></i></a></span></li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <section id="about" class="col-lg-7 col-md-7">
@@ -314,32 +301,6 @@
                                     </div>
                                 </div>
                                 {% endfor %}
-
-                                <!-- Coding Languages -->
-                                <!-- <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
-                                    <div class="card h-100">
-                                        <div class="card-title text-center revealUp">Coding Languages</div>
-                                        <div class="card-body revealUp">
-                                            <span class="icon"><i class="devicon-python-plain"></i></span>
-                                            <span class="icon"><i class="devicon-c-plain"></i></span>
-                                            <span class="icon"><i class="devicon-cplusplus-plain"></i></span>
-                                        </div>
-                                    </div>
-                                </div> -->
-
-                                <!-- Designing -->
-                                <!-- <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
-                                    <div class="card h-100">
-                                        <div class="card-title text-center revealUp">Designing</div>
-                                        <div class="card-body revealUp">
-                                            <span class="icon"><i class="devicon-vscode-plain"></i></span>
-                                            <span class="icon"><i class="devicon-git-plain"></i></span>
-                                            <span class="icon"><i class="devicon-github-original"></i></span>
-                                            <span class="icon"><i class="devicon-figma-plain"></i></span>
-                                        </div>
-                                    </div>
-                                </div> -->
-
                             </div>
                         </section>
 

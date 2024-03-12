@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
-from project.models import HomeStats,Biography,TimeLine,TechStack,AreaInterest
+from project.models import HomeStats,Biography,TimeLine,TechStack,AreaInterest,Contact
 
 
 def index(request):
@@ -11,6 +11,7 @@ def index(request):
     timeline = TimeLine.objects.all().order_by('-dateAndTime')
     techstack = TechStack.objects.all()
     intrest=AreaInterest.objects.all()
+    contcat=Contact.objects.all()
     if request.method == "POST":
         form = ContactForm(request.POST)
         
@@ -37,5 +38,6 @@ def index(request):
         'timeline': timeline,
         'intrest':intrest,
         'techstack': techstack,
+        'contact': contcat,
     }
     return render(request, 'core/index.html',context)
