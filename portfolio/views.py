@@ -13,8 +13,8 @@ def index(request):
     intrest=AreaInterest.objects.all()
     contcat=Contact.objects.all()
     prj_lang=projectLanguage.objects.all()
-    prj_gen=ProjectsGenere.objects.all()
-    prj_mod=ProjectsMod.objects.all()
+    prj_gen=ProjectsGenere.objects.all().order_by("-id")
+    prj_mod=ProjectsMod.objects.all().order_by("-orderId")
     if request.method == "POST":
         form = ContactForm(request.POST)
         
