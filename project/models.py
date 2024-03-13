@@ -34,3 +34,21 @@ class Contact(models.Model):
     contact_href=models.CharField(max_length=100)
     contactIcon_class=models.CharField(max_length=100)
     target=models.CharField(max_length=100)
+
+class ProjectsMod(models.Model):
+    webLink=models.CharField(max_length=100)
+    projectImage = models.ImageField(upload_to='Projects/',null=True, blank=True,default="projects/default_project.jpg")
+    projectLogo= models.ImageField(upload_to='ProjectsLogo/',null=True, blank=True,default="projectsLogo/default_project_Logo.jpg")
+    projectName=models.CharField(max_length=100)
+    projectGit=models.CharField(max_length=100)
+    projectAbout=models.CharField(max_length=200)
+
+class projectLanguage(models.Model):
+    language=models.CharField(max_length=100)
+    projectTech=models.ManyToManyField(ProjectsMod, related_name='projectlang')
+
+class ProjectsGenere(models.Model):
+    genereOnclick=models.CharField(max_length=100)
+    genereId=models.CharField(max_length=100)
+    genereName=models.CharField(max_length=100)
+    prjGen=models.ManyToManyField(ProjectsMod, related_name='prjGen')

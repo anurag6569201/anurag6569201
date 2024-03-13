@@ -311,246 +311,47 @@
                             <div class="col-12 text-center prj-heading">
                                 <h1 class="project-header">Projects</h1>
                                 <div class="project-sorting">
-                                    <button id="sort-all" onclick="sort_all()" class="sort-btn active"><span>Show
-                                            All</span></button>
-                                    <button id="sort-web" onclick="sort_web()" class="sort-btn"><span>Web
-                                            Dev</span></button>
-                                    <button id="sort-game" onclick="sort_game()"
-                                        class="sort-btn"><span>Games</span></button>
-                                    <button id="sort-aiml" onclick="sort_aiml()"
-                                        class="sort-btn"><span>AI/Ml</span></button>
-                                    <button id="sort-others" onclick="sort_others()"
-                                        class="sort-btn"><span>Others</span></button>
+                                    {% for pg in projectgenre %}
+                                    <button id="{{pg.genereId}}" onclick="{{pg.genereOnclick}}" class="sort-btn active"><span>{{pg.genereName}}</span></button>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
 
                         <section class="projects">
                             <div class="row projects-row col-12 col-md-12" id="projects-container" style="margin: 0;">
-                                <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
+                                {% for prj in prj_mod %}
+                                <div class="g-3 col-lg-4 col-md-6" data-category="{{ prj.prjGen.genereName }}">
                                     <div class="card">
 
                                         <a class="preview-project" target="_blank"
-                                            href="https://botspark2k24.vercel.app/">
-                                            <div class="lesgo"></div><img src="{% static 'assets/images/media/botspark.jpg' %}"
+                                            href="{{prj.webLink}}">
+                                            <div class="lesgo"></div><img src="{{prj.projectImage.url}}"
                                                 class="card-img-top" alt="...">
                                         </a>
                                         <div class="card-body">
-                                            <h5 class="card-title"><img src="{% static 'assets/images/media/bots-logo.png' %}" alt=""
-                                                    class="project-logo">Botspark
+                                            <h5 class="card-title"><img src="{{prj.projectLogo.url}}" alt=""
+                                                    class="project-logo">{{prj.projectName}}
                                                 <a target="_blank"
-                                                    href="https://github.com/anurag6569201/botspark2k23_frontend.git"><i
+                                                    href="{{prj.projectGit}}"><i
                                                         class="fa-brands fa-github"></i></a>
-                                                <a target="_blank" href="https://botspark2k24.vercel.app/"><i
+                                                <a target="_blank" href="{{prj.webLink}}"><i
                                                         class="fa-solid fa-share-from-square"></i></a>
                                             </h5>
                                             <p class="card-text">
                                             <ul>
-                                                <li>Developed a dynamic website for the Tars Society at IIIT
-                                                    Bhubaneswar,
-                                                    focusing on frontend development.</li>
+                                                <li>{{ prj.projectAbout }}</li>
                                                 <span class="techs">
-                                                    <button class="tech-button">HTML</button>
-                                                    <button class="tech-button">CSS</button>
-                                                    <button class="tech-button">JavaScript</button>
+                                                    {% for prjbtn in prj.projectlang.all %}
+                                                    <button class="tech-button">{{prjbtn.language}}</button>
+                                                    {% endfor %}
                                                 </span>
                                             </ul>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
-                                    <div class="card">
-                                        <div class="lesgo"></div>
-                                        <a class="preview-project" target="_blank"
-                                            href="https://depression-sathi.000webhostapp.com/">
-                                            <div class="lesgo"></div><img src="{% static 'assets/images/media/depression.jpg' %}"
-                                                class="card-img-top" alt="...">
-                                        </a>
-                                        <div class="card-body">
-                                            <h5 class="card-title"><img src="{% static 'assets/images/media/deps-logo.png' %}" alt=""
-                                                    class="project-logo">Depression-sathi
-                                                <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
-                                                <a target="_blank" href="https://depression-sathi.000webhostapp.com/"><i
-                                                        class="fa-solid fa-share-from-square"></i></a>
-                                            </h5>
-                                            <p class="card-text">
-                                            <ul>
-                                                <li>Created a platform facilitating interaction between doctors and
-                                                    users for
-                                                    healing through chat and chatbots.</li>
-                                                <span class="techs">
-                                                    <button class="tech-button">HTML</button>
-                                                    <button class="tech-button">CSS</button>
-                                                    <button class="tech-button">JavaScript</button>
-                                                    <button class="tech-button">Php</button>
-                                                    <button class="tech-button">MySQL</button>
-                                                    <button class="tech-button">Bootstrap</button>
-                                                </span>
-                                            </ul>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
-                                    <div class="card">
-                                        <div class="lesgo"></div>
-                                        <a class="preview-project" target="_blank" href="https://greenplog.vercel.app/">
-                                            <div class="lesgo"></div><img src="{% static 'assets/images/media/greenplog.jpg' %}"
-                                                class="card-img-top" alt="...">
-                                        </a>
-                                        <div class="card-body">
-                                            <h5 class="card-title"><img src="{% static 'assets/images/media/greeb-logo.png' %}" alt=""
-                                                    class="project-logo">GreenPlog
-                                                <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
-                                                <a target="_blank" href="https://greenplog.vercel.app/"><i
-                                                        class="fa-solid fa-share-from-square"></i></a>
-                                            </h5>
-                                            <p class="card-text">
-                                            <ul>
-                                                <li>Designed an interactive web app where users can locate garbage,
-                                                    engage in
-                                                    jogging, and earn rewards.</li>
-                                                <span class="techs">
-                                                    <button class="tech-button">HTML</button>
-                                                    <button class="tech-button">CSS</button>
-                                                    <button class="tech-button">JavaScript</button>
-                                                    <button class="tech-button">Python</button>
-                                                    <button class="tech-button">Django</button>
-                                                    <button class="tech-button">Bootstrap</button>
-                                                </span>
-                                            </ul>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
-                                    <div class="card">
-                                        <div class="lesgo"></div>
-                                        <a class="preview-project" target="_blank"
-                                            href="http://gutargu.000webhostapp.com/">
-                                            <div class="lesgo"></div><img src="{% static 'assets/images/media/gutargu.jpg' %}"
-                                                class="card-img-top" alt="...">
-                                        </a>
-                                        <div class="card-body">
-                                            <h5 class="card-title"><img src="{% static 'assets/images/media/gutar-logo.png' %}" alt=""
-                                                    class="project-logo">Gutar-Gu
-                                                <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
-                                                <a target="_blank" href="http://gutargu.000webhostapp.com/"><i
-                                                        class="fa-solid fa-share-from-square"></i></a>
-                                            </h5>
-                                            <p class="card-text">
-                                            <ul>
-                                                <li>Developed a real-time chatting web app for friends to connect and
-                                                    communicate seamlessly.</li>
-                                                <span class="techs">
-                                                    <button class="tech-button">HTML</button>
-                                                    <button class="tech-button">CSS</button>
-                                                    <button class="tech-button">JavaScript</button>
-                                                    <button class="tech-button">Php</button>
-                                                    <button class="tech-button">MySQL</button>
-                                                </span>
-                                            </ul>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="g-3 col-lg-4 col-md-6" data-category="Web dev">
-                                    <div class="card">
-                                        <div class="lesgo"></div>
-                                        <a class="preview-project" target="_blank" href="https://zencare.vercel.app/">
-                                            <div class="lesgo"></div><img src="{% static 'assets/images/media/zencare.jpg' %}"
-                                                class="card-img-top" alt="...">
-                                        </a>
-                                        <div class="card-body">
-                                            <h5 class="card-title"><img src="{% static 'assets/images/media/zen-logo.png' %}" alt=""
-                                                    class="project-logo">ZenCare-Hub
-                                                <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
-                                                <a target="_blank" href="https://zencare.vercel.app/"><i
-                                                        class="fa-solid fa-share-from-square"></i></a>
-                                            </h5>
-                                            <p class="card-text">
-                                            <ul>
-                                                <li>Designed a web app for hospitals to predict trending diseases using
-                                                    AI/ML
-                                                    based on retrieved data.</li>
-                                                <span class="techs">
-                                                    <button class="tech-button">HTML</button>
-                                                    <button class="tech-button">CSS</button>
-                                                    <button class="tech-button">JavaScript</button>
-                                                    <button class="tech-button">Python</button>
-                                                    <button class="tech-button">Django</button>
-                                                    <button class="tech-button">Bootstrap</button>
-                                                    <button class="tech-button">Beautiful-Soup</button>
-                                                </span>
-                                            </ul>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="g-3 col-lg-4 col-md-6" data-category="Games">
-                                    <div class="card">
-                                        <div class="lesgo"></div>
-                                        <a class="preview-project" target="_blank" href="https://snakeat.vercel.app/">
-                                            <div class="lesgo"></div><img src="{% static 'assets/images/media/snake.jpg' %}"
-                                                class="card-img-top" alt="...">
-                                        </a>
-                                        <div class="card-body">
-                                            <h5 class="card-title"><img src="{% static 'assets/images/media/snake-logo.png' %}" alt=""
-                                                    class="project-logo">Snake-eat
-                                                <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
-                                                <a target="_blank" href="https://snakeat.vercel.app/"><i
-                                                        class="fa-solid fa-share-from-square"></i></a>
-                                            </h5>
-                                            <p class="card-text">
-                                            <ul>
-                                                <li>Created a classic snake game with validations, boundaries, and
-                                                    interactive
-                                                    features.</li>
-                                                <span class="techs">
-                                                    <button class="tech-button">HTML</button>
-                                                    <button class="tech-button">CSS</button>
-                                                    <button class="tech-button">JavaScript</button>
-                                                </span>
-                                            </ul>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="g-3 col-lg-4 col-md-6" data-category="Games">
-                                    <div class="card">
-                                        <div class="lesgo"></div>
-                                        <a class="preview-project" target="_blank"
-                                            href="https://rockpaper6569.vercel.app/">
-                                            <div class="lesgo"></div><img src="{% static 'assets/images/media/rockpaper.jpg' %}"
-                                                class="card-img-top" alt="...">
-                                        </a>
-                                        <div class="card-body">
-                                            <h5 class="card-title"><img src="{% static 'assets/images/media/rockpaperlogo.png' %}" alt=""
-                                                    class="project-logo">rockpaper
-                                                <a target="_blank"
-                                                    href="https://github.com/anurag6569201/rockpaper.git"><i
-                                                        class="fa-brands fa-github"></i></a>
-                                                <a target="_blank" href="https://rockpaper6569.vercel.app/"><i
-                                                        class="fa-solid fa-share-from-square"></i></a>
-                                            </h5>
-                                            <p class="card-text">
-                                            <ul>
-                                                <li>Engage in the classic hand game against the CPU with a modern twist
-                                                    After 5
-                                                    rounds, view a detailed summary showcasing the outcome of each
-                                                    match.</li>
-                                                <span class="techs">
-                                                    <button class="tech-button">HTML</button>
-                                                    <button class="tech-button">CSS</button>
-                                                    <button class="tech-button">JavaScript</button>
-                                                    <button class="tech-button">Bootstrap</button>
-                                                </span>
-                                            </ul>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                {% endfor %}
                             </div>
                             <div id="pagination-container"></div>
                         </section>
