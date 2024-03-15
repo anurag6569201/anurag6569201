@@ -345,7 +345,7 @@
 }
 .contact-form{
     padding: 0 2em;
-    /* z-index: 1000; */
+    z-index: 1000;
 }
 form .form-label{
     background-color: transparent;
@@ -378,6 +378,7 @@ form button:hover{
 }
 .contact-detail{
     padding: 0 2em;
+    z-index: 1000;
 }
 #section5 ul {
     list-style-type: none;

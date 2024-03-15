@@ -1,4 +1,4 @@
-let shadowhr = document.querySelector('.shadowhr')
+let shadowhr = document.querySelector(".shadowhr")
 let hemburger_open = document.querySelector(".hemburger-open")
 let hemburger_close = document.querySelector(".hemburger-close")
 let navLinks = document.querySelectorAll(".navb .nav-link")
@@ -28,11 +28,13 @@ let link2 = document.querySelector(".link2")
             universe.style.display = "none";
             animblackhole.style.opacity = "0";
             blackholee.style.opacity = "0";
-        } else {
+
             bodycss.background = "transparent";
             universe.style.display = "block";
             animblackhole.style.opacity = "1";
             blackholee.style.opacity = "1";
+        } else {
+            
         }
     });
 

@@ -399,40 +399,35 @@
                                             width: 100%;
                                         }
                                     </style>
-
-                                        <ul style="display: flex; justify-content: space-around; padding: 0%;"
-                                            class="contact-icons text-center py-3">
-                                                {% for cont in contact %}
-                                                    <a href="{{cont.contact_href}}" target="{{cont.target}}">
-                                                        <i class="{{cont.contactIcon_class}}"></i>
-                                                    </a>
-                                                {% endfor %}
-                                        </ul>
                                 </div>
 
                                 <div class="col-6 col-md-6 col-sm-12 col-lg-6 mb-3 contact-detail">
-                                    <ul class="fa-ul">
+                                    <ul class="fa-ul" style="margin: 0;">
                                         <li><span><i class="fa-regular fa-envelope"></i></span><a
                                                 href="mailto:b323009@iiit-bh.ac.in">b323009@iiit-bh.ac.in</a>
-                </span></li>
-                <li><span><i class="fa-solid fa-phone"></i></span><a href="tel:8989591496">8989591496</a>
-            </span>
-            </li>
-            <li><span><i class="fa-solid fa-house"></i></span>Near Civil court Maihar (485771)
-                Madhya
-                Pradesh</span></li>
-            </ul>
-            <div class="map" style="z-index: 100; position: sticky;">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3637.6348182737665!2d80.765733!3d24.254548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDE1JzE2LjQiTiA4MMKwNDUnNTYuNiJF!5e0!3m2!1sen!2sin!4v1704286551931!5m2!1sen!2sin"
-                    width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </div>
+                                            </span></li>
+                                        <li><span><i class="fa-solid fa-phone"></i></span><a href="tel:8989591496">8989591496</a>
+                                            </span>
+                                        </li>
+                                        <li><span><i class="fa-solid fa-house"></i></span>Near Civil court Maihar (485771)
+                                            Madhya
+                                            Pradesh</span>
+                                        </li>
+                                        <ul style="display: flex; justify-content: space-around; padding: 0%;font-size: 1.5em;z-index: 1000;"
+                                            class="contact-icons text-center py-3">
+                                            {% for cont in contact %}
+                                            <a href="{{cont.contact_href}}" target="{{cont.target}}">
+                                                <i class="{{cont.contactIcon_class}}"></i>
+                                            </a>
+                                            {% endfor %}
+                                        </ul>
+                                    </ul>
+                                </div>
+                            </div>
 
-    </div>
-    </div>
-    </div>
+                        </div>
+                    </div>
+                </div>
     </div>
 
 
