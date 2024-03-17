@@ -4,7 +4,7 @@
 
 ###
 
-<h1 align="center">👋 Hi, I'm Anurag Singh!</h1>
+<h1 align="center">👋 Hi, I'm Anurag Singh !</h1>
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=anurag6569201&label=Code%20views&color=a538ff&style=plastic" alt="anurag6569201" /> </p>
 
 ###
@@ -32,7 +32,7 @@
 
 ###
 
-<a href="https://anu6569.onrender.com/">Portfolio link click here</a>
+<a href="https://anu6569.onrender.com/">Portfolio link</a>
 
 ###
 
