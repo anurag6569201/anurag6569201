@@ -1,0 +1,91 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="contact" id="section6">
+    <div class="row col-12">
+
+        <div class="section-heading text-center">
+            <h1>Contact</h1>
+        </div>
+
+        <div class="contact-map">
+            <div class="col-6 col-md-5 col-sm-12 col-lg-6 mb-3 contact-form" style="z-index: 1;">
+                <form method="post" class="needs-validation" novalidate>
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="{{ form.name.id_for_label }}" class="form-label">Name</label><br>
+                        {{ form.name }}
+                        <div class="invalid-feedback">
+                            {{ form.name.errors }}
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ form.email.id_for_label }}" class="form-label">Email</label><br>
+                        {{ form.email }}
+                        <div class="invalid-feedback">
+                            {{ form.email.errors }}
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ form.content.id_for_label }}" class="form-label">Message</label><br>
+                        {{ form.content }}
+                        <div class="invalid-feedback">
+                            {{ form.content.errors }}
+                        </div>
+                    </div>
+                    <button style="margin-top: 1em;" type="submit"><span>Submit</span></button>
+                </form>
+                <style>
+                    #id_email,
+                    #id_content,
+                    #id_name{
+                        width: 100%;
+                        background-color: rgba(250, 250, 250, 0.747);
+                        padding: .4em;
+                        border: 1px solid green;
+                        font-size: 1.2em;
+                    }
+                    #id_email:focus-visible,
+                    #id_content:focus-visible,
+                    #id_name:focus-visible{
+                        outline: none;
+                    }
+                </style>
+            </div>
+
+            <div class="col-6 col-md-6 col-sm-12 col-lg-6 mb-3 contact-detail">
+                <ul class="fa-ul" style="margin: 0;">
+                    <li><span><i class="fa-regular fa-envelope"></i></span><a
+                            href="mailto:b323009@iiit-bh.ac.in">b323009@iiit-bh.ac.in</a>
+                        </span></li>
+                    <li><span><i class="fa-solid fa-phone"></i></span><a href="tel:8989591496">8989591496</a>
+                        </span>
+                    </li>
+                    <li><span><i class="fa-solid fa-house"></i></span>Near Civil court Maihar (485771)
+                        Madhya
+                        Pradesh</span>
+                    </li>
+                    <ul style="display: flex; justify-content: space-around; padding: 0%;font-size: 1.5em;z-index: 1000;"
+                        class="contact-icons text-center py-3">
+                        {% for cont in contact %}
+                        <a href="{{cont.contact_href}}" target="{{cont.target}}">
+                            <i class="{{cont.contactIcon_class}}"></i>
+                        </a>
+                        {% endfor %}
+                    </ul>
+                    <div class="map" style="z-index: 100; position: sticky;max-height: 14em;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3637.6348182737665!2d80.765733!3d24.254548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDE1JzE2LjQiTiA4MMKwNDUnNTYuNiJF!5e0!3m2!1sen!2sin!4v1704286551931!5m2!1sen!2sin"
+                            width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock content %}

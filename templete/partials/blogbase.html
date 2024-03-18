@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Global</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <link rel="stylesheet" href="{% static 'assets/style/main.css' %}">
+</head>
+<body>
+
+{% block content %}
+
+
+{% endblock content %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{% static 'assets/script/vendor/jquery-2.2.4.min.js' %}"><\/script>')</script>
+<script src="{% static 'assets/script/functions-min.js' %}"></script>
+</body>
+</html>

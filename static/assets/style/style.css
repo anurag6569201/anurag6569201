@@ -112,7 +112,7 @@ body::-webkit-scrollbar {
     background: linear-gradient(90deg, var(--yellow), var(--main));
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: #92a347;
     font-weight: 700;
     font-size: 1.8em;
     text-align: center;
@@ -123,7 +123,7 @@ body::-webkit-scrollbar {
 
 .navb .link1 a.active,
 .navb .link2 a.active {
-    border: 1px solid #9cae4e;
+    color: white;
 }
 
 .navb .link1 a:hover,
@@ -333,7 +333,7 @@ body::-webkit-scrollbar {
     content: "";
     width: 15px;
     height: 15px;
-    background: white;
+    background: rgb(196, 196, 196);
     border: 1px solid #4e5ed3;
     box-shadow: 3px 3px 0px #bab5f8;
     box-shadow: 3px 3px 0px #bab5f8;
@@ -344,30 +344,29 @@ body::-webkit-scrollbar {
 }
 
 .news-content .time {
-    color: #e6e6e6;
+    color: rgb(255, 255, 255);
     font-family: "Poppins", sans-serif;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 @media screen and (min-width: 601px) {
     .news-content .time {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
     }
 }
 
 @media screen and (max-width: 600px) {
     .news-content .time {
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.1rem;
         font-size: 0.85rem;
     }
 }
 
 .news-content p {
-    color: #d3d3d3d7;
-    font-weight: 500;
+    color: #244e31d7;
+    font-weight: 700;
     font-family: sans-serif;
     line-height: 1.5;
-    margin-top: 0.4rem;
 }
 
 @media screen and (max-width: 600px) {
