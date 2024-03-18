@@ -1,3 +1,4 @@
+window.onload = () => {
 particlesJS("particles-js", {
     "particles": {
         "number": {
@@ -108,4 +109,4 @@ particlesJS("particles-js", {
     },
     "retina_detect": true
 });
-console.log("working")
+}

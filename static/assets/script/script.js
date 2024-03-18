@@ -23,7 +23,7 @@ let animblackhole = document.querySelector('.anim-blackhole')
 let blackholee = document.querySelector('.blackhole')
 let bodycss = document.body
 
-document.addEventListener('DOMContentLoaded', () => {
+window.onload = () => {
     themebtn.addEventListener('click', () => {
         if (themebtncheck.checked) {
             bodycss.background = "transparent";
@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const loader = document.getElementById("loader");
     setTimeout(() => {
         loader.style.display = "none";
-    }, 20);
+    }, 500);
 
-});
+};
 
 function menu_open() {
     link1.style.transform = "translateX(0%)";

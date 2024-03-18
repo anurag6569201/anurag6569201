@@ -1,4 +1,4 @@
-
+window.onload = () => {
 // set up global javascript variables
 var opt=false;
 var bgUrl = 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1427&q=80'
@@ -196,3 +196,4 @@ function updateVariableBasedOnMediaQuery() {
     updateVariableBasedOnMediaQuery();
   });
 
+}
