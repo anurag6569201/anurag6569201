@@ -1,3 +1,5 @@
+
+
 let shadowhr = document.querySelector(".shadowhr")
 let hemburger_open = document.querySelector(".hemburger-open")
 let hemburger_close = document.querySelector(".hemburger-close")
@@ -11,17 +13,17 @@ let link1 = document.querySelector(".link1")
 let linkmobile = document.querySelector(".mobile-navbar .mobile-ver")
 let link2 = document.querySelector(".link2")
 
-   
 
-    let themebtn = document.querySelector('.toggle-btn')
-    let themebtncheck = document.querySelector('#checkbox')
-    let universe = document.querySelector('#glscreen')
-    
-    let animblackhole = document.querySelector('.anim-blackhole')
-    let blackholee = document.querySelector('.blackhole')
-    let bodycss = document.body
-    
 
+let themebtn = document.querySelector('.toggle-btn')
+let themebtncheck = document.querySelector('#checkbox')
+let universe = document.querySelector('#glscreen')
+
+let animblackhole = document.querySelector('.anim-blackhole')
+let blackholee = document.querySelector('.blackhole')
+let bodycss = document.body
+
+document.addEventListener('DOMContentLoaded', () => {
     themebtn.addEventListener('click', () => {
         if (themebtncheck.checked) {
             bodycss.background = "transparent";
@@ -35,6 +37,13 @@ let link2 = document.querySelector(".link2")
             blackholee.style.opacity = "0";
         }
     });
+    // loader
+    const loader = document.getElementById("loader");
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 20);
+
+});
 
 function menu_open() {
     link1.style.transform = "translateX(0%)";
@@ -194,14 +203,8 @@ function scrollToElement(elementId) {
     }
 }
 
-// loader
-const loader = document.getElementById("loader");
 
-window.onload = () => {
-    setTimeout(() => {
-        loader.style.display = "none";
-    }, 20);
-};
+
 
 // reviling
 gsap.registerPlugin(ScrollTrigger);
@@ -229,5 +232,3 @@ gsap.utils.toArray(".revealUp").forEach(function (elem) {
         }
     });
 });
-
-

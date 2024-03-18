@@ -62,7 +62,6 @@ body::-webkit-scrollbar {
 }
 
 .navb {
-    backdrop-filter: blur(var(--blurness));
     height: 100vh;
     width: 8em;
     position: fixed;
@@ -102,7 +101,7 @@ body::-webkit-scrollbar {
     gap: 1.5em;
     width: 100%;
     transition: .6s;
-    transform: translateX(0%);
+    transform: translateX(-100%);
 }
 
 .navb .link1 a,
@@ -148,11 +147,11 @@ body::-webkit-scrollbar {
 }
 
 .navb .hemburger-open {
-    display: none;
+    display: block;
 }
 
 .navb .hemburger-close {
-    display: block;
+    display: none;
 }
 
 .navb .link-time {
