@@ -1,9 +1,8 @@
-
 header canvas {
     position: absolute;
     margin: auto auto;
     z-index: -10;
-    display: none;
+    display: block;
     box-shadow: 0 0 45px 35px black inset;
 
 }

@@ -24,17 +24,15 @@ let link2 = document.querySelector(".link2")
 
     themebtn.addEventListener('click', () => {
         if (themebtncheck.checked) {
-            bodycss.background = "var(--pic-theme)";
-            universe.style.display = "none";
-            animblackhole.style.opacity = "0";
-            blackholee.style.opacity = "0";
-
             bodycss.background = "transparent";
             universe.style.display = "block";
             animblackhole.style.opacity = "1";
             blackholee.style.opacity = "1";
         } else {
-            
+            bodycss.background = "var(--pic-theme)";
+            universe.style.display = "none";
+            animblackhole.style.opacity = "0";
+            blackholee.style.opacity = "0";
         }
     });
 
@@ -100,32 +98,34 @@ navLinks.forEach(link => {
         link.classList.add("active");
     });
 });
-// sorting of projects
-
 function sort_all() {
-    showProjects();
-    setActiveButton('sort-all')
+    hideProjects();
+    showProjectsByCategory("Web dev");
+    setActiveButton('sort-web');
 }
 
 function sort_web() {
     hideProjects();
     showProjectsByCategory("Web dev");
-    setActiveButton('sort-web')
+    setActiveButton('sort-web');
 }
+
 function sort_game() {
     hideProjects();
     showProjectsByCategory("Games");
-    setActiveButton('sort-game')
+    setActiveButton('sort-game');
 }
+
 function sort_aiml() {
     hideProjects();
     showProjectsByCategory("AI/ML");
-    setActiveButton('sort-aiml')
+    setActiveButton('sort-aiml');
 }
+
 function sort_others() {
     hideProjects();
     showProjectsByCategory("Others");
-    setActiveButton('sort-others')
+    setActiveButton('sort-others');
 }
 
 // Function to hide all projects
@@ -141,7 +141,7 @@ function showProjectsByCategory(category) {
     var projects = document.querySelectorAll('.projects .col-lg-4');
     projects.forEach(function (project) {
         var projectCategory = project.getAttribute('data-category');
-        if (projectCategory === category || category === "Show All") {
+        if (projectCategory === category) {
             project.style.display = 'block';
         }
     });
@@ -151,7 +151,10 @@ function showProjectsByCategory(category) {
 function showProjects() {
     var projects = document.querySelectorAll('.projects .col-lg-4');
     projects.forEach(function (project) {
-        project.style.display = 'block';
+        var projectCategory = project.getAttribute('data-category');
+        if (projectCategory === "Web dev") {
+            project.style.display = 'block';
+        }
     });
 }
 
@@ -168,6 +171,8 @@ function setActiveButton(activeButtonId) {
     }
 }
 
+// Set default sorting to web dev
+sort_all();
 
 // pagination scroll
 let dots = document.querySelectorAll('input[name="dots"]');
