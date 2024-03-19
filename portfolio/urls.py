@@ -18,15 +18,15 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path,include
-from project.views import index
+
+from portfolio import views
 
 app_name="portfolio"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index,name="index"),
+    path('', views.index,name="index"),
     path('project/',include('project.urls')),
-    path('bg/',include('blog.urls')),
 ]
 
 if settings.DEBUG:

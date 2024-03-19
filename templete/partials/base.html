@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="{% static 'assets/style/about.css' %}">
     <link rel="stylesheet" href="{% static 'assets/style/other.css' %}">
     <link rel="stylesheet" href="{% static 'assets/style/style.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/style/contact.css' %}">
     <link rel="stylesheet" href="{% static 'assets/style/responsive.css' %}">
 
 
@@ -33,87 +32,7 @@
 <!-- body area start-->
 
 <body>
-    <div class="loader" id="loader">
-        <div class="wrapper">
-            <div class="circle"></div>
-            <div class="line-1"></div>
-            <div class="line-2"></div>
-            <div class="line-3"></div>
-            <div class="line-4"></div>
-            <div class="line-1"></div>
-            <div class="line-2"></div>
-            <div class="line-3"></div>
-            <div class="line-4"></div>
-            <div class="line-1"></div>
-            <div class="line-2"></div>
-            <div class="line-3"></div>
-            <div class="line-4"></div>
-            <div class="line-1"></div>
-            <div class="line-2"></div>
-            <div class="line-3"></div>
-            <div class="line-4"></div>
-        </div>
-    </div>
 
-    <!-- navbar starts -->
-    <nav class="navb" id="navb">
-        <div class="logo">
-            <img src="{% static 'assets/images/hero.jpg' %}" alt="">
-        </div>
-        <div class="link-btn">
-            <span class="hemburger-open" onclick="menu_open()" style="display: flex;align-items: center;justify-content: center;"><i style="font-size: 3em;color: #9aaa48;" class="fa-solid fa-bars"></i></span>
-            <img src="{% static 'assets/images/xmark-solid.svg' %}" alt="" class="hemburger-close" onclick="menu_close()">
-        </div>
-
-        <div class="link1" id="link1">
-            <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'index' %}"><i class="fa-solid fa-house"></i></a>
-            <a class="nav-link {% if request.path == '/blogs/' %}active{% endif %}" href="{% url 'blog:blogs' %}"><i class="fa-solid fa-blog"></i></a>
-            <a class="nav-link {% if request.path == '/project/time' %}active{% endif %}" href="{% url 'project:timeline' %}"><i class="fa-solid fa-timeline"></i></a>
-        </div>
-
-        <div class="link2">
-            <a class="nav-link {% if request.path == '/project/contact' %}active{% endif %}" href="{% url 'project:contact' %}"><i class="fa-solid fa-address-book"></i></a>
-        </div>
-
-        <div class="link-time">
-            <span style="display: block;" id="hrs"></span>
-            <span style="display: block;" id="min"></span> 
-            <span style="display: block;" id="sec"></span>
-        </div>
-
-    </nav>
-    <div class="link-btn link-btn-mob" style="position: fixed;bottom: 0;right: 0;margin: 10px;z-index: 1000;">
-        <img style="width: 3em;height: 3em;cursor: pointer;display: block;" src="{% static 'assets/images/burger-solid.svg' %}" alt="" class="hemburger-open_mob" onclick="menu_open_mob()">
-        <img style="width: 3em;height: 3em;cursor: pointer;display: none;" src="{% static 'assets/images/xmark-solid.svg' %}" alt="" class="hemburger-close_mob" onclick="menu_close_mob()">
-    </div>
-
-    <div class="mobile-navbar" style="transition: .7s ease-out;z-index: 100;">
-        <nav class="mobile-ver" style="transition: .7s ease-out; width: 100vw;height: 100vh;background: transparent;backdrop-filter: blur(30px);">
-            <div>
-                <img style="width: 50px;height: 50px;border-radius: 50%;margin: 10px;position: absolute;top: 0;left: 0;" src="{% static 'assets/images/hero.jpg' %}" alt="">
-            </div>
-    
-            <div class="linkmobile" id="linkmobile" style="display: flex;align-items: center;flex-direction: column;z-index: 1000;">
-                <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link active" href="#section1">Home</a>
-                <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section2">about</a>
-                <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section3">News</a>
-                <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section4">Techs</a>
-                <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section5">Projects</a>
-                <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section6">Contact</a>
-            </div>
-    
-            <div style="text-align: center;display: flex;align-items: center;justify-content: center;gap: .5em;position: absolute;top: 0;margin: auto;margin-top: 1em;">
-                <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="hrs_mob"></span>
-                <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;">:</span>
-                <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="min_mob"></span>
-                <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;">:</span>
-                <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="sec_mob"></span>
-            </div>
-        </nav>
-    </div>
-    
-
-    <!-- navbar ends -->
     {% block content %}
 
 
@@ -139,8 +58,77 @@
 <!-- jquery js -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+<!-- anim webgl js -->
+<script id="2d-fragment-shader" type="x-shader/x-fragment">
+// <![CDATA[
+
+    #ifdef GL_ES
+    precision mediump float;
+    #endif
+    
+    #define PI 3.14159265359
+    
+    uniform sampler2D u_image;
+    varying vec2 v_texCoord;
+    
+    uniform vec2 u_resolution;
+    uniform vec2 u_mouse;
+    uniform float u_mass;
+    uniform float u_time;
+    uniform float u_clickedTime;
+    
+    vec2 rotate(vec2 mt, vec2 st, float angle){
+        float cos = cos((angle + u_clickedTime) * PI); // try replacing * 1.0 with * PI
+        float sin = sin(angle * 0.0); // try removing the * 0.0
+        
+        // Uncomment these two lines for realism
+        //float cos = cos(angle) * (u_time * 0.3);
+        //float sin = sin(angle) * (u_time * 0.3);
+        
+        float nx = (cos * (st.x - mt.x)) + (sin * (st.y - mt.y)) + mt.x;
+        float ny = (cos * (st.y - mt.y)) - (sin * (st.x - mt.x)) + mt.y;
+        return vec2(nx, ny);
+    }
+    
+    void main() {
+        vec2 st = vec2(gl_FragCoord.x, u_resolution.y - gl_FragCoord.y)/u_resolution;
+        vec2 mt = vec2(u_mouse.x, u_resolution.y - u_mouse.y)/u_resolution;
+    
+        float dx = st.x - mt.x;
+        float dy = st.y - mt.y;
+    
+        float dist = sqrt(dx * dx + dy * dy);
+        float pull = u_mass / (dist * dist);
+        
+        vec3 color = vec3(0.0);
+        
+        vec2 r = rotate(mt,st,pull);
+        vec4 imgcolor = texture2D(u_image, r);
+        color = vec3(
+            (imgcolor.x - (pull * 0.25)),
+            (imgcolor.y - (pull * 0.25)), 
+            (imgcolor.z - (pull * 0.25))
+        );
+        
+    
+        gl_FragColor = vec4(color,1.);
+    }
+    // ]]>
+</script>
+<script id="2d-vertex-shader" type="x-shader/x-vertex">// <![CDATA[
+    attribute vec2 a_position;
+    attribute vec2 a_texCoord;
+    
+    varying vec2 v_texCoord;
+    void main() {
+        gl_Position = vec4(a_position, 0, 1);
+        v_texCoord = a_texCoord;
+    }
+    // ]]>
+</script>
 
 <script id="universe-anim" async src="{% static 'assets/script/anim1.js' %}"></script>
+<script id="universe-anim" async src="{% static 'assets/script/anim.js' %}"></script>
 
 <!-- custom js -->
 <script src="{% static 'assets/script/script.js' %}"></script>
