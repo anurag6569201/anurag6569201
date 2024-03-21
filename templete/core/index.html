@@ -264,9 +264,9 @@
                                         <ul class="sessions revealUp">
                                             {% for line in timeline %}
                                             <li>
-                                                <div class="time">{{line.dateAndTime}}</div>
+                                                <div class="time">{{ line.dateAndTime|date:"F, Y, g:i a" }}</div>
                                                 <p>{{line.contentStart}}<a
-                                                        href="{{ line.readContentURL }}">{{ line.contentMid }}</a>
+                                                        href="{{ line.readContentURL }}" target="_blank"> {{ line.contentMid }} </a>
                                                     {{ line.contentEnd }}</p>
                                             </li>
                                             {% endfor %}
@@ -279,7 +279,7 @@
 
                     <!-- timeline -->
                     <!-- popular topics -->
-                    <div class="container-fluid topic-wrapper" id="section4" style="margin-top: 10em;">
+                    <div class="container-fluid topic-wrapper" id="section4">
 
                         <!-- Single "topic" Section -->
                         <section class="topic row-cols-1">
@@ -323,12 +323,6 @@
                                 {% for prj in prj_mod %}
                                 <div class="g-3 col-lg-4 col-md-6" data-category="{{ prj.prjGen.first.genereName }}">
                                     <div class="card">
-
-                                        <a class="preview-project" target="_blank"
-                                            href="{{prj.webLink}}">
-                                            <div class="lesgo"></div><img src="{{prj.projectImage.url}}"
-                                                class="card-img-top" alt="...">
-                                        </a>
                                         <div class="card-body">
                                             <h5 class="card-title"><img src="{{prj.projectLogo.url}}" alt=""
                                                     class="project-logo">{{prj.projectName}}
@@ -337,6 +331,8 @@
                                                         class="fa-brands fa-github"></i></a>
                                                 <a target="_blank" href="{{prj.webLink}}"><i
                                                         class="fa-solid fa-share-from-square"></i></a>
+                                                <a target="_blank" href="{{prj.webLink}}">
+                                                    <i class="fa-solid fa-book"></i></a>
                                             </h5>
                                             <p class="card-text">
                                             <ul>
@@ -358,7 +354,7 @@
                     </div>
 
 
-                    <div class="contact" style="margin-top: 10em;" id="section6">
+                    <div class="contact" id="section6">
                         <div class="row col-12">
 
                             <div class="section-heading text-center">

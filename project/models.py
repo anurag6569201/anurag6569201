@@ -52,4 +52,4 @@ class ProjectsGenere(models.Model):
     genereOnclick=models.CharField(max_length=100)
     genereId=models.CharField(max_length=100)
     genereName=models.CharField(max_length=100)
-    prjGen=models.ManyToManyField(ProjectsMod, related_name='prjGen')
+    prjGen=models.ManyToManyField(ProjectsMod, related_name='prjGen',blank=True)
