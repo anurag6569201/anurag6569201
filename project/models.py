@@ -37,6 +37,7 @@ class Contact(models.Model):
 
 class ProjectsMod(models.Model):
     webLink=models.CharField(max_length=100)
+    webblogLink=models.CharField(max_length=100,blank=True)
     orderId=models.IntegerField(default="0")
     projectImage = models.ImageField(upload_to='Projects/',null=True, blank=True,default="projects/default_project.jpg")
     projectLogo= models.ImageField(upload_to='ProjectsLogo/',null=True, blank=True,default="projectsLogo/default_project_Logo.jpg")
