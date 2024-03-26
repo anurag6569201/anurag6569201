@@ -154,6 +154,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 JAZZMIN_SETTINGS = {
     'site_header':"Portfolio",
     'site_brand':"Portfolio",
-    'site_logo':'assets/images/logo.png',
+    'site_logo':'/assets/images/avatar.png',
     'copyright':"Portfolio.com",
 }
