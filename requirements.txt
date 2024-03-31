@@ -1,6 +1,6 @@
 asgiref==3.7.2
 dj-database-url==2.1.0
-Django==5.0
+django==5.0
 django-cockroachdb==5.0
 django-jazzmin==2.6.0
 gunicorn==21.2.0
