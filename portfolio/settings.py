@@ -29,9 +29,10 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["anu6569.onrender.com",'127.0.0.1','localhost']
+ALLOWED_HOSTS=[os.environ['WEBSITE_HOSTNAME']]
+CSRF_TRUSTED_ORIGINS=['https://'+os.environ['WEBSITE_HOSTNAME']]
 
 EMAIL_HOST = 'smtp-relay.brevo.com'
 # EMAIL_HOST_USER = 'anurag6569201@gmail.com'
