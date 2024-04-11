@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anurag Singh</title>
-    <link rel="icon" href="images/avatar.png">
+    <link rel="icon" href="../../static/assets/images/avatar.png">
 
     <!-- cdn links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -26,18 +26,38 @@
     <link rel="stylesheet" href="{% static 'assets/style/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/style/responsive.css' %}">
 
-
 </head>
 
 <!-- body area start-->
 
 <body>
 
-    {% block content %}
+    <!-- paginatin -->
+    <div class="pages" id="pagination" style="pointer-events: none;">
+        <div class="pagination">
+            <input onclick="scrollToElement('section1')" id="dot-1" type="radio" name="dots" checked>
+            <label for="dot-1"></label>
+            <input onclick="scrollToElement('section2')" id="dot-2" type="radio" name="dots">
+            <label for="dot-2"></label>
+            <input onclick="scrollToElement('section3')" id="dot-3" type="radio" name="dots">
+            <label for="dot-3"></label>
+            <input onclick="scrollToElement('section4')" id="dot-4" type="radio" name="dots">
+            <label for="dot-4"></label>
+            <input onclick="scrollToElement('section5')" id="dot-5" type="radio" name="dots">
+            <label for="dot-5"></label>
+            <input onclick="scrollToElement('section6')" id="dot-6" type="radio" name="dots">
+            <label for="dot-6"></label>
+            <div class="pacman"></div>
+        </div>
+    </div>
+
+    <div class="allin-one">
+
+        {% block content %}
 
 
-    {% endblock content %}
-
+        {% endblock content %}
+    </div>
 
 </body>
 <!-- body area end -->

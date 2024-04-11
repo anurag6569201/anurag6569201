@@ -3,7 +3,6 @@
 
 {% block content %}
 
-
     <div class="loader" id="loader">
         <div class="wrapper">
             <div class="circle"></div>
@@ -26,73 +25,14 @@
         </div>
     </div>
 
-    <!-- paginatin -->
-    <div class="pages" id="pagination" style="pointer-events: none;">
-        <div class="pagination">
-            <input onclick="scrollToElement('section1')" id="dot-1" type="radio" name="dots" checked>
-            <label for="dot-1"></label>
-            <input onclick="scrollToElement('section2')" id="dot-2" type="radio" name="dots">
-            <label for="dot-2"></label>
-            <input onclick="scrollToElement('section3')" id="dot-3" type="radio" name="dots">
-            <label for="dot-3"></label>
-            <input onclick="scrollToElement('section4')" id="dot-4" type="radio" name="dots">
-            <label for="dot-4"></label>
-            <input onclick="scrollToElement('section5')" id="dot-5" type="radio" name="dots">
-            <label for="dot-5"></label>
-            <input onclick="scrollToElement('section6')" id="dot-6" type="radio" name="dots">
-            <label for="dot-6"></label>
-            <div class="pacman"></div>
+    <!-- navbar starts -->
+    <nav class="navb" id="navb">
+        <div class="logo">
+            <img src="{% static 'assets/images/hero.jpg' %}" alt="">
         </div>
-    </div>
-
-
-
-    <div class="allin-one">
-        <!-- navbar starts -->
-        <nav class="navb" id="navb">
-            <div class="logo">
-                <img src="{% static 'assets/images/hero.jpg' %}" alt="">
-            </div>
-            <div class="toggle-btn">
-                <input id="checkbox" type="checkbox" checked />
-                <label class="switch" for="checkbox">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="slider">
-                        <path
-                            d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z">
-                        </path>
-                    </svg>
-                </label>
-            </div>
-            <div class="link-btn">
-                <img src="{% static 'assets/images/burger-solid.svg' %}" alt="" class="hemburger-open" onclick="menu_open()">
-                <img src="{% static 'assets/images/xmark-solid.svg' %}" alt="" class="hemburger-close" onclick="menu_close()">
-            </div>
-
-            <div class="link1" id="link1">
-                <a class="nav-link active" href="#section1">Home</a>
-                <a class="nav-link" href="#section3">News</a>
-                <a class="nav-link" href="#section4">Techs</a>
-            </div>
-
-            <div class="link2">
-                <a class="nav-link" href="#section5">Projects</a>
-                <a class="nav-link" href="#section6">Contact</a>
-            </div>
-
-            <div class="link-time">
-                <span style="display: block;" id="hrs"></span>
-                <span style="display: block;" id="min"></span> 
-                <span style="display: block;" id="sec"></span>
-            </div>
-
-        </nav>
-        <div class="link-btn link-btn-mob" style="position: fixed;bottom: 0;right: 0;margin: 10px;z-index: 1000;">
-            <img style="width: 3em;height: 3em;cursor: pointer;display: block;" src="{% static 'assets/images/burger-solid.svg' %}" alt="" class="hemburger-open_mob" onclick="menu_open_mob()">
-            <img style="width: 3em;height: 3em;cursor: pointer;display: none;" src="{% static 'assets/images/xmark-solid.svg' %}" alt="" class="hemburger-close_mob" onclick="menu_close_mob()">
-        </div>
-        <div class="toggle-btn toggle-btn-mob" style="z-index: 1000; position: fixed;top: 0;right: 0;margin: 10px;">
+        <div class="toggle-btn">
             <input id="checkbox" type="checkbox" checked />
-            <label class="switch" for="checkbox" style="width: 3em;height: 3em;">
+            <label class="switch" for="checkbox">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="slider">
                     <path
                         d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z">
@@ -101,330 +41,344 @@
             </label>
         </div>
 
-        <div class="mobile-navbar" style="transition: .7s ease-out;z-index: 100;">
-            <nav class="mobile-ver" style="transition: .7s ease-out; width: 100vw;height: 100vh;background: transparent;backdrop-filter: blur(30px);">
-                <div>
-                    <img style="width: 50px;height: 50px;border-radius: 50%;margin: 10px;position: absolute;top: 0;left: 0;" src="{% static 'assets/images/hero.jpg' %}" alt="">
-                </div>
-        
-                <div class="linkmobile" id="linkmobile" style="display: flex;align-items: center;flex-direction: column;z-index: 1000;">
-                    <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link active" href="#section1">Home</a>
-                    <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section2">about</a>
-                    <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section3">News</a>
-                    <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section4">Techs</a>
-                    <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section5">Projects</a>
-                    <a style="padding: .2em;text-decoration: underline;font-weight: 800;background: linear-gradient(90deg,var(--yellow),#9aaa48);text-shadow: 0 0 -5px white; -webkit-background-clip: text;background-clip: text;color: transparent;font-size: 2.5em;transition: .4s;margin-top: 1em;" class="nav-link" href="#section6">Contact</a>
-                </div>
-        
-                <div style="text-align: center;display: flex;align-items: center;justify-content: center;gap: .5em;position: absolute;top: 0;margin: auto;margin-top: 1em;">
-                    <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="hrs_mob"></span>
-                    <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;">:</span>
-                    <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="min_mob"></span>
-                    <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;">:</span>
-                    <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="sec_mob"></span>
-                </div>
-            </nav>
+        <div class="link-time">
+            <span style="display: block;" id="hrs"></span>
+            <span style="display: block;" id="min"></span> 
+            <span style="display: block;" id="sec"></span>
         </div>
 
-        <!-- navbar ends -->
-        <header class="landing container-fluid" id="Home" style="position: relative;">
-            <!-- Hero section starts -->
-            <canvas id="glscreen" style="min-height: 220vh;"></canvas>
-            <div class="wrapper_all">
+    </nav>
+    <div class="link-btn link-btn-mob" style="position: fixed;bottom: 0;right: 0;margin: 10px;z-index: 1000;">
+        <img style="width: 3em;height: 3em;cursor: pointer;display: block;" src="{% static 'assets/images/burger-solid.svg' %}" alt="" class="hemburger-open_mob" onclick="menu_open_mob()">
+        <img style="width: 3em;height: 3em;cursor: pointer;display: none;" src="{% static 'assets/images/xmark-solid.svg' %}" alt="" class="hemburger-close_mob" onclick="menu_close_mob()">
+    </div>
+    <div class="toggle-btn toggle-btn-mob" style="z-index: 1000; position: fixed;top: 0;right: 0;margin: 10px;">
+        <input id="checkbox" type="checkbox" checked />
+        <label class="switch" for="checkbox" style="width: 3em;height: 3em;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="slider">
+                <path
+                    d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z">
+                </path>
+            </svg>
+        </label>
+    </div>
 
-                <div class="hero" id="section1">
+    <div class="mobile-navbar" style="transition: .7s ease-out;z-index: 100;">
+        <nav class="mobile-ver" style="transition: .7s ease-out; width: 100vw;height: 100vh;background: transparent;backdrop-filter: blur(30px);">
+            <div>
+                <img style="width: 50px;height: 50px;border-radius: 50%;margin: 10px;position: absolute;top: 0;left: 0;" src="{% static 'assets/images/hero.jpg' %}" alt="">
+            </div>
+    
+            <div style="text-align: center;display: flex;align-items: center;justify-content: center;gap: .5em;position: absolute;top: 0;margin: auto;margin-top: 1em;">
+                <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="hrs_mob"></span>
+                <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;">:</span>
+                <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="min_mob"></span>
+                <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;">:</span>
+                <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="sec_mob"></span>
+            </div>
+        </nav>
+    </div>
 
-                    <div class="container blocks-contain">
-                        <div class="row col-12 blocks">
-                            {% for state in homestat %}
-                            <div class="col-4 col-md-4 col-sm-4 col-lg-3">
-                                <div class="custom-block">
-                                    <span>{{state.projects}}</span>
-                                    <div>Projects</div>
-                                </div>
-                                <div class="custom-block">
-                                    <span>{{state.experience}}+ year</span>
-                                    <div>Experience</div>
+    <!-- navbar ends -->
+    <header class="landing container-fluid" id="Home" style="position: relative;">
+        <!-- Hero section starts -->
+        <canvas id="glscreen" style="min-height: 220vh;"></canvas>
+        <div class="wrapper_all">
+
+            <div class="hero" id="section1">
+
+                <div class="container blocks-contain">
+                    <div class="row col-12 blocks">
+                        {% for state in homestat %}
+                        <div class="col-4 col-md-4 col-sm-4 col-lg-3">
+                            <div class="custom-block">
+                                <span>{{state.projects}}</span>
+                                <div>Projects</div>
+                            </div>
+                            <div class="custom-block">
+                                <span>{{state.experience}}+ year</span>
+                                <div>Experience</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-4 col-sm-4 col-lg-3">
+                            <div class="custom-block">
+                                <span>{{state.clients}}+</span>
+                                <div>Clients</div>
+                            </div>
+                            <div class="custom-block">
+                                <p>{{state.field}}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="hero-bio">
+                    <div class="intro">
+                        <span>Anurag Singh</span>
+                        <div class="col-md-12">
+                            <div class="section-subheading">Interests</div>
+                            <ul class="ul-interests">
+                                {% for int in intrest %}
+                                <li>{{ int.content }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="bio">
+                <div class="row" id="section2">
+                    <div id="profile" class="col-lg-5 col-md-5">
+                        <div class="profile-area">
+                            <img class="avatar avatar-circle revealUp" src="{% static 'assets/images/avatar.png' %}" alt="Anurag singh">
+                            <div class="profile-text revealUp">
+                                <h2>Anurag Singh</h2>
+                                <h3>Electrical Engineering 2023-2027</h3>
+                                <h3>
+                                    <a href="https://www.iiit-bh.ac.in/" target="_blank" rel="noopener">
+                                        <span>International Institute Of Technology Bhubhneswar</span>
+                                    </a>
+                                </h3>
+                            </div>
+                        </div>
+                        <ul class="network-icon revealUp" aria-hidden="true">
+                            {% for cont in contact %}
+                            <li>
+                                <a href="{{cont.contact_href}}" target="{{cont.target}}">
+                                    <i class="{{cont.contactIcon_class}}"></i>
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <section id="about" class="col-lg-7 col-md-7">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="bio-content">
+                                    <h2 class="revealUp">Biography</h2>
+                                    <div class="article-style revealUp">
+                                        <p>Welcome! I'm Anurag Singh, a driven individual from Maihar, Madhya
+                                            Pradesh
+                                            (485771). My educational journey led me through Simran School and Blue
+                                            Bells
+                                            for my 10th and 12th grades, respectively. Currently immersed in the
+                                            world
+                                            of Electrical Engineering at IIIT Bhubneshwar.</p>
+                                        <p>Beyond the classroom, I've proven my mettle in hackathons, proudly
+                                            achieving
+                                            finalist status. My skills extend to web development, where I've
+                                            contributed
+                                            to the success of college fests. Whether crafting innovative solutions
+                                            in
+                                            hackathons or bringing digital magic to college events, I'm passionate
+                                            about
+                                            making a meaningful impact.</p>
+                                        <p>Join me on this exciting journey where my blend of technical prowess and
+                                            creative energy converges to create memorable experiences and solutions.
+                                        </p>
+                                        <p class="revealUp" style="font-size: 2em;"><i
+                                                class="fas fa-download pr-1 fa-fw"></i>
+                                            Download
+                                            my
+                                            {% for resu in biography %} 
+                                            <a href="{{ resu.resume.url }}" target="_blank">résumé</a>.</p>
+                                            {% endfor %}
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-4 col-sm-4 col-lg-3">
-                                <div class="custom-block">
-                                    <span>{{state.clients}}+</span>
-                                    <div>Clients</div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        <span class="shadowhr" style="padding: 0;position: absolute;bottom: 0;height: 10px;background-color: black;box-shadow: 0 0 50px 50px black;width: 100vw;"></span>
+    </header>
+    <!-- Hero section ends -->
+
+    <div class="secondin-one">
+        <div class="anim-blackhole" style="opacity: 1;">
+            <div class="blackhole" id="particles-js"></div>
+        </div>
+                <!-- about section starts -->
+                <div class="container-fluid" id="News" style="margin-bottom: 5em;">
+
+                    <div class="row news-row col-md-12" id="section3" style="margin: 0;">
+                        <div class="section-heading text-center">
+                            <h1 class="mb-0 news-heading revealUp">Timeline</h1>
+                        </div>
+                        <div class="news-content" style="padding: 0;">
+                            <div class="container" style="padding: 0;">
+                                <div class="wrapper">
+                                    <ul class="sessions revealUp">
+                                        {% for line in timeline|slice:":6" %}
+                                        <li>
+                                            <div class="time">{{ line.dateAndTime|date:"F, Y, g:i a" }}</div>
+                                            <p>{{line.contentStart}}<a
+                                                    href="{{ line.readContentURL }}" target="_blank"> {{ line.contentMid }} </a>
+                                                {{ line.contentEnd }}</p>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                    <div class="project-sorting" style="display: flex;align-items: center;justify-content: left;z-index: 999;position: sticky;">
+                                        <a target="_blank" href="{% url 'project:timeline' %}" style="text-decoration: none;padding: 0;font-size: 1.2em;"><button  class="sort-btn" style="width: max-content;padding: 0 1em;"><span style="font-size: 1.4em;">View Full Timeline</span></button></a>
+                                    </div>
                                 </div>
-                                <div class="custom-block">
-                                    <p>{{state.field}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- timeline -->
+                <!-- popular topics -->
+                <div class="container-fluid topic-wrapper" id="section4">
+
+                    <!-- Single "topic" Section -->
+                    <section class="topic row-cols-1">
+                        <div class="topic-head revealUp">
+                            <h1 class="topic-header text-center">Techs</h1>
+                        </div>
+                        <div class="topic-content row row-cols-3">
+
+                            <!-- Web Stacks -->
+                            {% for techs in techstack %}
+                            <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
+                                <div class="card h-100">
+                                    <div class="card-title text-center revealUp">{{ techs.description }}</div>
+                                    <div class="card-body revealUp">
+                                        {% for tlang in techs.techlang.all %}
+                                        <span class="icon"><i class="{{ tlang.language }}"></i></span>
+                                        {% endfor %}
+                                    </div>
                                 </div>
                             </div>
                             {% endfor %}
                         </div>
+                    </section>
+
+                </div>
+
+                <div class="container-fluid projects-wrapper revealUp" id="section5" style="margin: auto;">
+                    <div class="row justify-content-center" style="margin: 0;">
+                        <div class="col-12 text-center prj-heading">
+                            <h1 class="project-header">Projects</h1>
+                            <div class="project-sorting">
+                                {% for pg in projectgenre %}
+                                <button id="{{pg.genereId}}" onclick="{{pg.genereOnclick}}" class="sort-btn"><span>{{pg.genereName}}</span></button>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
-                    <div class="hero-bio">
-                        <div class="intro">
-                            <span>Anurag Singh</span>
-                            <div class="col-md-12">
-                                <div class="section-subheading">Interests</div>
-                                <ul class="ul-interests">
-                                    {% for int in intrest %}
-                                    <li>{{ int.content }}</li>
-                                    {% endfor %}
+
+                    <section class="projects">
+                        <div class="row projects-row col-12 col-md-12" id="projects-container" style="margin: 0;">
+                            {% for prj in prj_mod %}
+                            <div class="g-3 col-lg-4 col-md-6" data-category="{{ prj.prjGen.first.genereName }}">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><img src="{{prj.projectLogo.url}}" alt=""
+                                                class="project-logo">{{prj.projectName}}
+                                            <a target="_blank"
+                                                href="{{prj.projectGit}}"><i
+                                                    class="fa-brands fa-github"></i></a>
+                                            <a target="_blank" href="{{prj.webLink}}"><i
+                                                    class="fa-solid fa-share-from-square"></i></a>
+                                            <a target="_blank" href="{{prj.webblogLink}}">
+                                                <i class="fa-solid fa-book"></i></a>
+                                        </h5>
+                                        <p class="card-text">
+                                        <ul>
+                                            <li>{{ prj.projectAbout }}</li>
+                                            <span class="techs">
+                                                {% for prjbtn in prj.projectlang.all %}
+                                                <button class="tech-button">{{prjbtn.language}}</button>
+                                                {% endfor %}
+                                            </span>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div id="pagination-container"></div>
+                    </section>
+                </div>
+
+
+                <div class="contact" id="section6">
+                    <div class="row col-12">
+
+                        <div class="section-heading text-center">
+                            <h1>Contact</h1>
+                        </div>
+
+                        <div class="contact-map">
+                            <div class="col-6 col-md-5 col-sm-12 col-lg-6 mb-3 contact-form" style="z-index: 1;">
+                                <form method="post" class="needs-validation" novalidate>
+                                    {% csrf_token %}
+                                    <div class="mb-3">
+                                        <label for="{{ form.name.id_for_label }}" class="form-label">Name</label><br>
+                                        {{ form.name }}
+                                        <div class="invalid-feedback">
+                                            {{ form.name.errors }}
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="{{ form.email.id_for_label }}" class="form-label">Email</label><br>
+                                        {{ form.email }}
+                                        <div class="invalid-feedback">
+                                            {{ form.email.errors }}
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="{{ form.content.id_for_label }}" class="form-label">Message</label><br>
+                                        {{ form.content }}
+                                        <div class="invalid-feedback">
+                                            {{ form.content.errors }}
+                                        </div>
+                                    </div>
+                                    <button style="margin-top: 1em;" type="submit"><span>Submit</span></button>
+                                </form>
+                                <style>
+                                    #id_email,
+                                    #id_content,
+                                    #id_name{
+                                        width: 100%;
+                                    }
+                                </style>
+                            </div>
+
+                            <div class="col-6 col-md-6 col-sm-12 col-lg-6 mb-3 contact-detail">
+                                <ul class="fa-ul" style="margin: 0;">
+                                    <li><span><i class="fa-regular fa-envelope"></i></span><a
+                                            href="mailto:b323009@iiit-bh.ac.in">b323009@iiit-bh.ac.in</a>
+                                        </span></li>
+                                    <li><span><i class="fa-solid fa-phone"></i></span><a href="tel:8989591496">8989591496</a>
+                                        </span>
+                                    </li>
+                                    <li><span><i class="fa-solid fa-house"></i></span>Near Civil court Maihar (485771)
+                                        Madhya
+                                        Pradesh</span>
+                                    </li>
+                                    <ul style="display: flex; justify-content: space-around; padding: 0%;font-size: 1.5em;z-index: 1000;"
+                                        class="contact-icons text-center py-3">
+                                        {% for cont in contact %}
+                                        <a href="{{cont.contact_href}}" target="{{cont.target}}">
+                                            <i class="{{cont.contactIcon_class}}"></i>
+                                        </a>
+                                        {% endfor %}
+                                    </ul>
                                 </ul>
                             </div>
                         </div>
-                    </div>
 
-                </div>
-
-
-
-                <div class="bio">
-                    <div class="row" id="section2">
-                        <div id="profile" class="col-lg-5 col-md-5">
-                            <div class="profile-area">
-                                <img class="avatar avatar-circle revealUp" src="{% static 'assets/images/avatar.png' %}" alt="Anurag singh">
-                                <div class="profile-text revealUp">
-                                    <h2>Anurag Singh</h2>
-                                    <h3>Electrical Engineering 2023-2027</h3>
-                                    <h3>
-                                        <a href="https://www.iiit-bh.ac.in/" target="_blank" rel="noopener">
-                                            <span>International Institute Of Technology Bhubhneswar</span>
-                                        </a>
-                                    </h3>
-                                </div>
-                            </div>
-                            <ul class="network-icon revealUp" aria-hidden="true">
-                                {% for cont in contact %}
-                                <li>
-                                    <a href="{{cont.contact_href}}" target="{{cont.target}}">
-                                        <i class="{{cont.contactIcon_class}}"></i>
-                                    </a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <section id="about" class="col-lg-7 col-md-7">
-                            <div class="container">
-                                <div class="row">
-
-                                    <div class="bio-content">
-                                        <h2 class="revealUp">Biography</h2>
-                                        <div class="article-style revealUp">
-                                            <p>Welcome! I'm Anurag Singh, a driven individual from Maihar, Madhya
-                                                Pradesh
-                                                (485771). My educational journey led me through Simran School and Blue
-                                                Bells
-                                                for my 10th and 12th grades, respectively. Currently immersed in the
-                                                world
-                                                of Electrical Engineering at IIIT Bhubneshwar.</p>
-                                            <p>Beyond the classroom, I've proven my mettle in hackathons, proudly
-                                                achieving
-                                                finalist status. My skills extend to web development, where I've
-                                                contributed
-                                                to the success of college fests. Whether crafting innovative solutions
-                                                in
-                                                hackathons or bringing digital magic to college events, I'm passionate
-                                                about
-                                                making a meaningful impact.</p>
-                                            <p>Join me on this exciting journey where my blend of technical prowess and
-                                                creative energy converges to create memorable experiences and solutions.
-                                            </p>
-                                            <p class="revealUp" style="font-size: 2em;"><i
-                                                    class="fas fa-download pr-1 fa-fw"></i>
-                                                Download
-                                                my
-                                                {% for resu in biography %} 
-                                                <a href="{{ resu.resume.url }}" target="_blank">résumé</a>.</p>
-                                                {% endfor %}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-
-                </div>
-            <span class="shadowhr" style="padding: 0;position: absolute;bottom: 0;height: 10px;background-color: black;box-shadow: 0 0 50px 50px black;width: 100vw;"></span>
-        </header>
-        <!-- Hero section ends -->
-
-        <div class="secondin-one">
-            <div class="anim-blackhole" style="opacity: 1;">
-                <div class="blackhole" id="particles-js"></div>
-            </div>
-                    <!-- about section starts -->
-                    <div class="container-fluid" id="News" style="margin-bottom: 5em;">
-
-                        <div class="row news-row col-md-12" id="section3" style="margin: 0;">
-                            <div class="section-heading text-center">
-                                <h1 class="mb-0 news-heading revealUp">Timeline</h1>
-                            </div>
-                            <div class="news-content" style="padding: 0;">
-                                <div class="container" style="padding: 0;">
-                                    <div class="wrapper">
-                                        <ul class="sessions revealUp">
-                                            {% for line in timeline %}
-                                            <li>
-                                                <div class="time">{{ line.dateAndTime|date:"F, Y, g:i a" }}</div>
-                                                <p>{{line.contentStart}}<a
-                                                        href="{{ line.readContentURL }}" target="_blank"> {{ line.contentMid }} </a>
-                                                    {{ line.contentEnd }}</p>
-                                            </li>
-                                            {% endfor %}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- timeline -->
-                    <!-- popular topics -->
-                    <div class="container-fluid topic-wrapper" id="section4">
-
-                        <!-- Single "topic" Section -->
-                        <section class="topic row-cols-1">
-                            <div class="topic-head revealUp">
-                                <h1 class="topic-header text-center">Techs</h1>
-                            </div>
-                            <div class="topic-content row row-cols-3">
-
-                                <!-- Web Stacks -->
-                                {% for techs in techstack %}
-                                <div class="col col-sm-12 col-md-6 col-lg-4 mb-3">
-                                    <div class="card h-100">
-                                        <div class="card-title text-center revealUp">{{ techs.description }}</div>
-                                        <div class="card-body revealUp">
-                                            {% for tlang in techs.techlang.all %}
-                                            <span class="icon"><i class="{{ tlang.language }}"></i></span>
-                                            {% endfor %}
-                                        </div>
-                                    </div>
-                                </div>
-                                {% endfor %}
-                            </div>
-                        </section>
-
-                    </div>
-
-                    <div class="container-fluid projects-wrapper revealUp" id="section5" style="margin: auto;">
-                        <div class="row justify-content-center" style="margin: 0;">
-                            <div class="col-12 text-center prj-heading">
-                                <h1 class="project-header">Projects</h1>
-                                <div class="project-sorting">
-                                    {% for pg in projectgenre %}
-                                    <button id="{{pg.genereId}}" onclick="{{pg.genereOnclick}}" class="sort-btn"><span>{{pg.genereName}}</span></button>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </div>
-
-                        <section class="projects">
-                            <div class="row projects-row col-12 col-md-12" id="projects-container" style="margin: 0;">
-                                {% for prj in prj_mod %}
-                                <div class="g-3 col-lg-4 col-md-6" data-category="{{ prj.prjGen.first.genereName }}">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><img src="{{prj.projectLogo.url}}" alt=""
-                                                    class="project-logo">{{prj.projectName}}
-                                                <a target="_blank"
-                                                    href="{{prj.projectGit}}"><i
-                                                        class="fa-brands fa-github"></i></a>
-                                                <a target="_blank" href="{{prj.webLink}}"><i
-                                                        class="fa-solid fa-share-from-square"></i></a>
-                                                <a target="_blank" href="{{prj.webblogLink}}">
-                                                    <i class="fa-solid fa-book"></i></a>
-                                            </h5>
-                                            <p class="card-text">
-                                            <ul>
-                                                <li>{{ prj.projectAbout }}</li>
-                                                <span class="techs">
-                                                    {% for prjbtn in prj.projectlang.all %}
-                                                    <button class="tech-button">{{prjbtn.language}}</button>
-                                                    {% endfor %}
-                                                </span>
-                                            </ul>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {% endfor %}
-                            </div>
-                            <div id="pagination-container"></div>
-                        </section>
-                    </div>
-
-
-                    <div class="contact" id="section6">
-                        <div class="row col-12">
-
-                            <div class="section-heading text-center">
-                                <h1>Contact</h1>
-                            </div>
-
-                            <div class="contact-map">
-                                <div class="col-6 col-md-5 col-sm-12 col-lg-6 mb-3 contact-form" style="z-index: 1;">
-                                    <form method="post" class="needs-validation" novalidate>
-                                        {% csrf_token %}
-                                        <div class="mb-3">
-                                            <label for="{{ form.name.id_for_label }}" class="form-label">Name</label><br>
-                                            {{ form.name }}
-                                            <div class="invalid-feedback">
-                                                {{ form.name.errors }}
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="{{ form.email.id_for_label }}" class="form-label">Email</label><br>
-                                            {{ form.email }}
-                                            <div class="invalid-feedback">
-                                                {{ form.email.errors }}
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="{{ form.content.id_for_label }}" class="form-label">Message</label><br>
-                                            {{ form.content }}
-                                            <div class="invalid-feedback">
-                                                {{ form.content.errors }}
-                                            </div>
-                                        </div>
-                                        <button style="margin-top: 1em;" type="submit"><span>Submit</span></button>
-                                    </form>
-                                    <style>
-                                        #id_email,
-                                        #id_content,
-                                        #id_name{
-                                            width: 100%;
-                                        }
-                                    </style>
-                                </div>
-
-                                <div class="col-6 col-md-6 col-sm-12 col-lg-6 mb-3 contact-detail">
-                                    <ul class="fa-ul" style="margin: 0;">
-                                        <li><span><i class="fa-regular fa-envelope"></i></span><a
-                                                href="mailto:b323009@iiit-bh.ac.in">b323009@iiit-bh.ac.in</a>
-                                            </span></li>
-                                        <li><span><i class="fa-solid fa-phone"></i></span><a href="tel:8989591496">8989591496</a>
-                                            </span>
-                                        </li>
-                                        <li><span><i class="fa-solid fa-house"></i></span>Near Civil court Maihar (485771)
-                                            Madhya
-                                            Pradesh</span>
-                                        </li>
-                                        <ul style="display: flex; justify-content: space-around; padding: 0%;font-size: 1.5em;z-index: 1000;"
-                                            class="contact-icons text-center py-3">
-                                            {% for cont in contact %}
-                                            <a href="{{cont.contact_href}}" target="{{cont.target}}">
-                                                <i class="{{cont.contactIcon_class}}"></i>
-                                            </a>
-                                            {% endfor %}
-                                        </ul>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
                     </div>
                 </div>
     </div>
 
-
-    {% endblock content %}
+{% endblock content %}

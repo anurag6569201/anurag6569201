@@ -1,0 +1,90 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- navbar starts -->
+<nav class="navb" id="navb">
+    <div class="logo">
+        <img src="{% static 'assets/images/hero.jpg' %}" alt="">
+    </div>
+    <div class="toggle-btn" style="pointer-events: none;">
+        <input id="checkbox" type="checkbox" checked />
+        <label class="switch" for="checkbox">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="slider">
+                <path
+                    d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z">
+                </path>
+            </svg>
+        </label>
+    </div>
+
+    <div class="link-time">
+        <span style="display: block;" id="hrs"></span>
+        <span style="display: block;" id="min"></span> 
+        <span style="display: block;" id="sec"></span>
+    </div>
+
+</nav>
+<div class="link-btn link-btn-mob" style="position: fixed;bottom: 0;right: 0;margin: 10px;z-index: 1000;">
+    <img style="width: 3em;height: 3em;cursor: pointer;display: block;" src="{% static 'assets/images/burger-solid.svg' %}" alt="" class="hemburger-open_mob" onclick="menu_open_mob()">
+    <img style="width: 3em;height: 3em;cursor: pointer;display: none;" src="{% static 'assets/images/xmark-solid.svg' %}" alt="" class="hemburger-close_mob" onclick="menu_close_mob()">
+</div>
+<div class="toggle-btn toggle-btn-mob" style="z-index: 1000; position: fixed;top: 0;right: 0;margin: 10px;pointer-events: none;">
+    <input id="checkbox" type="checkbox" checked />
+    <label class="switch" for="checkbox" style="width: 3em;height: 3em;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="slider">
+            <path
+                d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z">
+            </path>
+        </svg>
+    </label>
+</div>
+
+<div class="mobile-navbar" style="transition: .7s ease-out;z-index: 100;">
+    <nav class="mobile-ver" style="transition: .7s ease-out; width: 100vw;height: 100vh;background: transparent;backdrop-filter: blur(30px);">
+        <div>
+            <img style="width: 50px;height: 50px;border-radius: 50%;margin: 10px;position: absolute;top: 0;left: 0;" src="{% static 'assets/images/hero.jpg' %}" alt="">
+        </div>
+
+        <div style="text-align: center;display: flex;align-items: center;justify-content: center;gap: .5em;position: absolute;top: 0;margin: auto;margin-top: 1em;">
+            <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="hrs_mob"></span>
+            <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;">:</span>
+            <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="min_mob"></span>
+            <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;">:</span>
+            <span style="display: block;font-size: 3em;font-weight: 800;background: linear-gradient(90deg, var(--yellow),#9aaa48);-webkit-background-clip: text;background-clip: text;color: transparent;" id="sec_mob"></span>
+        </div>
+    </nav>
+</div>
+<div class="secondin-one">
+    <div class="anim-blackhole" style="opacity: 1;">
+        <div class="blackhole" id="particles-js"></div>
+    </div>
+    <!-- about section starts -->
+    <div class="container-fluid" id="News" style="margin-bottom: 5em;">
+
+        <div class="row news-row col-md-12" id="section3" style="margin: 0;">
+            <div class="section-heading text-center">
+                <h1 class="mb-0 news-heading revealUp">Timeline</h1>
+            </div>
+            <div class="news-content" style="padding: 0;">
+                <div class="container" style="padding: 0;">
+                    <div class="wrapper">
+                        <ul class="sessions revealUp">
+                            {% for line in timeline %}
+                            <li>
+                                <div class="time">{{ line.dateAndTime|date:"F, Y, g:i a" }}</div>
+                                <p>{{line.contentStart}}<a href="{{ line.readContentURL }}" target="_blank"> {{line.contentMid }} </a>
+                                    {{ line.contentEnd }}</p>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock content %}
