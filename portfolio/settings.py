@@ -31,7 +31,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["anu6569.onrender.com",'127.0.0.1','localhost']
+ALLOWED_HOSTS = ["anu6569.onrender.com",'127.0.0.1','localhost','https://anu6569.azurewebsites.net/']
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
