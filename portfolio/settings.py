@@ -26,7 +26,7 @@ if os.path.isfile(dotenv_file):
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = os.environ['django-insecure-tev81&t)a)a6yd4u2*vb79qtq(fuec1r5!$7+h9^s^rz1p*)g+']
+SECRET_KEY = 'django-insecure-tev81&t)a)a6yd4u2*vb79qtq(fuec1r5!$7+h9^s^rz1p*)g+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
