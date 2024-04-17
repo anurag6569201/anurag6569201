@@ -98,7 +98,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {'default': dj_database_url.config(default=os.environ['DATABASE_URL'], engine='django_cockroachdb')}
+DATABASES = {'default': dj_database_url.config(default='postgresql://anurag:Ljz3aoh-3yY0Q5FU2quDcg@portfolio-9063.8nk.gcp-asia-southeast1.cockroachlabs.cloud:26257/defaultdb?sslmode=require', engine='django_cockroachdb')}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
