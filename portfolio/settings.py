@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-tev81&t)a)a6yd4u2*vb79qtq(fuec1r5!$7+h9^s^rz1p*)g+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["anu6569.onrender.com",'127.0.0.1','localhost','anuragsingh.azurewebsites.net']
+ALLOWED_HOSTS = ['*']
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
