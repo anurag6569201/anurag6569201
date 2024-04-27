@@ -1,7 +1,13 @@
 // set up global javascript variables
 var opt=false;
-var bgUrl = 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1427&q=80'
-
+var bgUrl = [
+	'https://images.unsplash.com/photo-1608178398319-48f814d0750c?q=80&w=1479&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+	'https://images.unsplash.com/photo-1606125784258-570fc63c22c1?q=80&w=1361&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+	'https://images.unsplash.com/photo-1592518973646-8f50fe9d53c7?q=80&w=1555&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+	'https://images.unsplash.com/photo-1575624056016-b6ec5091e0f5?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+	'https://images.unsplash.com/photo-1447433819943-74a20887a81e?q=80&w=1499&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+	'https://images.unsplash.com/photo-1459624470348-67edb45d81b1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+];
 var blackholeMass = 1500;
 var curblackholeMass = 100;
 
@@ -170,11 +176,24 @@ function render() {
 window.addEventListener('load', function(event){
 	var image = new Image();
   	image.crossOrigin = "Anonymous";
-	image.src = bgUrl;
+	let currentTime = new Date();
+	var min=currentTime.getMinutes()
+	if (min < 10) {
+        image.src = bgUrl[0];
+    } else if (min >= 10 && min < 20) {
+        image.src = bgUrl[1];
+    } else if (min >= 20 && min < 30) {
+        image.src = bgUrl[2];
+    } else if (min >= 30 && min < 40) {
+        image.src = bgUrl[3];
+    } else if (min >= 40 && min < 50) {
+        image.src = bgUrl[4];
+    } else if (min >= 50 && min < 60) {
+        image.src = bgUrl[5];
+    }
 	image.onload = function() {
 		init(image);
 	}
-
 });
 
 function updateVariableBasedOnMediaQuery() {
