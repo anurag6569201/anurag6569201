@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 import dotenv
 import dj_database_url
+from sqlalchemy import true
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +30,7 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = 'django-insecure-tev81&t)a)a6yd4u2*vb79qtq(fuec1r5!$7+h9^s^rz1p*)g+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -68,7 +69,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://' + os.environ.get('WEBSITE_HOSTNAME')]
+# CSRF_TRUSTED_ORIGINS = ['https://' + os.environ.get('WEBSITE_HOSTNAME')]
 
 ROOT_URLCONF = 'portfolio.urls'
 
