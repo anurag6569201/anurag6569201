@@ -6,10 +6,7 @@
   <h1 align="center">👋 Hi, I'm Anurag Singh ! <p align="center"> <img src="https://komarev.com/ghpvc/?username=anurag6569201&label=Code%20views&color=a538ff&style=plastic" alt="anurag6569201" /> </p></h1>
 </p>
 
-<p align="center">
-  <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img src="https://readme-typing-svg.demolab.com/?lines=Full-stack%20web%20and%20Data%20Science;Experienced%20UI%2FUX%20Web Designer;1%2B%20year%20of%20coding%20experience;Always%20learning%20new%20things&font=Fira%20Code&center=true&width=440&height=45&color=ffffff&vCenter=true&pause=1000&size=22" /></a>
-</p>
+
 
 <!-- Social icons section -->
 <p align="center">
