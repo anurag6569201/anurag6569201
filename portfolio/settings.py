@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
 import dotenv
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-tev81&t)a)a6yd4u2*vb79qtq(fuec1r5!$7+h9^s^rz1p*)g+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','.vercel.app', '.now.sh']
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
@@ -100,7 +100,8 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {'default': dj_database_url.config(default='postgresql://anurag:Ljz3aoh-3yY0Q5FU2quDcg@portfolio-9063.8nk.gcp-asia-southeast1.cockroachlabs.cloud:26257/defaultdb?sslmode=require', engine='django_cockroachdb')}
+DATABASES = {'default': dj_database_url.config(default=os.environ['DATABASE_URL'], engine='django_cockroachdb')}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
