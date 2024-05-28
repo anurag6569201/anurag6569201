@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 import dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -93,13 +94,13 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-# DATABASES = {'default': dj_database_url.config(default='postgresql://anurag:Ljz3aoh-3yY0Q5FU2quDcg@portfolio-9063.8nk.gcp-asia-southeast1.cockroachlabs.cloud:26257/defaultdb?sslmode=require', engine='django_cockroachdb')}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+DATABASES = {'default': dj_database_url.config(default='postgresql://anurag:Ljz3aoh-3yY0Q5FU2quDcg@portfolio-9063.8nk.gcp-asia-southeast1.cockroachlabs.cloud:26257/defaultdb?sslmode=require', engine='django_cockroachdb')}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
