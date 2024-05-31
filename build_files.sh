@@ -17,4 +17,4 @@ python3.9 manage.py migrate --noinput
 
 # Collect Static
 echo "Collect Static..."
-python3.9 manage.py collectstatic --noinput --clear
+python3.9 manage.py collectstatic --ignore=vendor/bootswatch/default/bootstrap.min.css.map --noinput --clear
