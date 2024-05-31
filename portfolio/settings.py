@@ -143,7 +143,9 @@ STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 
 # renderstorage
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-# ......
+
+# Add this setting to ignore missing files warnings (useful for production)
+WHITENOISE_MANIFEST_STRICT = False
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
