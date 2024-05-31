@@ -1,8 +1,9 @@
-<div align="center">
-  <img align="center" src="https://raw.githubusercontent.com/anurag6569201/anurag6569201/output/snake.svg" alt="Snake animation" />
-</div>
+
 
 <p align="center">
+  <div align="center">
+<img src="https://github.com/fnky/fnky/raw/fnky/img/fan-1.gif" alt="Fan" align="center">
+</div>
   <h1 align="center">👋 Hi, I'm Anurag Singh ! <p align="center"> <img src="https://komarev.com/ghpvc/?username=anurag6569201&label=Code%20views&color=a538ff&style=plastic" alt="anurag6569201" /> </p></h1>
 </p>
 
