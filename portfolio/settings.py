@@ -142,7 +142,7 @@ STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 
 # renderstorage
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 # Add this setting to ignore missing files warnings (useful for production)
 WHITENOISE_MANIFEST_STRICT = False
