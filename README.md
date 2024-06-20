@@ -21,7 +21,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kibana/kibana-original.svg" width="40" height="40" alt="Kibana Icon"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/logstash/logstash-original.svg" width="40" height="40" alt="Logstash Icon"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/beats/beats-original.svg" width="40" height="40" alt="Beats Icon"/>
-  <img width="40" height="40" src="https://drive.google.com/file/d/1X0k_W-SUNWlQei0meAAibA1KZ2Emf3bn/view?usp=sharing" />
+  <img width="40" height="40" src="https://github.com/anurag6569201/anurag6569201/blob/main/static/assets/images/xpack.png" />
 </p>
 
 ### Languages
