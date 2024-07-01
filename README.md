@@ -38,9 +38,21 @@
   </a>
 </p>
 
-![Anurag6569201's Stats](https://github-readme-stats.vercel.app/api?username=anurag6569201&theme=gotham&show_icons=true&hide_border=true&count_private=true)![Anurag6569201's Streak](https://github-readme-streak-stats.herokuapp.com/?user=anurag6569201&theme=gotham&hide_border=true)
-[![Anurag's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=anurag6569201&bg_color=0c1014&color=268f77&line=268f77&point=268f77&area=true&hide_border=true)](https://github.com/anurag6569201/github-readme-activity-graph)
+<div align="center">
+<a href="https://anurag.icu">
 
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=anurag6569201&card_width=480&custom_title=Anurag's%20Used%20Languages&langs_count=8&theme=gotham&hide_border=true&layout=compact" alt="Most used languages" />
+  
+<br/>
+
+![Anurag6569201's Stats](https://github-readme-stats.vercel.app/api?username=anurag6569201&theme=gotham&show_icons=true&hide_border=true&count_private=true)![Anurag6569201's Streak](https://github-readme-streak-stats.herokuapp.com/?user=anurag6569201&theme=gotham&hide_border=true)
+
+<br/>
+
+[![Anurag's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=anurag6569201&days=45&bg_color=0c1014&color=268f77&line=268f77&point=268f77&area=true&hide_border=true)](https://github.com/anurag6569201/github-readme-activity-graph)
+
+</a>
+</div>
 ###
 
 
