@@ -1,30 +1,40 @@
 from django.contrib import admin
 from .models import HomeStats,Biography,TimeLine,TechStack,AreaInterest,TechLang,Contact,projectLanguage,ProjectsGenere,ProjectsMod
+from import_export.admin import ImportExportModelAdmin
 
-class ProjectsModClass(admin.ModelAdmin):
+class ProjectsModClass(ImportExportModelAdmin):
     list_display=['projectName']
 
-class ProjectsLanguageClass(admin.ModelAdmin):
+class ProjectsLanguageClass(ImportExportModelAdmin):
     list_display=['language']
 
-class ProjectsGenereClass(admin.ModelAdmin):
+class ProjectsGenereClass(ImportExportModelAdmin):
     list_display=['genereId','genereName']
 
-class ProjectsTimelineClass(admin.ModelAdmin):
+class ProjectsTimelineClass(ImportExportModelAdmin):
     list_display=['contentStart','contentMid','contentEnd']
 
-class ProjectsTechstackClass(admin.ModelAdmin):
+class ProjectsTechstackClass(ImportExportModelAdmin):
     list_display=['description']
 
-class ProjectsTechlangClass(admin.ModelAdmin):
+class ProjectsTechlangClass(ImportExportModelAdmin):
     list_display=['language','techstack']
 
-class ProjectsContactClass(admin.ModelAdmin):
+class ProjectsContactClass(ImportExportModelAdmin):
     list_display=['contact_href']
 
-admin.site.register(HomeStats)
-admin.site.register(AreaInterest)
-admin.site.register(Biography)
+class ProjectsHomeStats(ImportExportModelAdmin):
+    list_display=['projects','clients','field']
+    
+class ProjectsAreaInterest(ImportExportModelAdmin):
+    list_display=['content']
+
+class ProjectsBiography(ImportExportModelAdmin):
+    list_display=['resume']
+
+admin.site.register(HomeStats,ProjectsHomeStats)
+admin.site.register(AreaInterest,ProjectsAreaInterest)
+admin.site.register(Biography,ProjectsBiography)
 admin.site.register(TimeLine,ProjectsTimelineClass)
 admin.site.register(TechStack,ProjectsTechstackClass)
 admin.site.register(TechLang,ProjectsTechlangClass)
