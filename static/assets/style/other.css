@@ -157,6 +157,7 @@
     display: flex;
     flex-wrap: wrap; /* Add flex-wrap property */
     gap: 10px;
+    justify-content: center;
     margin-top: 1em;
 }
 
@@ -388,6 +389,7 @@ form button:hover{
     color: aliceblue;
     font-size: 1.4em;
     font-weight: 400;
+    text-align: center;
 }
 .card-body h5{
     color: aliceblue;

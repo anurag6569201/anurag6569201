@@ -398,3 +398,31 @@ body::-webkit-scrollbar {
         opacity: 1;
     }
 }
+
+
+/* Style for Swiper carousel */
+.swiper {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  .links_prj{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .links_prj a{
+    text-decoration: none;
+  }

@@ -1,9 +1,17 @@
 from django.contrib import admin
-from .models import HomeStats,Biography,TimeLine,TechStack,AreaInterest,TechLang,Contact,projectLanguage,ProjectsGenere,ProjectsMod
+from .models import HomeStats,Biography,TimeLine,TechStack,AreaInterest,TechLang,Contact,projectLanguage,ProjectsGenere,ProjectsMod,ProjectImage
 from import_export.admin import ImportExportModelAdmin
 
-class ProjectsModClass(ImportExportModelAdmin):
-    list_display=['projectName']
+class ProjectImageInline(admin.TabularInline):
+    model = ProjectImage
+    extra = 1 
+
+class ProjectsModAdmin(admin.ModelAdmin):
+    list_display = ('projectName', 'orderId', 'webLink', 'projectGit') 
+    search_fields = ('projectName', 'projectAbout') 
+    inlines = [ProjectImageInline] 
+
+admin.site.register(ProjectsMod, ProjectsModAdmin)
 
 class ProjectsLanguageClass(ImportExportModelAdmin):
     list_display=['language']
@@ -41,4 +49,3 @@ admin.site.register(TechLang,ProjectsTechlangClass)
 admin.site.register(Contact,ProjectsContactClass)
 admin.site.register(projectLanguage,ProjectsLanguageClass)
 admin.site.register(ProjectsGenere,ProjectsGenereClass)
-admin.site.register(ProjectsMod,ProjectsModClass)

@@ -131,10 +131,10 @@ function sort_aiml() {
     setActiveButton('sort-aiml');
 }
 
-function sort_others() {
+function sort_freelance() {
     hideProjects();
-    showProjectsByCategory("Others");
-    setActiveButton('sort-others');
+    showProjectsByCategory("freelance");
+    setActiveButton('sort-freelance');
 }
 
 function hackathon() {

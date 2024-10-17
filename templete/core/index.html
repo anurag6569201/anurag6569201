@@ -2,7 +2,10 @@
 {% load static %}
 
 {% block content %}
-
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <div class="loader" id="loader">
         <div class="wrapper">
             <div class="circle"></div>
@@ -277,33 +280,81 @@
                     <section class="projects">
                         <div class="row projects-row col-12 col-md-12" id="projects-container" style="margin: 0;">
                             {% for prj in prj_mod %}
-                            <div class="g-3 col-lg-4 col-md-6" data-category="{{ prj.prjGen.first.genereName }}">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><img src="{{prj.projectLogo.url}}" alt=""
-                                                class="project-logo">{{prj.projectName}}
-                                            <a target="_blank"
-                                                href="{{prj.projectGit}}"><i
-                                                    class="fa-brands fa-github"></i></a>
-                                            <a target="_blank" href="{{prj.webLink}}"><i
-                                                    class="fa-solid fa-share-from-square"></i></a>
-                                            <a target="_blank" href="{{prj.webblogLink}}">
-                                                <i class="fa-solid fa-book"></i></a>
-                                        </h5>
-                                        <p class="card-text">
-                                        <ul>
-                                            <li>{{ prj.projectAbout }}</li>
-                                            <span class="techs">
-                                                {% for prjbtn in prj.projectlang.all %}
-                                                <button class="tech-button">{{prjbtn.language}}</button>
-                                                {% endfor %}
-                                            </span>
-                                        </ul>
-                                        </p>
+                                <div class="g-3 col-lg-4 col-md-6" data-category="{{ prj.prjGen.first.genereName }}">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title" style="display: flex;justify-content: space-between;align-items: center;">
+                                                <div>
+                                                    <img src="{{prj.projectLogo.url}}" alt="" class="project-logo">{{prj.projectName}}
+                                                </div>
+                                                <div class="links_prj">
+                                                    <a target="_blank" href="{{prj.projectGit}}">
+                                                        <i class="fa-brands fa-github"></i>
+                                                    </a>
+                                                    <a target="_blank" href="{{prj.webLink}}">
+                                                        <i class="fa-solid fa-share-from-square"></i>
+                                                    </a>
+                                                    <a target="_blank" href="{{prj.webblogLink}}">
+                                                        <i class="fa-solid fa-book"></i>
+                                                    </a>
+                                                </div>
+                                            </h5>
+
+                                            <!-- Carousel section -->
+                                            <div class="crousal" style="position: relative;">
+                                                <div class="swiper mySwiper">
+                                                    <div class="swiper-wrapper">
+                                                        {% for image in prj.images.all %}
+                                                        <div class="swiper-slide">
+                                                            <img src="{{ image.image.url }}" alt="Project Image">
+                                                        </div>
+                                                        {% endfor %}
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+
+                                            <p class="card-text">
+                                                <ul>
+                                                    <li>{{ prj.projectAbout }}</li>
+                                                    <span class="techs">
+                                                        {% for prjbtn in prj.projectlang.all %}
+                                                        <button class="tech-button">{{prjbtn.language}}</button>
+                                                        {% endfor %}
+                                                    </span>
+                                                </ul>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             {% endfor %}
+
+                            <!-- Swiper JS -->
+                            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+                            <!-- Initialize Swiper with autoplay and infinite loop -->
+                            <script>
+                                var swiper = new Swiper(".mySwiper", {
+                                    loop: true,
+                                    autoplay: {
+                                        delay: 2500,
+                                        disableOnInteraction: false,
+                                    },
+                                    pagination: {
+                                        el: ".swiper-pagination",
+                                        clickable: true,
+                                    },
+                                    effect: "cube",
+                                    grabCursor: true,
+                                    cubeEffect: {
+                                        shadow: true,
+                                        slideShadows: true,
+                                        shadowOffset: 20,
+                                        shadowScale: 0.94,
+                                    }
+                                });
+                            </script>
+
                         </div>
                         <div id="pagination-container"></div>
                     </section>
