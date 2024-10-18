@@ -306,7 +306,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                                                     <div class="swiper-wrapper">
                                                         {% for image in prj.images.all %}
                                                         <div class="swiper-slide">
-                                                            <img src="{{ image.image.url }}" alt="Project Image">
+                                                            <img loading="lazy" src="{{ image.image.url }}" alt="Project Image">
                                                         </div>
                                                         {% endfor %}
                                                     </div>
