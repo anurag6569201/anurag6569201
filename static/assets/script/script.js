@@ -119,10 +119,10 @@ function sort_web() {
     setActiveButton('sort-web');
 }
 
-function sort_game() {
+function sort_contro() {
     hideProjects();
-    showProjectsByCategory("Games");
-    setActiveButton('sort-game');
+    showProjectsByCategory("Contro");
+    setActiveButton('sort-contro');
 }
 
 function sort_aiml() {

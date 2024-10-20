@@ -1,5 +1,6 @@
 {% extends 'partials/base.html' %}
 {% load static %}
+{% load custom_filters %}
 
 {% block content %}
 <link
@@ -285,7 +286,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                                         <div class="card-body">
                                             <h5 class="card-title" style="display: flex;justify-content: space-between;align-items: center;">
                                                 <div>
-                                                    <img src="{{prj.projectLogo.url}}" alt="" class="project-logo">{{prj.projectName}}
+                                                    <img src="{{prj.projectLogo.url|webp_image}}" alt="" class="project-logo">{{prj.projectName}}
                                                 </div>
                                                 <div class="links_prj">
                                                     <a target="_blank" href="{{prj.projectGit}}">
@@ -306,7 +307,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                                                     <div class="swiper-wrapper">
                                                         {% for image in prj.images.all %}
                                                         <div class="swiper-slide">
-                                                            <img loading="lazy" src="{{ image.image.url }}" alt="Project Image">
+                                                            <img loading="lazy" src="{{ image.image.url|webp_image }}" alt="Project Image">
                                                         </div>
                                                         {% endfor %}
                                                     </div>
