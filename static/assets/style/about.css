@@ -99,3 +99,7 @@
     opacity: 0;
     visibility: hidden;
 }
+.webbloglink{
+    pointer-events: none !important;
+    opacity: .5;
+}
