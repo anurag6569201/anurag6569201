@@ -23,27 +23,26 @@ let animblackhole = document.querySelector('.anim-blackhole')
 let blackholee = document.querySelector('.blackhole')
 let bodycss = document.body
 
-window.onload = () => {
-    themebtn.addEventListener('click', () => {
-        if (themebtncheck.checked) {
-            bodycss.background = "transparent";
-            universe.style.display = "block";
-            animblackhole.style.opacity = "1";
-            blackholee.style.opacity = "1";
-        } else {
-            bodycss.background = "var(--pic-theme)";
-            universe.style.display = "none";
-            animblackhole.style.opacity = "0";
-            blackholee.style.opacity = "0";
-        }
-    });
-    // loader
-    const loader = document.getElementById("loader");
-    setTimeout(() => {
-        loader.style.display = "none";
-    }, 500);
 
-};
+themebtn.addEventListener('click', () => {
+    if (themebtncheck.checked) {
+        bodycss.background = "transparent";
+        universe.style.display = "block";
+        universe.style.opacity = "1"; // Fade in effect
+        animblackhole.style.opacity = "1";
+        blackholee.style.opacity = "1";
+    } else {
+        bodycss.background = "var(--pic-theme)";
+        universe.style.opacity = "0"; // Fade out effect
+        setTimeout(() => {
+            universe.style.display = "none"; // Wait for fade-out before hiding
+        }, 500);
+        animblackhole.style.opacity = "0";
+        blackholee.style.opacity = "0";
+    }
+});
+
+
 
 function menu_open() {
     link1.style.transform = "translateX(0%)";
@@ -237,3 +236,200 @@ gsap.utils.toArray(".revealUp").forEach(function (elem) {
         }
     });
 });
+
+function loader_blackhole() {
+
+
+    blackhole('#blackhole', onLoaderComplete);
+
+    function blackhole(element, onComplete) {
+        var h = $(element).height(),
+            w = $(element).width(),
+            cw = w,
+            ch = h,
+            maxorbit = 255, // distance from center
+            centery = ch / 2,
+            centerx = cw / 2;
+
+        var startTime = new Date().getTime();
+        var currentTime = 0;
+
+        var stars = [],
+            collapse = false,
+            collapsing = true,
+            expanse = true,
+            fading = false;
+
+        var canvas = $('<canvas/>').attr({ width: cw, height: ch }).appendTo(element),
+            context = canvas.get(0).getContext("2d");
+
+        canvas.css({
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            zIndex: 9999,
+            opacity: 1,
+            transition: 'opacity 2s ease'
+        });
+
+        context.globalCompositeOperation = "multiply";
+
+        function setDPI(canvas, dpi) {
+            if (!canvas.get(0).style.width) canvas.get(0).style.width = canvas.get(0).width + 'px';
+            if (!canvas.get(0).style.height) canvas.get(0).style.height = canvas.get(0).height + 'px';
+
+            var scaleFactor = dpi / 96;
+            canvas.get(0).width = Math.ceil(canvas.get(0).width * scaleFactor);
+            canvas.get(0).height = Math.ceil(canvas.get(0).height * scaleFactor);
+            var ctx = canvas.get(0).getContext('2d');
+            ctx.scale(scaleFactor, scaleFactor);
+        }
+
+        function rotate(cx, cy, x, y, angle) {
+            var radians = angle,
+                cos = Math.cos(radians),
+                sin = Math.sin(radians),
+                nx = (cos * (x - cx)) + (sin * (y - cy)) + cx,
+                ny = (cos * (y - cy)) - (sin * (x - cx)) + cy;
+            return [nx, ny];
+        }
+
+        setDPI(canvas, 192);
+
+        var star = function () {
+            var rands = [];
+            rands.push(Math.random() * (maxorbit / 2) + 1);
+            rands.push(Math.random() * (maxorbit / 2) + maxorbit);
+
+            this.orbital = rands.reduce(function (p, c) {
+                return p + c;
+            }, 0) / rands.length;
+
+            this.x = centerx;
+            this.y = centery + this.orbital;
+
+            this.yOrigin = centery + this.orbital;
+
+            this.speed = (Math.floor(Math.random() * 2.5) + 1.5) * Math.PI / 180;
+            this.rotation = 0;
+            this.startRotation = (Math.floor(Math.random() * 360) + 1) * Math.PI / 180;
+
+            this.id = stars.length;
+
+            this.color = 'rgba(255,255,255,' + (1 - (this.orbital / 255)) + ')';
+            this.collapseTarget = centery;
+
+            this.expansePos = centery + (this.id % 100) * -10 + (Math.floor(Math.random() * 20) + 1);
+
+            this.prevR = this.startRotation;
+            this.prevX = this.x;
+            this.prevY = this.y;
+
+            stars.push(this);
+        };
+
+        star.prototype.draw = function () {
+            if (!expanse) {
+                this.rotation = this.startRotation + (currentTime * this.speed);
+                if (collapse) {
+                    collapsing = true; // Trigger gradual collapse
+                    if (this.y > this.collapseTarget) {
+                        this.y -= 5; // Collapse speed
+                    } else if (collapsing) {
+                        collapsing = false;
+                        expanse = true; // Automatically trigger expansion after collapsing
+                        setTimeout(() => { expanse = true; }, 500); // Delay for visual effect
+                    }
+                }
+            } else {
+                this.rotation = this.startRotation + (currentTime * (this.speed / 2));
+                if (this.y > this.expansePos) {
+                    this.y -= Math.floor(this.expansePos - this.y) / -140;
+                } else if (!fading) {
+                    fading = true;
+                    setTimeout(() => fadeOut(), 500); // Trigger fade-out
+                }
+            }
+
+            context.save();
+            context.fillStyle = this.color;
+            context.strokeStyle = this.color;
+            context.beginPath();
+            var oldPos = rotate(centerx, centery, this.prevX, this.prevY, -this.prevR);
+            context.moveTo(oldPos[0], oldPos[1]);
+            context.translate(centerx, centery);
+            context.rotate(this.rotation);
+            context.translate(-centerx, -centery);
+            context.lineTo(this.x, this.y);
+            context.stroke();
+            context.restore();
+
+            this.prevR = this.rotation;
+            this.prevX = this.x;
+            this.prevY = this.y;
+        };
+
+        function fadeOut() {
+            canvas.css({ opacity: 0 });
+            setTimeout(() => {
+                canvas.remove();
+                if (typeof onComplete === 'function') onComplete(); // Trigger callback
+            },10); // Matches the CSS transition duration
+        }
+
+        function loop() {
+            var now = new Date().getTime();
+            currentTime = (now - startTime) / 50;
+
+            context.fillStyle = 'rgb(0, 0, 0)';
+            context.fillRect(0, 0, cw, ch);
+
+            for (var i = 0; i < stars.length; i++) {
+                if (stars[i] != stars) {
+                    stars[i].draw();
+                }
+            }
+
+            requestFrame(loop);
+        }
+
+        function init() {
+            context.fillStyle = 'rgb(0, 0, 0)';
+            context.fillRect(0, 0, cw, ch);
+            for (var i = 0; i < 2500; i++) {
+                new star();
+            }
+            loop();
+        }
+
+        $('.centerHover').on('click', function () {
+            collapse = true; // Start the collapse effect
+        });
+
+        window.requestFrame = (function () {
+            return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                function (callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+        })();
+
+        init();
+    }
+
+    function onLoaderComplete() {
+        console.log('onLoaderComplete');
+            // Ensure the loader hides only after the page fully loads
+            console.log("Loading");
+            const elapsedTime = performance.now() - startTime;
+            const remainingTime = Math.max(1000 - elapsedTime, 0);
+
+                console.log("Loader complete");
+                loader.style.transition = "opacity 0.5s ease"; // Smooth fade-out
+                loader.style.opacity = "0";
+              
+                loader.style.display = "none"; // Hide after fade-out
+              
+    }
+}

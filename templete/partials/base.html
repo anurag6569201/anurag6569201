@@ -150,5 +150,32 @@
 
 <!-- custom js -->
 <script src="{% static 'assets/script/script.js' %}"></script>
+<script>
+    loader_blackhole();
+    let loader = document.getElementById("loader");
+let main_body = document.querySelector(".main_body");
 
+window.onload = () => {
+    // Set the initial opacity of the main body to 0
+    main_body.style.opacity = "0";
+
+    // Delay the execution to fade out the loader and fade in the main body
+    setTimeout(() => {
+        loader.style.transition = "opacity 4.5s ease";
+        main_body.style.transition = "opacity 4.5s ease";
+
+        // Fade in the main body
+        main_body.style.opacity = "1";
+
+        // Fade out the loader
+        loader.style.opacity = "0";
+
+        // Hide the loader completely after the fade-out
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 6000); // Matches the transition duration
+    }, 3000); // Delay before fading starts
+};
+
+</script>
 </html>

@@ -2,13 +2,9 @@
 var opt=false;
 var bgUrl = [
 	'https://images.unsplash.com/photo-1608178398319-48f814d0750c?q=80&w=1479&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-	'https://images.unsplash.com/photo-1527066579998-dbbae57f45ce?q=80&w=1370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 	'https://images.unsplash.com/photo-1592518973646-8f50fe9d53c7?q=80&w=1555&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-	'https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-	'https://images.unsplash.com/photo-1541356665065-22676f35dd40?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 	'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=1479&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 	'https://images.unsplash.com/photo-1484589065579-248aad0d8b13?q=80&w=1359&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-	'https://images.unsplash.com/photo-1509114397022-ed747cca3f65?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 	'https://images.unsplash.com/photo-1555448248-2571daf6344b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 	'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 ];
@@ -182,26 +178,18 @@ window.addEventListener('load', function(event){
   	image.crossOrigin = "Anonymous";
 	let currentTime = new Date();
 	var min=currentTime.getMinutes()
-	if (min < 6) {
+	if (min < 10) {
         image.src = bgUrl[0];
-    } else if (min >= 6 && min < 12) {
+    } else if (min >= 10 && min < 20) {
         image.src = bgUrl[1];
-    } else if (min >= 12 && min < 18) {
+    } else if (min >= 20 && min < 30) {
         image.src = bgUrl[2];
-    } else if (min >= 18 && min < 24) {
+    } else if (min >= 30 && min < 40) {
         image.src = bgUrl[3];
-    } else if (min >= 24 && min <30) {
+    } else if (min >= 40 && min <50) {
         image.src = bgUrl[4];
-    } else if (min >=30 && min < 36) {
+    } else if (min >=50 && min < 60) {
         image.src = bgUrl[5];
-    } else if (min >= 36 && min < 42) {
-        image.src = bgUrl[6];
-    } else if (min >= 42 && min < 48) {
-        image.src = bgUrl[7];
-    } else if (min >= 48 && min < 54) {
-        image.src = bgUrl[8];
-    } else if (min >= 54 && min < 60) {
-        image.src = bgUrl[9];
     }
 	image.onload = function() {
 		init(image);
