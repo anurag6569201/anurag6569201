@@ -20,6 +20,11 @@
         "src": "/(.*)",
         "dest": "portfolio/wsgi.py"
       }
+    ],
+    "excludeFiles": [
+        "portfolio/staticfiles/**",  
+        "portfolio/tests/**",      
+        "portfolio/docs/**"         
     ]
   }
   
