@@ -8,18 +8,12 @@ rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-    <div class="loader" id="loader">
-        <div id="blackhole">
-            <div class="centerHover"><span>ENTER</span></div>
-        </div>
-    </div>
+    
 
     <!-- navbar starts -->
     <nav class="navb" id="navb">
         <div class="logo">
-            <img src="{% static 'assets/images/hero.jpg' %}" alt="">
+            <img loading="lazy" src="{% static 'assets/images/hero.jpg' %}" alt="">
         </div>
         <div class="toggle-btn">
             <input id="checkbox" type="checkbox" checked />
@@ -40,8 +34,8 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 
     </nav>
     <div class="link-btn link-btn-mob" style="position: fixed;bottom: 0;right: 0;margin: 10px;z-index: 1000;">
-        <img style="width: 3em;height: 3em;cursor: pointer;display: block;" src="{% static 'assets/images/burger-solid.svg' %}" alt="" class="hemburger-open_mob" onclick="menu_open_mob()">
-        <img style="width: 3em;height: 3em;cursor: pointer;display: none;" src="{% static 'assets/images/xmark-solid.svg' %}" alt="" class="hemburger-close_mob" onclick="menu_close_mob()">
+        <img loading="lazy"  style="width: 3em;height: 3em;cursor: pointer;display: block;" src="{% static 'assets/images/burger-solid.svg' %}" alt="" class="hemburger-open_mob" onclick="menu_open_mob()">
+        <img loading="lazy"  style="width: 3em;height: 3em;cursor: pointer;display: none;" src="{% static 'assets/images/xmark-solid.svg' %}" alt="" class="hemburger-close_mob" onclick="menu_close_mob()">
     </div>
     <div class="toggle-btn toggle-btn-mob" style="z-index: 1000; position: fixed;top: 0;right: 0;margin: 10px;">
         <input id="checkbox" type="checkbox" checked />
@@ -57,7 +51,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     <div class="mobile-navbar" style="transition: .7s ease-out;z-index: 100;">
         <nav class="mobile-ver" style="transition: .7s ease-out; width: 100vw;height: 100vh;background: transparent;backdrop-filter: blur(30px);">
             <div>
-                <img style="width: 50px;height: 50px;border-radius: 50%;margin: 10px;position: absolute;top: 0;left: 0;" src="{% static 'assets/images/hero.jpg' %}" alt="">
+                <img loading="lazy" style="width: 50px;height: 50px;border-radius: 50%;margin: 10px;position: absolute;top: 0;left: 0;" src="{% static 'assets/images/hero.jpg' %}" alt="">
             </div>
     
             <div style="text-align: center;display: flex;align-items: center;justify-content: center;gap: .5em;position: absolute;top: 0;margin: auto;margin-top: 1em;">
@@ -125,7 +119,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                 <div class="row" id="section2">
                     <div id="profile" class="col-lg-5 col-md-5">
                         <div class="profile-area">
-                            <img class="avatar avatar-circle revealUp" src="{% static 'assets/images/avatar.png' %}" alt="Anurag singh">
+                            <img loading="lazy" class="avatar avatar-circle revealUp" src="{% static 'assets/images/avatar.png' %}" alt="Anurag singh">
                             <div class="profile-text revealUp">
                                 <h2>Anurag Singh</h2>
                                 <h3>Electrical Engineering 2023-2027</h3>
@@ -273,7 +267,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                                         <div class="card-body">
                                             <h5 class="card-title" style="display: flex;justify-content: space-between;align-items: center;">
                                                 <div>
-                                                    <img src="{{prj.projectLogo.url|webp_image}}" alt="" class="project-logo">{{prj.projectName}}
+                                                    <img loading="lazy" src="{{prj.projectLogo.url|webp_image}}" alt="" class="project-logo">{{prj.projectName}}
                                                 </div>
                                                 <div class="links_prj">
                                                     <a target="_blank" href="{{prj.projectGit}}">

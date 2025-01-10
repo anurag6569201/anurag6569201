@@ -8,8 +8,8 @@ var bgUrl = [
 	'https://images.unsplash.com/photo-1555448248-2571daf6344b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 	'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 ];
-var blackholeMass = 1500;
-var curblackholeMass = 100;
+var blackholeMass =700;
+var curblackholeMass = 50;
 
 var canvas, gl;
 

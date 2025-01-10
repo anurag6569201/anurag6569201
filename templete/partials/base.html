@@ -30,7 +30,13 @@
 <!-- body area start-->
 
 <body>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+    <div class="loader" id="loader">
+        <div id="blackhole">
+            <div class="centerHover"><span>ENTER</span></div>
+        </div>
+    </div>
     <!-- paginatin -->
     <div class="pages" id="pagination" style="pointer-events: none;">
         <div class="pagination">
@@ -50,7 +56,7 @@
         </div>
     </div>
 
-    <div class="allin-one">
+    <div class="allin-one" id="specific_page">
 
         {% block content %}
 
@@ -75,7 +81,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 
 <!-- jquery js -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script id="2d-fragment-shader" type="x-shader/x-fragment">
     // <![CDATA[
     
@@ -150,9 +155,11 @@
 <script id="universe-anim" async src="{% static 'assets/script/anim.js' %}"></script>
 
 <!-- custom js -->
-<script src="{% static 'assets/script/script.js' %}"></script>
-<script>
-    loader_blackhole();
+<script async src="{% static 'assets/script/script.js' %}"></script>
+<script async>
+    window.addEventListener("load", function () {
+        loader_blackhole();
+    });
 </script>
 {% endcompress %}
 </html>

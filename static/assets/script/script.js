@@ -428,7 +428,7 @@ function loader_blackhole() {
         function init(time){
             context.fillStyle = 'rgb(0, 0, 0)';  // Initial clear of the canvas, to avoid an issue where it all gets too dark
             context.fillRect(0, 0, cw, ch);
-            for(var i = 0; i < 2500; i++){  // create 2500 stars
+            for(var i = 0; i < 700; i++){  // create 2500 stars
                 new star();
             }
             loop();

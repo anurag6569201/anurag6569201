@@ -98,8 +98,8 @@
     .profile-area {
         flex-direction: column;
     }
-    #glscreen{
-        width: 700px !important;
+    .landing canvas{
+        min-width: min-content;
     }
 
     .wrapper_all {
@@ -149,8 +149,8 @@
     #News {
         padding: 0;
     }
-    #glscreen{
-        max-width: 500px !important;
+    .landing canvas{
+        min-width: min-content;
     }
     .secondin-one {
         padding: 0;
