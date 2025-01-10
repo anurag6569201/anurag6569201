@@ -1,4 +1,5 @@
 {% load static %}
+{% load compress %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,13 +18,13 @@
     <link rel="stylesheet" href="{% static 'assets/style/bootstrap.min.css.map' %}">
     <!-- custom css -->
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    {% compress css %}
     <link rel="stylesheet" href="{% static 'assets/style/anim.css' %}">
-
     <link rel="stylesheet" href="{% static 'assets/style/about.css' %}">
     <link rel="stylesheet" href="{% static 'assets/style/other.css' %}">
     <link rel="stylesheet" href="{% static 'assets/style/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/style/responsive.css' %}">
-
+    {% endcompress %}
 </head>
 
 <!-- body area start-->
@@ -75,75 +76,75 @@
 
 <!-- jquery js -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-<!-- anim webgl js -->
 <script id="2d-fragment-shader" type="x-shader/x-fragment">
-// <![CDATA[
-
-    #ifdef GL_ES
-    precision mediump float;
-    #endif
+    // <![CDATA[
     
-    #define PI 3.14159265359
-    
-    uniform sampler2D u_image;
-    varying vec2 v_texCoord;
-    
-    uniform vec2 u_resolution;
-    uniform vec2 u_mouse;
-    uniform float u_mass;
-    uniform float u_time;
-    uniform float u_clickedTime;
-    
-    vec2 rotate(vec2 mt, vec2 st, float angle){
-        float cos = cos((angle + u_clickedTime) * PI); // try replacing * 1.0 with * PI
-        float sin = sin(angle * 0.0); // try removing the * 0.0
+        #ifdef GL_ES
+        precision mediump float;
+        #endif
         
-        // Uncomment these two lines for realism
-        //float cos = cos(angle) * (u_time * 0.3);
-        //float sin = sin(angle) * (u_time * 0.3);
+        #define PI 3.14159265359
         
-        float nx = (cos * (st.x - mt.x)) + (sin * (st.y - mt.y)) + mt.x;
-        float ny = (cos * (st.y - mt.y)) - (sin * (st.x - mt.x)) + mt.y;
-        return vec2(nx, ny);
-    }
-    
-    void main() {
-        vec2 st = vec2(gl_FragCoord.x, u_resolution.y - gl_FragCoord.y)/u_resolution;
-        vec2 mt = vec2(u_mouse.x, u_resolution.y - u_mouse.y)/u_resolution;
-    
-        float dx = st.x - mt.x;
-        float dy = st.y - mt.y;
-    
-        float dist = sqrt(dx * dx + dy * dy);
-        float pull = u_mass / (dist * dist);
+        uniform sampler2D u_image;
+        varying vec2 v_texCoord;
         
-        vec3 color = vec3(0.0);
+        uniform vec2 u_resolution;
+        uniform vec2 u_mouse;
+        uniform float u_mass;
+        uniform float u_time;
+        uniform float u_clickedTime;
         
-        vec2 r = rotate(mt,st,pull);
-        vec4 imgcolor = texture2D(u_image, r);
-        color = vec3(
-            (imgcolor.x - (pull * 0.25)),
-            (imgcolor.y - (pull * 0.25)), 
-            (imgcolor.z - (pull * 0.25))
-        );
+        vec2 rotate(vec2 mt, vec2 st, float angle){
+            float cos = cos((angle + u_clickedTime) * PI); // try replacing * 1.0 with * PI
+            float sin = sin(angle * 0.0); // try removing the * 0.0
+            
+            // Uncomment these two lines for realism
+            //float cos = cos(angle) * (u_time * 0.3);
+            //float sin = sin(angle) * (u_time * 0.3);
+            
+            float nx = (cos * (st.x - mt.x)) + (sin * (st.y - mt.y)) + mt.x;
+            float ny = (cos * (st.y - mt.y)) - (sin * (st.x - mt.x)) + mt.y;
+            return vec2(nx, ny);
+        }
         
-    
-        gl_FragColor = vec4(color,1.);
-    }
-    // ]]>
-</script>
-<script id="2d-vertex-shader" type="x-shader/x-vertex">// <![CDATA[
-    attribute vec2 a_position;
-    attribute vec2 a_texCoord;
-    
-    varying vec2 v_texCoord;
-    void main() {
-        gl_Position = vec4(a_position, 0, 1);
-        v_texCoord = a_texCoord;
-    }
-    // ]]>
-</script>
+        void main() {
+            vec2 st = vec2(gl_FragCoord.x, u_resolution.y - gl_FragCoord.y)/u_resolution;
+            vec2 mt = vec2(u_mouse.x, u_resolution.y - u_mouse.y)/u_resolution;
+        
+            float dx = st.x - mt.x;
+            float dy = st.y - mt.y;
+        
+            float dist = sqrt(dx * dx + dy * dy);
+            float pull = u_mass / (dist * dist);
+            
+            vec3 color = vec3(0.0);
+            
+            vec2 r = rotate(mt,st,pull);
+            vec4 imgcolor = texture2D(u_image, r);
+            color = vec3(
+                (imgcolor.x - (pull * 0.25)),
+                (imgcolor.y - (pull * 0.25)), 
+                (imgcolor.z - (pull * 0.25))
+            );
+            
+        
+            gl_FragColor = vec4(color,1.);
+        }
+        // ]]>
+    </script>
+    <script id="2d-vertex-shader" type="x-shader/x-vertex">// <![CDATA[
+        attribute vec2 a_position;
+        attribute vec2 a_texCoord;
+        
+        varying vec2 v_texCoord;
+        void main() {
+            gl_Position = vec4(a_position, 0, 1);
+            v_texCoord = a_texCoord;
+        }
+        // ]]>
+    </script>
+{% compress js %}
+<!-- anim webgl js -->
 
 <script id="universe-anim" async src="{% static 'assets/script/anim1.js' %}"></script>
 <script id="universe-anim" async src="{% static 'assets/script/anim.js' %}"></script>
@@ -152,30 +153,6 @@
 <script src="{% static 'assets/script/script.js' %}"></script>
 <script>
     loader_blackhole();
-    let loader = document.getElementById("loader");
-let main_body = document.querySelector(".main_body");
-
-window.onload = () => {
-    // Set the initial opacity of the main body to 0
-    main_body.style.opacity = "0";
-
-    // Delay the execution to fade out the loader and fade in the main body
-    setTimeout(() => {
-        loader.style.transition = "opacity 4.5s ease";
-        main_body.style.transition = "opacity 4.5s ease";
-
-        // Fade in the main body
-        main_body.style.opacity = "1";
-
-        // Fade out the loader
-        loader.style.opacity = "0";
-
-        // Hide the loader completely after the fade-out
-        setTimeout(() => {
-            loader.style.display = "none";
-        }, 6000); // Matches the transition duration
-    }, 3000); // Delay before fading starts
-};
-
 </script>
+{% endcompress %}
 </html>

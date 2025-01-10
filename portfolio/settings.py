@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 import dotenv
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -55,6 +54,9 @@ INSTALLED_APPS = [
     # default apps
     'project',
     'import_export',
+
+    'compressor',
+    'htmlmin',
 ]
 
 MIDDLEWARE = [
@@ -68,7 +70,10 @@ MIDDLEWARE = [
     
     # render.com middleware
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    'htmlmin.middleware.HtmlMinifyMiddleware', 
+    'htmlmin.middleware.MarkRequestMiddleware'
 ]
+HTML_MINIFY = True
 
 # CSRF_TRUSTED_ORIGINS = ['https://' + os.environ.get('WEBSITE_HOSTNAME')]
 
@@ -149,6 +154,17 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+]
+
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
+COMPRESS_CSS_HASHING_METHOD = 'content'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -159,4 +175,16 @@ JAZZMIN_SETTINGS = {
     'site_brand':"Portfolio",
     'site_logo':'/assets/images/avatar.png',
     'copyright':"Portfolio.com",
+
+    "custom_css": "../static/assets/style/jazzmin.css",
 }
+
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django_redis.cache.RedisCache',
+#         'LOCATION': 'redis://127.0.0.1:6379/1',
+#         'OPTIONS': {
+#             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+#         },
+#     }
+# }

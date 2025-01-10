@@ -1,0 +1,268 @@
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    padding: 0;
+}
+
+.allin-one {
+    overflow-x: hidden;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+}
+
+.secondin-one {
+    width: 100vw;
+    background: var(--blacktheme);
+    overflow-x: hidden;
+    z-index: 20;
+}
+
+.landing {
+    z-index: 1;
+}
+
+#section6,
+#section5,
+#section4,
+#News {
+    padding: 0 3em 0 8em;
+}
+#Home{
+    overflow: hidden;
+}
+
+@media (max-width:1000px) and (min-width:1100px) {
+    .wrapper_all {
+        background-size: cover;
+    }
+
+    body {
+        font-size: 9px;
+    }
+
+    #profile {
+        font-size: 7px;
+    }
+
+    .blocks {
+        font-size: 8px;
+    }
+}
+
+@media (max-width:1101px) {
+    body {
+        font-size: 8.5px;
+    }
+
+    #profile {
+        font-size: 6.7px;
+    }
+
+    .blocks {
+        font-size: 8px;
+    }
+}
+
+@media (max-width:999px) and (min-width:768px) {
+    body {
+        font-size: 8.5px;
+    }
+
+    .profile-area {
+        flex-direction: column;
+    }
+
+    .hero {
+        background-attachment: local;
+        background-size: cover;
+    }
+
+    .projects-row .card {
+        height: 270px;
+    }
+
+    .topic-content .icon {
+        padding-right: .5em;
+    }
+
+    .hero .blocks-contain {
+        right: -2em;
+    }
+}
+
+@media (max-width:767px) and (min-width:576px) {
+    .profile-area {
+        flex-direction: column;
+    }
+    #glscreen{
+        width: 700px !important;
+    }
+
+    .wrapper_all {
+        background-attachment: local;
+        background-size: cover;
+    }
+
+    .projects-row .card {
+        height: 270px;
+    }
+
+    .topic-content .icon {
+        padding-right: .5em;
+    }
+
+    .hero .blocks-contain {
+        right: -7em;
+    }
+
+    .blocks {
+        font-size: 6.5px;
+    }
+
+    #profile .avatar {
+        width: 140px;
+        height: 140px;
+    }
+
+    .contact-map {
+        display: block;
+    }
+
+    .contact {
+        font-size: 8px;
+    }
+
+    .landing {
+        background-size: cover;
+    }
+}
+
+@media (max-width:575px) {
+
+    #section6,
+    #section5,
+    #section4,
+    #News {
+        padding: 0;
+    }
+    #glscreen{
+        max-width: 500px !important;
+    }
+    .secondin-one {
+        padding: 0;
+    }
+
+    .navb {
+        display: none;
+    }
+
+    .link-btn-mob {
+        display: block;
+    }
+
+    .toggle-btn-mob {
+        display: block;
+    }
+
+    .section-subheading,
+    .intro span {
+        background: linear-gradient(90deg, var(--main), var(--blue));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .bio {
+        padding: 0 2em;
+    }
+
+    .hero {
+        width: 100vw;
+    }
+
+    .blocks {
+        font-size: 6px;
+        justify-content: left;
+        bottom: 18vh;
+    }
+
+    .intro {
+        top: 5vh;
+        right: 0;
+        font-size: 6px;
+    }
+
+    #News {
+        padding: 0 2em;
+        font-size: 8px;
+    }
+
+    .projects-wrapper {
+        margin: 0 !important;
+        padding: 0 2em;
+    }
+
+    .prj-heading {
+        font-size: 8px;
+    }
+
+    .project-sorting {
+        display: block;
+    }
+
+    .project-sorting button {
+        margin-bottom: 1em;
+        margin-left: .5em;
+    }
+
+    .topic-wrapper {
+        padding: 0 2em;
+        margin: 0;
+    }
+
+    .row-cols-3>* {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .contact {
+        padding: 0 0em;
+        border-radius: 0;
+    }
+
+    .section-heading {
+        border-radius: 0;
+        background-color: transparent;
+    }
+
+    .contact .row {
+        border-radius: 0;
+    }
+
+    .contact .col-6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .contact-map {
+        flex-direction: column;
+    }
+
+    .pages {
+        left: 98.5vw;
+        scale: .90;
+    }
+
+    .network-icon {
+        padding: .5em;
+    }
+
+    .landing {
+        background-size: cover;
+        background-position-x: 60%;
+    }
+}

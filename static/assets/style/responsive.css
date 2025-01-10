@@ -98,6 +98,9 @@
     .profile-area {
         flex-direction: column;
     }
+    .landing canvas{
+        width: 700px !important;
+    }
 
     .wrapper_all {
         background-attachment: local;
@@ -146,7 +149,9 @@
     #News {
         padding: 0;
     }
-
+    .landing canvas{
+        max-width: 500px !important;
+    }
     .secondin-one {
         padding: 0;
     }
