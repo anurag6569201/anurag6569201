@@ -442,11 +442,14 @@ let main_body = document.querySelector(".main_body");
 
 function initiate_main_body(){
     main_body.style.opacity = "0";
+    let main_content_html = document.getElementById("main_html_id");
+    main_content_html.style.overflow="hidden";
     setTimeout(() => {
         loader.style.transition = "opacity 4.5s ease";
         main_body.style.transition = "opacity 4.5s ease";
         main_body.style.opacity = "1";
         loader.style.opacity = "0";
+        main_content_html.style.overflow="inherit";
         setTimeout(() => {
             loader.style.display = "none";
         }, 6000); // Matches the transition duration

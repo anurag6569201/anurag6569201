@@ -1,7 +1,7 @@
 {% load static %}
 {% load compress %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="main_html_id">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="{% static 'assets/style/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/style/bootstrap.min.css.map' %}">
     <!-- custom css -->
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     {% compress css %}
@@ -25,6 +24,10 @@
     <link rel="stylesheet" href="{% static 'assets/style/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/style/responsive.css' %}">
     {% endcompress %}
+    <script>
+        let main_content_html = document.getElementById("main_html_id");
+        main_content_html.style.overflow="hidden";
+    </script>
 </head>
 
 <!-- body area start-->
@@ -32,11 +35,7 @@
 <body>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <div class="loader" id="loader">
-        <div id="blackhole">
-            <div class="centerHover"><span>ENTER</span></div>
-        </div>
-    </div>
+
     <!-- paginatin -->
     <div class="pages" id="pagination" style="pointer-events: none;">
         <div class="pagination">
