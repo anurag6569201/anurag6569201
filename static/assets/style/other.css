@@ -409,6 +409,7 @@ form button:hover{
     background-color: #000000;
     overflow: hidden;
     z-index: 100000;
+    left: 0;
   }
   
 #blackhole {

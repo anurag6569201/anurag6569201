@@ -1,7 +1,7 @@
 {% load static %}
 {% load compress %}
 <!DOCTYPE html>
-<html lang="en" id="main_html_id">
+<html lang="en" id="">
 
 <head>
     <meta charset="UTF-8">
@@ -27,6 +27,13 @@
     <script>
         let main_content_html = document.getElementById("main_html_id");
         main_content_html.style.overflow="hidden";
+    </script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "r5fd63e8u0");
     </script>
 </head>
 
@@ -150,15 +157,10 @@
 {% compress js %}
 <!-- anim webgl js -->
 
-<script id="universe-anim" async src="{% static 'assets/script/anim1.js' %}"></script>
-<script id="universe-anim" async src="{% static 'assets/script/anim.js' %}"></script>
+<script id="universe-anim" defer src="{% static 'assets/script/anim1.js' %}"></script>
+<script id="universe-anim" defer src="{% static 'assets/script/anim.js' %}"></script>
 
 <!-- custom js -->
-<script async src="{% static 'assets/script/script.js' %}"></script>
-<script async>
-    window.addEventListener("load", function () {
-        loader_blackhole();
-    });
-</script>
+<script defer src="{% static 'assets/script/script.js' %}"></script>
 {% endcompress %}
 </html>

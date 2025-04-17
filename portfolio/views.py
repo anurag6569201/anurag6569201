@@ -46,3 +46,7 @@ def index(request):
         'prj_mod':prj_mod,
     }
     return render(request, 'core/index.html',context)
+
+
+def Landing(request):
+    return render(request, 'core/landing.html')

@@ -7,21 +7,13 @@
 rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-
-    <div class="loader" id="loader">
-        <div id="blackhole">
-            <div class="centerHover"><span>ENTER</span></div>
-        </div>
-    </div>
 
     <!-- navbar starts -->
     <nav class="navb" id="navb">
         <div class="logo">
             <img loading="lazy" src="{% static 'assets/images/hero.jpg' %}" alt="">
         </div>
-        <div class="toggle-btn">
+        <!-- <div class="toggle-btn">
             <input id="checkbox" type="checkbox" checked />
             <label class="switch" for="checkbox">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="slider">
@@ -30,7 +22,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                     </path>
                 </svg>
             </label>
-        </div>
+        </div> -->
 
         <div class="link-time">
             <span style="display: block;" id="hrs"></span>
@@ -191,14 +183,14 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     </header>
     <!-- Hero section ends -->
 
-    <div class="secondin-one main_body" style="opacity: 0;">
+    <div class="secondin-one main_body" style="opacity: 1;">
         <div class="anim-blackhole" style="opacity: 1;">
             <div class="blackhole" id="particles-js"></div>
         </div>
                 <!-- about section starts -->
                 <div class="container-fluid" id="News" style="margin-bottom: 5em;">
 
-                    <div class="row news-row col-md-12" id="section3" style="margin: 0;">
+                    <div class="row news-row col-md-12 px-3" id="section3" style="margin: 0;">
                         <div class="section-heading text-center">
                             <h1 class="mb-0 news-heading revealUp">Timeline</h1>
                         </div>
@@ -209,7 +201,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                                         {% for line in timeline|slice:":6" %}
                                         <li>
                                             <div class="time">{{ line.dateAndTime|date:"F, Y, g:i a" }}</div>
-                                            <p>{{line.contentStart}}<a
+                                            <p>{{line.contentStart}} <a
                                                     href="{{ line.readContentURL }}" target="_blank"> {{ line.contentMid }} </a>
                                                 {{ line.contentEnd }}</p>
                                         </li>

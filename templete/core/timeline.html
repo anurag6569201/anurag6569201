@@ -62,7 +62,7 @@
     <!-- about section starts -->
     <div class="container-fluid" id="News" style="margin-bottom: 5em;">
 
-        <div class="row news-row col-md-12" id="section3" style="margin: 0;">
+        <div class="row news-row col-md-12 px-3" id="section3" style="margin: 0;height: 100vh;overflow: scroll !important;">
             <div class="section-heading text-center">
                 <h1 class="mb-0 news-heading revealUp">Timeline</h1>
             </div>
@@ -73,7 +73,7 @@
                             {% for line in timeline %}
                             <li>
                                 <div class="time">{{ line.dateAndTime|date:"F, Y, g:i a" }}</div>
-                                <p>{{line.contentStart}}<a href="{{ line.readContentURL }}" target="_blank"> {{line.contentMid }} </a>
+                                <p>{{line.contentStart}} <a href="{{ line.readContentURL }}" target="_blank"> {{line.contentMid }} </a>
                                     {{ line.contentEnd }}</p>
                             </li>
                             {% endfor %}
