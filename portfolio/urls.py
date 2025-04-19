@@ -25,8 +25,7 @@ app_name="portfolio"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.Landing,name="index"),
-    path('home/', views.index,name="index"),
+    path('', views.index,name="index"),
     path('project/',include('project.urls')),
 ]
 
