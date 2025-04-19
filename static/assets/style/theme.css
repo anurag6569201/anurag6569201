@@ -1,0 +1,152 @@
+/* Theme Variables */
+:root {
+    /* Base Colors (Dark Theme Default) */
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --text-muted-color: #a0a0a0;
+    --primary-color: #56b7f7; /* Brighter blue for dark bg */
+    --secondary-color: #4a5a6a;
+    --accent-color: #e5c07b; /* Gold/Yellow Accent */
+    --card-background: #1e1e1e;
+    --border-color: #333;
+    --link-color: var(--primary-color);
+    --link-hover-color: #8ccfff;
+    --code-background: #282c34;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --gradient-start: #56b7f7;
+    --gradient-end: #3b8dd4;
+    --glass-bg: rgba(25, 25, 25, 0.6); /* Darker glass */
+    --blurness: 10px;
+
+    /* Fonts */
+    --font-primary: 'Poppins', sans-serif; /* Example: Add Google Font import */
+    --font-secondary: 'Roboto Mono', monospace; /* Example */
+
+    /* Sizes & Spacing */
+    --navbar-height: 70px; /* Adjust as needed */
+    --section-padding-y: 6rem;
+    --section-padding-hero-y: 8rem;
+    --border-radius: 0.375rem; /* Bootstrap default */
+
+    /* Transitions */
+    --transition-speed: 0.3s;
+}
+
+/* Light Theme Variables */
+body[data-theme='light'] {
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --text-muted-color: #6c757d;
+    --primary-color: #007bff;
+    --secondary-color: #e9ecef;
+    --accent-color: #fd7e14; /* Orange Accent */
+    --card-background: #ffffff;
+    --border-color: #dee2e6;
+    --link-color: var(--primary-color);
+    --link-hover-color: #0056b3;
+    --code-background: #f1f1f1;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --gradient-start: #0d6efd;
+    --gradient-end: #0a58ca;
+    --glass-bg: rgba(255, 255, 255, 0.7); /* Lighter glass */
+    --blurness: 10px;
+}
+
+/* Apply base styles using variables */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color); /* Ensure headings inherit color */
+    font-weight: 600; /* Slightly bolder */
+}
+
+a {
+    color: var(--link-color);
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+.text-muted {
+    color: var(--text-muted-color) !important;
+}
+
+.shadow-sm {
+   box-shadow: 0 0.125rem 0.25rem var(--shadow-color) !important;
+}
+.shadow {
+   box-shadow: 0 0.5rem 1rem var(--shadow-color) !important;
+}
+.shadow-lg {
+    box-shadow: 0 1rem 3rem var(--shadow-color) !important;
+}
+
+.section-padding {
+    padding-top: var(--section-padding-y);
+    padding-bottom: var(--section-padding-y);
+}
+
+.section-padding-hero {
+    padding-top: var(--section-padding-hero-y);
+    padding-bottom: var(--section-padding-hero-y);
+     min-height: 100vh; /* Ensure hero takes full height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+}
+
+
+.btn-gradient {
+    background-image: linear-gradient(to right, var(--gradient-start) 0%, var(--gradient-end) 51%, var(--gradient-start) 100%);
+    background-size: 200% auto;
+    color: white;
+    border: none;
+    transition: background-position var(--transition-speed) ease;
+    box-shadow: 0 4px 15px 0 rgba(0, 123, 255, 0.4); /* Adjust color */
+}
+
+.btn-gradient:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Glass Effect */
+.glass-effect {
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(var(--blurness));
+    -webkit-backdrop-filter: blur(var(--blurness));
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+.card {
+    background-color: var(--card-background);
+    transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.form-control {
+    background-color: var(--card-background); /* Match card bg */
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+.form-control:focus {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(var(--primary-color-rgb), 0.25); /* Use RGB version if available or calculate */
+}
+.form-label {
+     color: var(--text-muted-color);
+}
+/* Add styles for custom filter tags like 'add_class' */
+.form-control::placeholder { /* Standard syntax */
+  color: var(--text-muted-color);
+  opacity: 0.7;
+}

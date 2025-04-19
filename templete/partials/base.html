@@ -1,50 +1,93 @@
 {% load static %}
 {% load compress %}
 <!DOCTYPE html>
-<html lang="en" id="">
+<html lang="en" id="main_html_id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anurag Singh</title>
-    <link rel="icon" href="../../static/assets/images/avatar.png">
+    <title>Anurag Singh - Portfolio</title>
+    <link rel="icon" href="{% static 'assets/images/avatar.png' %}"> <!-- Prefer static tag -->
 
-    <!-- cdn links -->
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/favicons/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'assets/favicons/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'assets/favicons/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#1a1a1a"> <!-- Dark theme color -->
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Anurag Singh, Electrical Engineering student at IIIT Bhubaneswar, showcasing web development projects, skills, and experience.">
+    <meta name="keywords" content="Anurag Singh, IIIT Bhubaneswar, Electrical Engineering, Web Developer, Portfolio, Full Stack, Python, Django, JavaScript, React, Hackathons">
+    <meta name="author" content="Anurag Singh">
+
+    <!-- Open Graph Meta Tags (for social sharing) -->
+    <meta property="og:title" content="Anurag Singh - Portfolio">
+    <meta property="og:description" content="Explore the projects and skills of Anurag Singh, a passionate developer and engineering student.">
+    <meta property="og:image" content="{% static 'assets/images/og_image.jpg' %}"> <!-- Create an OG image -->
+    <meta property="og:url" content="{{ request.build_absolute_uri }}"> <!-- Assuming you want the current page URL -->
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anurag Singh - Portfolio">
+    <meta name="twitter:description" content="Explore the projects and skills of Anurag Singh, a passionate developer and engineering student.">
+    <meta name="twitter:image" content="{% static 'assets/images/og_image.jpg' %}"> <!-- Use the same OG image -->
+    <!-- <meta name="twitter:site" content="@yourtwitterhandle"> Optional -->
+
+
+    <!-- CDN Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="{% static 'assets/style/bootstrap.min.css' %}">
-    <!-- custom css -->
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> <!-- Moved Swiper CSS here -->
+
+    <!-- Local CSS -->
+
     {% compress css %}
-    <link rel="stylesheet" href="{% static 'assets/style/anim.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/style/about.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/style/other.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/style/style.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/style/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/style/bootstrap.min.css' %}"> <!-- Bootstrap first -->
+    <link rel="stylesheet" href="{% static 'assets/style/theme.css' %}"> <!-- Base theme variables -->
+    <link rel="stylesheet" href="{% static 'assets/style/contact.css' %}"> <!-- Animation related styles -->
+    <link rel="stylesheet" href="{% static 'assets/style/preloader.css' %}"> <!-- Preloader styles -->
+    <link rel="stylesheet" href="{% static 'assets/style/anim.css' %}"> <!-- Animation related styles -->
+    <link rel="stylesheet" href="{% static 'assets/style/about.css' %}"> <!-- Specific section styles -->
+    <link rel="stylesheet" href="{% static 'assets/style/other.css' %}"> <!-- Animation related styles -->
+    <link rel="stylesheet" href="{% static 'assets/style/style.css' %}"> <!-- Main styles -->
+    <link rel="stylesheet" href="{% static 'assets/style/responsive.css' %}"> <!-- Responsive adjustments -->
     {% endcompress %}
-    <script>
-        let main_content_html = document.getElementById("main_html_id");
-        main_content_html.style.overflow="hidden";
-    </script>
+    <!-- Clarity Analytics -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "r5fd63e8u0");
+        })(window, document, "clarity", "script", "r5fd63e8u0"); // Replace with your actual Clarity ID
     </script>
 </head>
 
-<!-- body area start-->
+<!-- Add data-theme attribute for easy theme switching -->
+<body data-theme="dark"> <!-- Default theme -->
 
-<body>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-ring">
+             <img loading="lazy" src="{% static 'assets/images/hero.jpg' %}" alt="Loading..." class="loader-logo">
+             <span></span> <!-- Spinner element -->
+        </div>
+         <div class="loader-text">Loading Portfolio...</div>
+    </div>
+
+    <!-- Page Scroll Progress Indicator (Optional Alternative/Addition to Dots) -->
+    <div id="scroll-progress"></div>
 
 
-    <!-- paginatin -->
-    <div class="pages" id="pagination" style="pointer-events: none;">
+
+    <!-- Main Content Wrapper -->
+       <!-- paginatin -->
+       <div class="pages" id="pagination" style="pointer-events: none;">
         <div class="pagination">
             <input onclick="scrollToElement('section1')" id="dot-1" type="radio" name="dots" checked>
             <label for="dot-1"></label>
@@ -70,97 +113,91 @@
         {% endblock content %}
     </div>
 
-</body>
-<!-- body area end -->
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container text-center">
+             <p>© {% now "Y" %} Anurag Singh. All Rights Reserved.</p>
+             <p>Built with <a href="https://www.djangoproject.com/" target="_blank" rel="noopener">Django</a> & <i class="fa-solid fa-heart text-danger"></i></p>
+        </div>
+    </footer>
 
-<!-- cdn bootstrap js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
-    integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
 
-<!-- gsap library js -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <!-- Core JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
-<!-- jquery js -->
-<script id="2d-fragment-shader" type="x-shader/x-fragment">
+    <!-- Animation & Interaction Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> <!-- Isotope JS -->
+
+
+    <!-- WebGL Shaders (remain unchanged) -->
+    <script id="2d-fragment-shader" type="x-shader/x-fragment">
     // <![CDATA[
-    
         #ifdef GL_ES
         precision mediump float;
         #endif
-        
         #define PI 3.14159265359
-        
         uniform sampler2D u_image;
         varying vec2 v_texCoord;
-        
         uniform vec2 u_resolution;
         uniform vec2 u_mouse;
         uniform float u_mass;
         uniform float u_time;
         uniform float u_clickedTime;
-        
         vec2 rotate(vec2 mt, vec2 st, float angle){
-            float cos = cos((angle + u_clickedTime) * PI); // try replacing * 1.0 with * PI
-            float sin = sin(angle * 0.0); // try removing the * 0.0
-            
-            // Uncomment these two lines for realism
-            //float cos = cos(angle) * (u_time * 0.3);
-            //float sin = sin(angle) * (u_time * 0.3);
-            
+            float cos = cos((angle + u_clickedTime) * PI);
+            float sin = sin(angle * 0.0);
             float nx = (cos * (st.x - mt.x)) + (sin * (st.y - mt.y)) + mt.x;
             float ny = (cos * (st.y - mt.y)) - (sin * (st.x - mt.x)) + mt.y;
             return vec2(nx, ny);
         }
-        
         void main() {
             vec2 st = vec2(gl_FragCoord.x, u_resolution.y - gl_FragCoord.y)/u_resolution;
             vec2 mt = vec2(u_mouse.x, u_resolution.y - u_mouse.y)/u_resolution;
-        
             float dx = st.x - mt.x;
             float dy = st.y - mt.y;
-        
             float dist = sqrt(dx * dx + dy * dy);
             float pull = u_mass / (dist * dist);
-            
             vec3 color = vec3(0.0);
-            
             vec2 r = rotate(mt,st,pull);
             vec4 imgcolor = texture2D(u_image, r);
             color = vec3(
                 (imgcolor.x - (pull * 0.25)),
-                (imgcolor.y - (pull * 0.25)), 
+                (imgcolor.y - (pull * 0.25)),
                 (imgcolor.z - (pull * 0.25))
             );
-            
-        
             gl_FragColor = vec4(color,1.);
         }
-        // ]]>
+    // ]]>
     </script>
     <script id="2d-vertex-shader" type="x-shader/x-vertex">// <![CDATA[
         attribute vec2 a_position;
         attribute vec2 a_texCoord;
-        
         varying vec2 v_texCoord;
         void main() {
             gl_Position = vec4(a_position, 0, 1);
             v_texCoord = a_texCoord;
         }
-        // ]]>
+    // ]]>
     </script>
-{% compress js %}
-<!-- anim webgl js -->
 
-<script id="universe-anim" defer src="{% static 'assets/script/anim1.js' %}"></script>
-<script id="universe-anim" defer src="{% static 'assets/script/anim.js' %}"></script>
+    <!-- Custom JS - Compressed -->
+    {% compress js %}
+    <script defer src="{% static 'assets/script/projectFilter.js' %}"></script>
+    <script defer src="{% static 'assets/script/animations.js' %}"></script>
+    <script defer src="{% static 'assets/script/navigation.js' %}"></script>
+    <script defer src="{% static 'assets/script/theme.js' %}"></script>
+    <script defer src="{% static 'assets/script/main.js' %}"></script> <!-- Main initialization script -->
+    <script defer src="{% static 'assets/script/anim.js' %}"></script> <!-- Renamed anim.js -->
+    <script defer src="{% static 'assets/script/anim1.js' %}"></script> <!-- Renamed anim1.js -->
+    <script defer src="{% static 'assets/script/script.js' %}"></script> <!-- Main initialization script -->
+    {% endcompress %}
 
-<!-- custom js -->
-<script defer src="{% static 'assets/script/script.js' %}"></script>
-{% endcompress %}
+</body>
 </html>

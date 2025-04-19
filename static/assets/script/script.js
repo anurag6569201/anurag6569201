@@ -139,6 +139,12 @@ function hackathon() {
     showProjectsByCategory("hackathon");
     setActiveButton('hackathon');
 }
+function sort_maintainer() {
+    hideProjects();
+    showProjectsByCategory("maintainer");
+    setActiveButton('maintainer');
+}
+
 // Function to hide all projects
 function hideProjects() {
     var projects = document.querySelectorAll('.projects .col-lg-4');
