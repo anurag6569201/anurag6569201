@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-tev81&t)a)a6yd4u2*vb79qtq(fuec1r5!$7+h9^s^rz1p*)g+
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://anuragsingh.azurewebsites.net','https://anurag.icu','https://127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://anurag6569201.azurewebsites.net','https://anurag.icu','https://127.0.0.1']
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
