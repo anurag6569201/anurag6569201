@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     # default apps
     'project',
     'import_export',
+    'rest_framework',
 
     'compressor',
     'htmlmin',

@@ -27,6 +27,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index,name="index"),
     path('project/',include('project.urls')),
+    
+    path('api/', include('project.api_urls')),
 ]
 
 
