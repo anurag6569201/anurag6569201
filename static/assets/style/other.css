@@ -581,3 +581,6 @@ body {
 #universe {
     transition: display 0.5s ease, opacity 0.5s ease;
 }
+#navb .logo img{
+    display: none !important;
+}
